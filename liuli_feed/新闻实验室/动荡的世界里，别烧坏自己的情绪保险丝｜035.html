@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title dir='ltr'>动荡的世界里，别烧坏自己的情绪保险丝｜035 | Revue</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='新闻实验室 - 新闻实验室免费版。
+付费版请见：https://newslab.info/join/' name='description'>
+<meta content='newsletter, email, digest, curation' name='keywords'>
+<!--[if lt IE 9]>
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/html5shiv-bb669dd537dfdfb80f5581532f95e3d93d4e161976d46f6a8ea5c49c57cafbc8.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="all" href="//d3jbm9h03wxzi9.cloudfront.net/assets/application-4eeb1b015e3c86cc20dbdc72a26232e7574974f39c773bc496318055f4845771.css" nonce="NRJIOrCTWR7P1XODcMq72w==" />
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/application-989b33e0ccddb3384b2987632d5a790c45139d7bd4a857507860f6eeeea1fca1.js" nonce="NRJIOrCTWR7P1XODcMq72w==" defer="defer"></script>
+<script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+  I18n.defaultLocale = "en";
+  I18n.locale = "en";
+});
+
+
+
+//]]>
+</script><link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='16x16'>
+<link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='32x32'>
+<link color='#E15718' href='//d3jbm9h03wxzi9.cloudfront.net/assets/icon-3ef15b89ab8676cd48dac6b7878bbc0e564d4e4167ea590f1f49d8e596d1ee4b.svg' rel='mask-icon'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="EpBXXuWbl2Qe1U8BTQKVyJ4Xmwz2RotKexC+FFlNrIwnUGHxUpebfc9Ev7/795kOUxs0pY4Z0p3LuI9s4M9acA==" />
+<meta name="csp-nonce" content="NRJIOrCTWR7P1XODcMq72w==" />
+
+<script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+  function getQueryParam(url, param) {
+    // Expects a raw URL
+    param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + param + "=([^&#]*)",
+    regex = new RegExp( regexS ),
+    results = regex.exec(url);
+    if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+      return '';
+    } else {
+      return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+    }
+  };
+
+  function geUtmParams() {
+    var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
+    , kw = ''
+    , params = {}
+    , first_params = {}
+    , result = {};
+
+    var index;
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        params[campaign_keywords[index] + ' [last touch]'] = kw;
+      }
+    }
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        first_params[campaign_keywords[index]] = kw;
+      }
+    };
+
+    result.first_params = first_params;
+    result.params = params;
+
+    return result;
+  }
+
+  function extractReferrer(referrer) {
+    campaign = geUtmParams().first_params["utm_campaign"];
+    ref = getQueryParam(document.URL, 'ref');
+
+    if(!campaign && !ref) {
+      if (/www\.getrevue\.co\/profile\/(.*?)\/issue/.test(window.location.href)) {
+        return 'Revue Profile Issue'
+      } else if(/www\.getrevue\.co\/profile/.test(window.location.href)) {
+        return 'Revue Profile'
+      }
+    }
+
+    if(!!campaign) {
+      return campaign;
+    } else if (referrer.search('https?://(.*)google.([^/?]*)') === 0) {
+      return 'Google';
+    } else if (referrer.search('https?://(.*)bing.([^/?]*)') === 0) {
+      return 'Bing';
+    } else if (referrer.search('https?://(.*)yahoo.([^/?]*)') === 0) {
+      return 'Yahoo';
+    } else if (referrer.search('https?://(.*)facebook.([^/?]*)') === 0) {
+      return 'Facebook';
+    } else if (referrer.search('https?://(.*)twitter.([^/?]*)') === 0 || referrer.search('https?://(.*)t.co/') === 0) {
+      return 'Twitter';
+    } else if (referrer.search('https?://(.*)linkedin.([^/?]*)') === 0) {
+      return 'LinkedIn'
+    } else if (referrer == '$direct' || (!referrer || /^\s*$/.test(referrer))) {
+      return '$direct';
+    } else if (referrer.search('https?://(.*)getrevue.co') == 0) {
+      if(/\/app\//.test(referrer)) {
+        return 'Revue App';
+      } else if (/\/profile\/(.*?)\/issue/.test(referrer)) {
+        return 'Revue Profile Issue'
+      } else if (/\/profile\//.test(referrer)) {
+        return 'Revue Profile'
+      } else if (/blog\.getrevue\.co/.test(referrer)) {
+        return 'Revue Blog'
+      } else {
+        return 'Revue Page'
+      }
+    } else if (referrer.search('https?://(.*)rev.vu([^/?]*)') === 0) {
+      return 'Revue Item';
+    } else if (!!ref) {
+      return ref;
+    } else {
+      tld = new RegExp('\.(asn\.au|com\.au|net\.au|id\.au|org\.au|edu\.au|gov\.au|csiro\.au|act\.au|nsw\.au|nt\.au|qld\.au|sa\.au|tas\.au|vic\.au|wa\.au|co\.at|or\.at|priv\.at|ac\.at|avocat\.fr|aeroport\.fr|veterinaire\.fr|co\.hu|film\.hu|lakas\.hu|ingatlan\.hu|sport\.hu|hotel\.hu|ac\.il|co\.il|org\.il|net\.il|k12\.il|gov\.il|muni\.il|idf\.il|ac\.za|gov\.za|law\.za|mil\.za|nom\.za|school\.za|net\.za|co\.uk|org\.uk|me\.uk|ltd\.uk|plc\.uk|net\.uk|sch\.uk|ac\.uk|gov\.uk|mod\.uk|nhs\.uk|police\.uk)')
+      a = document.createElement('a');
+      a.href = referrer;
+      ref = a.hostname;
+      if(tld.test(ref)) {
+        return ref.replace(tld, '').split('.').pop()
+      } else {
+        return ref.split('.').reverse()[1];
+      }
+    }
+  };
+
+  function getReferrer() {
+    ref = document.referrer;
+    return extractReferrer(ref);
+  }
+
+  function mixpanelLoaded() {
+    try {
+      // Set ref
+      initial_ref = mixpanel.get_property('$initial_referrer');
+      mixpanel.register_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"$created": new Date().toISOString()});
+
+      // Set distinct id
+      var member_distinct_id_element = document.querySelector('#member_distinct_id');
+      member_distinct_id_element.value = mixpanel.get_distinct_id();
+    } catch(e) {}
+  };
+
+//]]>
+</script>
+<script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("2087bc32dd14049d6de8a339112517d9", {loaded: mixpanelLoaded, ip: false});
+//]]>
+</script>
+
+<script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+  var utm = geUtmParams();
+  mixpanel.register(utm.params);
+
+//]]>
+</script>
+<meta content='86400' property='twitter:maxage'>
+<meta content='171913' property='twitter:revue:account:id'>
+<meta content='新闻实验室' property='twitter:newsletter:title'>
+<meta content='新闻实验室免费版。
+付费版请见：https://newslab.info/join/' property='twitter:newsletter:description'>
+<meta content='https://www.getrevue.co/profile/newslab?via=twitter-card' property='twitter:newsletter:profile:url'>
+<meta content='true' property='twitter:newsletter:issue:card'>
+<meta content='https://imgix.revue.co/profiles/images/000/172/257/original/log520.png?ixlib=rails-3.1.0' property='twitter:newsletter:image:src'>
+<meta content='动荡的世界里，别烧坏自己的情绪保险丝｜035' property='twitter:issue:title'>
+<meta content='9月好。今天的信里，我想聊聊这个动荡世界里的心理健康。前段时间，有一篇文章在英文世界里面引发了不少讨论。文章讲的事情其实很简单：我们需要关注自己情绪的“保险丝”。如果你有住在旧房子里的经验，那么你很可能遇到过保险丝烧坏的情况。很多旧房子的电路承载能力很弱，因为盖那些房子的时候，这个世界上还没有那么多大功率的电器。在这样的房子里面，如果你同时打开吹风机、电磁炉、音响之类的电器，那么很可能保险丝就会烧坏，电路系统罢工。就像房子的电路系统一样，我们的情绪也有一定的承受极限。而且，因为人类生理上的进化速度是非常慢的，所以我们每个人的情绪保险丝，可能还是古代的配置。也就是那个“从前慢”的时代，那时的世界也有悲剧、有不公、有灾难，但你能知道的可能只有自己村里发生的这些事。遥远地方的事情，要么你永远不会知道，要么等你知道的时候，已经是几个星期、几个月之后了，因为“从前的日色变得慢，车、马、邮件都慢”。当我们的情绪保险丝还是“从前慢”的配置，我们身边的世界早已进入了“地球村”。我们可能需要关心的事情，早已不只是自己村里的那些事，而是包括了许多遥远的地方、遥远的人。鲁迅先生说，“无穷的远方，无数的人们…' property='twitter:issue:description'>
+<meta content='25' property='twitter:issue:number'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/035-741855?via=twitter-card' property='twitter:issue:url'>
+<meta content='https://imgix.revue.co/items/images/010/896/278/mail/0?ixlib=rails-3.1.0' property='twitter:issue:image:src'>
+<meta content='29942836' property='twitter:user:id'>
+<meta content='summary_large_image' property='twitter:card'>
+<meta content='@revue' property='twitter:site'>
+<meta content='1073732649320413' property='fb:app_id'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/035-741855' property='og:url'>
+<meta content='article' property='og:type'>
+<meta content='动荡的世界里，别烧坏自己的情绪保险丝｜035' property='og:title'>
+<meta content='9月好。今天的信里，我想聊聊这个动荡世界里的心理健康。前段时间，有一篇文章在英文世界里面引发了不少讨论。文章讲的事情其实很简单：我们需要关注自己情绪的“保险丝”。如果你有住在旧房子里的经验，那么你很可能遇到过保险丝烧坏的情况。很多旧房子的电路承载能力很弱，因为盖那些房子的时候，这个世界上还没有那么多大功率的电器。在这样的房子里面，如果你同时打开吹风机、电磁炉、音响之类的电器，那么很可能保险丝就会烧坏，电路系统罢工。就像房子的电路系统一样，我们的情绪也有一定的承受极限。而且，因为人类生理上的进化速度是非常慢的，所以我们每个人的情绪保险丝，可能还是古代的配置。也就是那个“从前慢”的时代，那时的世界也有悲剧、有不公、有灾难，但你能知道的可能只有自己村里发生的这些事。遥远地方的事情，要么你永远不会知道，要么等你知道的时候，已经是几个星期、几个月之后了，因为“从前的日色变得慢，车、马、邮件都慢”。当我们的情绪保险丝还是“从前慢”的配置，我们身边的世界早已进入了“地球村”。我们可能需要关心的事情，早已不只是自己村里的那些事，而是包括了许多遥远的地方、遥远的人。鲁迅先生说，“无穷的远方，无数的人们…' property='og:description'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/312/935/original/issue_image_741855.jpg?1630828503' property='twitter:image'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/312/935/original/issue_image_741855.jpg?1630828503' property='og:image'>
+<meta content='https://s3.amazonaws.com/revue/items/images/010/896/548/original/035banner.jpg?1630820224' property='og:image'>
+
+
+</head>
+<body class='profiles archive' data-page='ProfilesArchive'>
+<script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58968534-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+//]]>
+</script>
+<style>
+  .component__issue-page .premium-issue-details a {
+    color: #88B04B;
+  }
+</style>
+<div class='component__issue-page component__profile-layout'>
+<div class='component__issue-page__sticky-navigation'>
+<style>
+  ::selection {background-color: #88B04B;color: #FFF;}
+  .component__profile-header { background-color: #fff; box-shadow: inset 0 0 0 1000px rgba(136, 176, 75, 0.04); }
+  .component__profile-header__bar { background-color: #88B04B }
+</style>
+<div class='component__profile-header'>
+<div class='component__profile-header__bar'></div>
+<div class='profile-layout-row'>
+<div class='profile-layout-columns'>
+<div class='profile-layout-column'>
+<style>
+  .component__profile-intro-header .component__button {
+    background-color: #88B04B;
+    border-color: #88B04B;
+    color: #ffffff;
+  }
+  .component__profile-intro-header h1 {
+    color: #88B04B;
+  }
+</style>
+<div class='component__profile-intro-header'>
+<div class='component__profile-intro-header__content'>
+<a href='https://www.getrevue.co/profile/newslab'>
+<h1 title='新闻实验室'>新闻实验室</h1>
+</a>
+</div>
+<div class='component__profile-intro-header__action'>
+<div class='component__button component__button--is-primary'>
+<a data-toggle="modal" data-target="#profile-subscribe-modal-form" href="#">Subscribe</a>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<style>
+  ::selection {background-color: #88B04B;color: #FFF;}
+  .component__profile-header { background-color: #fff; box-shadow: inset 0 0 0 1000px rgba(136, 176, 75, 0.04); }
+  .component__profile-header__bar { background-color: #88B04B }
+</style>
+<div class='component__profile-header'>
+<div class='component__profile-header__bar'></div>
+<div class='profile-layout-row'>
+<div class='profile-layout-columns'>
+<div class='profile-layout-column'>
+<div class='profile-layout-block profile-layout-block--with-padding--small profile-layout-block--with-border-bottom'>
+<style>
+  .component__profile-intro-header .component__button {
+    background-color: #88B04B;
+    border-color: #88B04B;
+    color: #ffffff;
+  }
+  .component__profile-intro-header h1 {
+    color: #88B04B;
+  }
+</style>
+<div class='component__profile-intro-header'>
+<div class='component__profile-intro-header__content'>
+<a href='https://www.getrevue.co/profile/newslab'>
+<h1 title='新闻实验室'>新闻实验室</h1>
+</a>
+<h2 title='By 方可成'>By 方可成</h2>
+</div>
+<div class='component__profile-intro-header__action'>
+<div class='component__button component__button--is-primary'>
+<a data-toggle="modal" data-target="#profile-subscribe-modal-form" href="#">Subscribe</a>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class='profile-layout-row'>
+<div class='profile-layout-columns'>
+<div class='profile-layout-column profile-layout-column--is-left'>
+<div class='profile-layout-block profile-layout-block--with-padding--small'>
+<div class='component__profile-issue-item component__profile-issue-item--is-minimal'>
+<h1>动荡的世界里，别烧坏自己的情绪保险丝｜035</h1>
+<div class='profile-issue-item-header'>
+<strong>
+#25・
+<time datetime='2021-09-05T07:55:00Z'>Sep  5, 2021</time>
+</strong>
+</div>
+</div>
+
+</div>
+</div>
+<div class='profile-layout-column profile-layout-column--is-right'>
+<div class='profile-layout-block profile-layout-block--is-floating profile-layout-block--with-padding--small'>
+<style>
+  .component__author-and-member-plan-card .component__support-member-plan-card {
+    background-color: rgba(136, 176, 75, 0.04);
+  }
+  
+  .component__author-and-member-plan-card .component__support-member-plan-card .component__button {
+    border-color: #88B04B;
+    color: #88B04B;
+  }
+</style>
+<style>
+  .component__author-card .social-accounts-list a { color: #88B04B }
+</style>
+<div class='component__card component__card--has-spacing'>
+<div class='component__author-card'>
+<img alt="新闻实验室" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/thumb/log520.png?1615620626" />
+<div class='author-information'>
+<div class='social-accounts-list'>
+<a target="_blank" href="https://instagram.com/incurable"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.005 5.44c2.138 0 2.39.01 3.232.048.781.034 1.203.165 1.484.275.372.144.641.319.92.597.28.281.452.547.596.919.11.281.24.706.275 1.484.038.844.047 1.098.047 3.232 0 2.138-.01 2.391-.047 3.232-.034.782-.166 1.203-.275 1.485-.144.372-.319.64-.597.919a2.46 2.46 0 0 1-.919.597c-.281.11-.706.24-1.484.275-.844.037-1.098.047-3.232.047-2.138 0-2.391-.01-3.232-.047-.782-.035-1.204-.166-1.485-.275a2.473 2.473 0 0 1-.919-.597 2.46 2.46 0 0 1-.597-.92c-.11-.28-.24-.706-.275-1.484-.037-.844-.047-1.097-.047-3.232 0-2.138.01-2.39.047-3.232.035-.781.166-1.203.275-1.484.144-.372.32-.641.597-.92.282-.28.547-.452.92-.596.28-.11.706-.24 1.484-.275.84-.038 1.094-.047 3.232-.047Zm0-1.44c-2.173 0-2.445.01-3.298.047-.85.037-1.434.175-1.94.372a3.905 3.905 0 0 0-1.42.925 3.92 3.92 0 0 0-.925 1.416c-.197.51-.334 1.09-.372 1.94-.037.857-.047 1.13-.047 3.302s.01 2.444.047 3.297c.038.85.175 1.435.372 1.941.206.528.478.975.925 1.42.444.443.891.718 1.416.921.51.197 1.09.335 1.941.372.853.038 1.125.047 3.298.047 2.172 0 2.444-.01 3.297-.047.85-.037 1.435-.175 1.941-.372a3.911 3.911 0 0 0 1.416-.922c.444-.444.719-.89.922-1.416.197-.51.335-1.09.372-1.94.038-.854.047-1.126.047-3.298 0-2.173-.01-2.445-.047-3.298-.037-.85-.175-1.435-.372-1.94a3.747 3.747 0 0 0-.916-1.423 3.91 3.91 0 0 0-1.416-.922c-.51-.197-1.09-.334-1.94-.372-.857-.04-1.129-.05-3.301-.05Zm0 3.891a4.111 4.111 0 0 0 0 8.22 4.111 4.111 0 0 0 0-8.22Zm0 6.777a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333Zm4.272-5.98a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92Z"/></svg>
+</a><a target="_blank" href="https://youtube.com/c/FANGKecheng"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M18.858 9.201s-.137-.965-.558-1.389c-.533-.558-1.13-.56-1.403-.593C14.94 7.077 12 7.077 12 7.077h-.005s-2.94 0-4.898.142c-.273.033-.869.035-1.402.593-.422.424-.555 1.39-.555 1.39S5 10.333 5 11.467v1.06c0 1.133.14 2.268.14 2.268s.137.965.555 1.389c.533.558 1.233.538 1.545.599 1.12.106 4.76.14 4.76.14s2.942-.006 4.9-.146c.273-.032.87-.035 1.403-.593.42-.424.557-1.389.557-1.389s.14-1.132.14-2.267v-1.06c-.003-1.133-.142-2.267-.142-2.267Zm-8.307 4.616V9.882l3.782 1.975-3.782 1.96Z"/></svg>
+</a></div>
+</div>
+</div>
+
+</div>
+
+
+<div class='component__stats-card'>
+<div class='component__card component__card--has-spacing'>
+<div class='stat-row'>
+<div class='stat-column'>
+<strong class='stat-number'>36.8K</strong>
+<p class='stat-number'>subscribers</p>
+</div>
+<div class='stat-column'>
+<strong class='stat-number'>44</strong>
+<p class='stat-number'>issues</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<style>
+  .component__profile-subscribe-form--is-modal .modal-body a svg { color: #88B04B; }
+</style>
+<div class='component__profile-subscribe-form component__profile-subscribe-form--is-card'>
+<p>Subscribe to our newsletter</p>
+<style>
+  .component__profile-subscribe-form h1 { color: #88B04B }
+  .component__profile-subscribe-form .component__button { background-color: #88B04B; border-color: #88B04B }
+  .component__profile-subscribe-form .component__button:hover { background-color: #88B04B; border-color: #88B04B }
+  .component__form-input input[type=email] { outline-color: #88B04B;}
+</style>
+<form class="new_member" id="8VEXoBTC_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7QQs9znmpjuipkrn3EtoUTTgaIbi2Wors+QmXPHL09/YxBpYjuqqInM3ullqvmSX+ezHL5qGM/wDTBckSEklIw==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-sidebar" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='profile-form-fields-container'>
+<div class='component__form-input'>
+<input id="member_email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" />
+<p>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</p>
+
+</div>
+<div class='component-form-input-submit'>
+<div class='component__button component__button--is-primary-block'>
+<script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='NRJIOrCTWR7P1XODcMq72w=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="oWjYf0DHCaptchaCallback" class="g-recaptcha " title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+
+
+</div>
+</div>
+
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_ThC5rN" id="confirm_ThC5rN" autocomplete="off" />
+</div>
+
+</form><script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+window["oWjYf0DHCaptchaCallback"] = function() {
+  document.getElementById("8VEXoBTC_new_member").submit();
+};
+
+// Show terms field after focus
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById("8VEXoBTC_new_member");
+    if (!form) {
+      return;
+    }
+
+    var termsParagraph = form.querySelector('.profile-form-fields-container p');
+    var emailField = form.querySelector('input[name="member[email]"');
+    if (emailField !== null && termsParagraph !== null) {
+      emailField.addEventListener('focus', function() {
+        termsParagraph.classList.add('visible');
+      });
+    }
+  });
+})();
+
+
+//]]>
+</script>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='profile-layout-row'>
+<div class='profile-layout-columns'>
+<div class='profile-layout-column profile-layout-column--is-left'>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <title></title>
+  <!--[if !mso]><!-- -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+  #outlook a { padding: 0; }
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height:100%; }
+  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  p { display: block; padding: 0; margin: 0; margin-bottom: 0; }
+  .revue-p + .revue-p, .revue-p + .revue-blockquote {margin-top: 14px !important;}
+  .revue-p + .revue-h2, .revue-h2 + .revue-p, .revue-ul + .revue-h2, .revue-h2 + .revue-ul, .revue-ol + .revue-h2, .revue-h2 + .revue-ol  {margin-top: 14px !important;}
+  .revue-h2 {font-size:20px;line-height:28px;font-weight:700;padding-bottom:0px !important;}
+  [class*="revue-p"] + [class*="revue-p"], [class*="revue-p"] + [class*="revue-blockquote"] {margin-top: 14px !important;}
+  [class*="revue-p"] + [class*="revue-h2"] {margin-top: 14px !important;}
+</style>
+<!--[if !mso]><!-->
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+    @-ms-viewport { width:320px; }
+    @viewport { width:320px; }
+  }
+</style>
+<!--<![endif]-->
+<!--[if mso]>
+<style type="text/css">
+  .revue-p,
+  .revue-h2,
+  .revue-ul,
+  .revue-ol,
+  .revue-blockquote {margin-bottom: 14px !important;}
+</style>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if lte mso 11]>
+<style type="text/css">
+  .outlook-group-fix {
+    width:100% !important;
+  }
+</style>
+<![endif]-->
+<style type="text/css">
+  @media only screen and (min-width:480px) {
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-25 { width:25.9259259259%!important; }
+    .mj-column-per-74 { width:74.0740740741%!important; }
+    .mj-column-per-50 { width:50%!important; }
+    .mj-column-per-60 { width:60%!important; }
+    .mj-column-per-20 { width:20%!important; }
+  }
+
+  @media screen and (max-width:600px) {
+    .title-text{font-size:14px !important; line-height:20px !important;}
+    .title-image{width:44px !important;height:44px !important;}
+    .indented {padding-left: 8px !important; padding-right: 8px !important;}
+    .link-image {width: 112px !important;}
+    .header-text {font-size: 22px !important; line-height: 32px !important;}
+    .revue-h2 {font-size:18px !important; line-height: 24px !important;}
+    .introduction-subject {font-size: 24px !important; line-height: 24px !important;}
+    .introduction-spacer {padding: 30px 0 !important;}
+    .link-title {font-size: 18px !important; line-height: 24px !important;}
+    .text-default,
+    .link-description {font-size: 14px !important; line-height: 22px !important;}
+    .link-url {font-size: 13px !important;}
+    .text-small {font-size:12px !important;}
+  }
+</style>
+</head>
+<body>
+  <div>
+    <div id="preheader" style="display:none;font-size:1px;color:#FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;"></div>
+
+    
+    
+    
+    
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;" class="indented"><div style="cursor:auto;color:#657786;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:12px;line-height:22px;text-align:center;font-weight:400;" class="text-small"><a target="_blank" style="color: #657786;text-decoration:underline;" href="https://www.getrevue.co/profile/newslab/issues/035-741855?utm_campaign=Issue&amp;utm_content=view_in_browser&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">View online</a></div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
+
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;padding-bottom:28px;" class="indented">
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-right:12px;" width="56">
+<a target="_blank" href="https://www.getrevue.co/profile/newslab">
+<img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" class="title-image" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" /></a></td>
+<td><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody>
+<tr><td><div style="cursor:auto;color:#14171A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:22px;text-align:left;font-weight:700;" class="title-text">方可成</div></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+
+    
+
+    
+
+    
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      亲爱的朋友：
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">9月好。今天的信里，我想聊聊这个动荡世界里的心理健康。</div><div style="margin:0;" class="revue-p">前段时间，有一篇<a href="https://thecorners.substack.com/p/if-you-cant-take-in-anymore-theres?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">文章</a>在英文世界里面引发了不少讨论。文章讲的事情其实很简单：我们需要关注自己情绪的“保险丝”。</div><div style="margin:0;" class="revue-p">如果你有住在旧房子里的经验，那么你很可能遇到过保险丝烧坏的情况。很多旧房子的电路承载能力很弱，因为盖那些房子的时候，这个世界上还没有那么多大功率的电器。在这样的房子里面，如果你同时打开吹风机、电磁炉、音响之类的电器，那么很可能保险丝就会烧坏，电路系统罢工。</div><div style="margin:0;" class="revue-p">就像房子的电路系统一样，我们的情绪也有一定的承受极限。而且，因为人类生理上的进化速度是非常慢的，所以<strong>我们每个人的情绪保险丝，可能还是古代的配置。</strong>也就是那个“从前慢”的时代，那时的世界也有悲剧、有不公、有灾难，但你能知道的可能只有自己村里发生的这些事。遥远地方的事情，要么你永远不会知道，要么等你知道的时候，已经是几个星期、几个月之后了，因为“从前的日色变得慢，车、马、邮件都慢”。</div><div style="margin:0;" class="revue-p">当我们的情绪保险丝还是“从前慢”的配置，我们身边的世界早已进入了“地球村”。我们可能需要关心的事情，早已不只是自己村里的那些事，而是包括了许多遥远的地方、遥远的人。</div><div style="margin:0;" class="revue-p">鲁迅先生说，“无穷的远方，无数的人们，都与我有关。”这句话很打动人，我也希望所有的世人都有这样的情怀，这样我们的世界一定会比现在美好得多。可是，我们也必须承认，有时候，这种“有关”、这种共情，会烧坏我们的情绪保险丝。特别是，对一些本身就特别容易产生共情的人来说，不断袭来的消息就像不断被打开的大功率电器一样，让人不堪重负。</div><div style="margin:0;" class="revue-p">社交媒体在很大程度上加大了这种压力。一方面是社交媒体上信息更新的速度太快了；另一方面则是：社交媒体会形成一种社会压力，好像如果你没有关心什么，就是一个冷漠的、傲慢的人。</div><div style="margin:0;" class="revue-p">但我们必须承认：<strong>人的情绪承受力是有限度的，我们不可能关心所有的不公和灾难。</strong>否则，当情绪的保险丝烧坏了，我们就失去了关心任何事的能力，我们会抑郁、焦虑，会失去行动力。</div><div style="margin:0;" class="revue-p">所以，那篇文章的作者建议，经常问问自己三个问题：</div><ul class="revue-ul">
+<li style="margin:0;">哪些是我应该做的事情，哪些不是我应该做的事情？</li>
+<li style="margin:0;">哪些是我应该说的，哪些不是我应该说的？</li>
+<li style="margin:0;">哪些是我应该关心的，哪些不是我应该关心的？</li>
+</ul><div style="margin:0;" class="revue-p">她特别强调：问这些问题，无关价值，只关乎数学——增加得太多，就会超过情绪保险丝的承载上限。</div><div style="margin:0;" class="revue-p">这个世界面临着太多的问题：仍未结束的疫情，残酷的不平等，气候变化带来的越来越多的灾害，全球政治的不稳定，等等。这些问题都需要有人去关心，但并不需要一个人投入关心所有。如果你是一个关怀社会、共情他人的人（如果你订阅了这份newsletter，你很可能就是这样的人），那么请一定记住：留意自己情绪保险丝的上限，选择一些自己最关心的议题去关心，对于另一些不公和悲剧，可以稍微隔离开来，留给其他人去关心。</div><div style="margin:0;" class="revue-p">这不是逃避，不是冷漠，这是为了我们可以可持续地关心这个世界。</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      🎙新闻实验室播客
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">本周来和大家聊天的是王子诣，她和<a href="https://www.xiaoyuzhoufm.com/episode/6106ba129b37bf42000bd518?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">第7期聊土味视频</a>的裴瑜一样，也是在上学期选了我开设的课程“中国内地的媒介与社会发展”，完成了一篇很有意思的期末作业《<a href="https://mp.weixin.qq.com/s/y1BdSL3kgypke8RA0j-COQ?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">当互联网把心理咨询师送到江西小镇</a>》。</div><div style="margin:0;" class="revue-p">在她的文章中，线上心理咨询是一个切片。通过它，我们可以观察小镇百态：留守儿童、问题少年、心理问题的污名，以及疗愈的尝试。</div><div style="margin:0;" class="revue-p">我们谈到了这些话题：</div><ul class="revue-ul">
+<li style="margin:0;">小镇青年重新观察自己成长的地方；</li>
+<li style="margin:0;">心理咨询如何和小镇发生关系；</li>
+<li style="margin:0;">互联网心理咨询为小镇体制内人士提供的机会；</li>
+<li style="margin:0;">小镇里的问题少年和问题青年；</li>
+<li style="margin:0;">小镇心理咨询师的工作状态；</li>
+<li style="margin:0;">心理健康问题依然被污名化；</li>
+<li style="margin:0;">线上和线下咨询的异同；</li>
+<li style="margin:0;">互联网平台的角色；</li>
+<li style="margin:0;">70后和90后心理咨询师的代际差异；</li>
+<li style="margin:0;">怎样理解当今的中国小城镇生态。</li>
+</ul><div style="margin:0;" class="revue-p">你可以在<a href="https://www.xiaoyuzhoufm.com/episodes/6134745c223895fdb208dafb?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">小宇宙</a>、<a href="https://podcasts.apple.com/podcast/%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4/id1579475103?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">苹果Podcast</a>、<a href="https://open.spotify.com/show/73Lr1XBF4VLi3bkQ6xcDjp?dl_branch=1&amp;si=YvXpXCCoT0-pu3FB8aExIw&amp;utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">Spotify</a>及各泛用型播客客户端收听本期播客。新闻实验室播客的RSS地址是：https://feed.xyzfm.space/xxkgbvrglujv</div><div style="margin:0;" class="revue-p">另外，每期播客聊天部分的内容我也会做成视频版，在我的<a href="https://youtube.com/c/fangkecheng?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">YouTube频道</a>上线，欢迎收看和订阅。</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      我最近出现在……
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100" style="vertical-align:top;display:inline-block;font-size:0px;line-height:0px;text-align:left;width:100%;"><!--[if mso | IE]>
+<table  role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#3B424B;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:13px;font-weight: 400;line-height:22px;text-align:left;">
+          <!--[if mso]>
+          <table border="0" cellpadding="0" cellspacing="0" width="140" align="right" style="width:140px;"><tr><td style="padding:0 0 30px 30px;">
+          <![endif]-->
+          <a target="_blank" style="text-decoration: none;" href="https://mp.weixin.qq.com/s/n3wfQN4qzjlE1WfGfODHdA?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">
+            <img width="140" height="140" alt="Citizen沙龙文字整理+PPT | 方可成 x 刘致昕：我们与真相的距离（上）" align="right" style="padding-left: 30px; padding-bottom: 36px;border:none;border-radius:0;outline:none;text-decoration:none;" class="link-image" src="https://s3.amazonaws.com/revue/items/images/010/896/278/thumb/0?1630818399" />
+</a>          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+        <div>
+          <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="https://mp.weixin.qq.com/s/n3wfQN4qzjlE1WfGfODHdA?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">Citizen沙龙文字整理+PPT | 方可成 x 刘致昕：我们与真相的距离（上）</a></div>
+          <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">上周参与的沙龙的文字整理稿。下篇应该会在周一（9月6日）在该公号（Sysiphus公社）推送。</div>
+</div>
+          <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="https://mp.weixin.qq.com/s/n3wfQN4qzjlE1WfGfODHdA?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">mp.weixin.qq.com</a></div>
+        </div>
+      </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      我最近读了……
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100" style="vertical-align:top;display:inline-block;font-size:0px;line-height:0px;text-align:left;width:100%;"><!--[if mso | IE]>
+<table  role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#3B424B;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:13px;font-weight: 400;line-height:22px;text-align:left;">
+          <!--[if mso]>
+          <table border="0" cellpadding="0" cellspacing="0" width="140" align="right" style="width:140px;"><tr><td style="padding:0 0 30px 30px;">
+          <![endif]-->
+          <a target="_blank" style="text-decoration: none;" href="https://mp.weixin.qq.com/s/8-4tRCVq8dEgirO4PMsQ6w?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">
+            <img width="140" height="140" alt="55年没有等到真相，卞仲耘丈夫王晶垚走了" align="right" style="padding-left: 30px; padding-bottom: 36px;border:none;border-radius:0;outline:none;text-decoration:none;" class="link-image" src="https://s3.amazonaws.com/revue/items/images/010/896/252/thumb/0?1630817833" />
+</a>          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+        <div>
+          <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="https://mp.weixin.qq.com/s/8-4tRCVq8dEgirO4PMsQ6w?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">55年没有等到真相，卞仲耘丈夫王晶垚走了</a></div>
+          <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">上周，百岁老人王晶垚去世。他的妻子卞仲耘是“文革”中第一个被学生打死的校长。他在当时拍摄了妻子的遗体，并在此后不断地追寻真相。他说：“我就是要让后来的人看看，这是人类历史上多么黑暗的一页。”</div>
+</div>
+          <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="https://mp.weixin.qq.com/s/8-4tRCVq8dEgirO4PMsQ6w?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">mp.weixin.qq.com</a></div>
+        </div>
+      </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div>
+  <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="http://liferestart.syaro.io/view/index.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">人生重开模拟器</a></div>
+  <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">这是一个有趣的小游戏——其实，与其说是游戏，不如说是随机事件和网络热梗生成器。虽然粗糙，但总能让你产生奇妙的关联感。</div>
+</div>
+  <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="http://liferestart.syaro.io/view/index.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">liferestart.syaro.io</a></div>
+</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">💌</div><div style="margin:0;" class="revue-p">欢迎通过邮箱或者社交媒体分享本期newsletter，你可以分享网址：<a href="https://www.getrevue.co/profile/newslab?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">https://www.getrevue.co/profile/newslab</a> 。也可以分享以下这张图：</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:650px;">
+    <img alt="欢迎转发此图" title="欢迎转发此图" height="auto" src="https://s3.amazonaws.com/revue/items/images/010/896/548/mail/035banner.jpg?1630820224" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="650">
+</td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:16px;" align="center"><div style="cursor:auto;color:#95989C;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight: 400;font-size:13px;line-height:21px;text-align:center;">欢迎转发此图</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">以上就是新闻实验室通过免费newsletter与你的第35次见面。如果你是从朋友转发读到的这封信，记得<a href="https://www.getrevue.co/profile/newslab?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">点这里</a>免费订阅和阅读往期内容，比如上一期的《<a href="https://www.getrevue.co/profile/newslab/issues/034-732150?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">在这个时代，关心真相是一件不合时宜的事情吗？</a>》。</div><div style="margin:0;" class="revue-p">下周再见！</div><div style="margin:0;" class="revue-p">方可成</div><div style="margin:0;" class="revue-p">2021.9.5</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+
+
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center" colspan="2"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:14px;text-align:center;font-weight:400;">Did you enjoy this issue? <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">Yes</a> <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">No</a></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left" width="76" valign="top">
+      <a style="text-decoration: none;" target="_blank" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=profileimage&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">
+        <img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" />
+</a>    </td>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left">
+
+    <div style="cursor:auto;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:16px;text-align:left;font-weight:400;padding-bottom: 8px;">
+      <span style="font-weight:700;">方可成</span>
+      </div>
+    <div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">
+      <p>新闻实验室免费版。
+<br />付费版请见：https://newslab.info/join/</p>
+    </div></td></tr>
+  </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:32px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:40px;padding-top:40px;" align="center"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">In order to unsubscribe, click <a style="color: #6F7379; text-decoration:underline;" href="#">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">If you were forwarded this newsletter and you like it, you can subscribe <a target="_blank" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=forwarded&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:12px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">Created with <a target="_parent" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/?utm_source=新闻实验室&amp;utm_medium=email&amp;utm_content=footerlink&amp;utm_campaign=Issue">Revue by Twitter</a>.</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+
+  </div>
+</body>
+</html>
+</div>
+</div>
+</div>
+<div class='profile-layout-row'>
+<div class='profile-layout-columns'>
+<div class='profile-layout-column profile-layout-column--is-left'>
+<div class='component__profile-subscribe-form component__profile-subscribe-form--is-footer'>
+<h1 title='新闻实验室'>新闻实验室</h1>
+<style>
+  .component__profile-subscribe-form h1 { color: #88B04B }
+  .component__profile-subscribe-form .component__button { background-color: #88B04B; border-color: #88B04B }
+  .component__profile-subscribe-form .component__button:hover { background-color: #88B04B; border-color: #88B04B }
+  .component__form-input input[type=email] { outline-color: #88B04B;}
+</style>
+<form class="new_member" id="iY1WSa17_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="NWwOxPnPmsdRqXh7ZKCJfrPSI45RTuL3N9U3JP3lvDgArDhrTsOW3oA4iMXSVYW4ft6MJykRuyCHfQZcRGdKxA==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-footer" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='profile-form-fields-container'>
+<div class='component__form-input'>
+<input id="member_email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" />
+<p>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</p>
+
+</div>
+<div class='component-form-input-submit'>
+<div class='component__button component__button--is-primary-block'>
+<script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='NRJIOrCTWR7P1XODcMq72w=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="lUjnGcEvCaptchaCallback" class="g-recaptcha " title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+
+
+</div>
+</div>
+
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_YKeCK1" id="confirm_YKeCK1" autocomplete="off" />
+</div>
+
+</form><script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+window["lUjnGcEvCaptchaCallback"] = function() {
+  document.getElementById("iY1WSa17_new_member").submit();
+};
+
+// Show terms field after focus
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById("iY1WSa17_new_member");
+    if (!form) {
+      return;
+    }
+
+    var termsParagraph = form.querySelector('.profile-form-fields-container p');
+    var emailField = form.querySelector('input[name="member[email]"');
+    if (emailField !== null && termsParagraph !== null) {
+      emailField.addEventListener('focus', function() {
+        termsParagraph.classList.add('visible');
+      });
+    }
+  });
+})();
+
+
+//]]>
+</script>
+
+</div>
+
+</div>
+</div>
+</div>
+<div class='component__profile-footer'>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg>
+<div class='footer-links-container'>
+<a target="_blank" href="https://www.getrevue.co/privacy/platform?locale=en&amp;ref=Revue+Profile">Privacy Policy</a>
+&
+<a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a>
+</div>
+</div>
+
+</div>
+<style>
+  .component__profile-subscribe-form--is-modal .modal-body a svg { color: #88B04B; }
+</style>
+<div class='component__profile-subscribe-form component__profile-subscribe-form--is-modal'>
+<div class='modal align-left fade' id='profile-subscribe-modal-form'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-body'>
+<a class='component__profile-subscribe-form__close-button' data-dismiss='modal' href='#'>
+<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11.5" fill="none" /><path fill-rule="evenodd" clip-rule="evenodd" fill="#000000" d="M12 12.812L16.188 17l.812-.812L12.812 12 17 7.812 16.188 7 12 11.188 7.812 7 7 7.812 11.188 12 7 16.188l.812.812L12 12.812z" /></svg>
+
+</a>
+<h1 title='新闻实验室'>新闻实验室</h1>
+<style>
+  .component__profile-subscribe-form h1 { color: #88B04B }
+  .component__profile-subscribe-form .component__button { background-color: #88B04B; border-color: #88B04B }
+  .component__profile-subscribe-form .component__button:hover { background-color: #88B04B; border-color: #88B04B }
+  .component__form-input input[type=email] { outline-color: #88B04B;}
+</style>
+<form class="new_member" id="qfbQHJ36_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="z0mecEMRRD6goxGMgZd3LyKv5+kETNzPLume8Vot42P6iajf9B1IJ3Ey4TI3Ynvp76NIQHwThRieQa+J468Vnw==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-modal" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='profile-form-fields-container'>
+<div class='component__form-input'>
+<input id="member_email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" />
+<p>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</p>
+
+</div>
+<div class='component-form-input-submit'>
+<div class='component__button component__button--is-primary-block'>
+<script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='NRJIOrCTWR7P1XODcMq72w=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="cZkWJkTvCaptchaCallback" class="g-recaptcha " title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+
+
+</div>
+</div>
+
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_1aL10P" id="confirm_1aL10P" autocomplete="off" />
+</div>
+
+</form><script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+window["cZkWJkTvCaptchaCallback"] = function() {
+  document.getElementById("qfbQHJ36_new_member").submit();
+};
+
+// Show terms field after focus
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById("qfbQHJ36_new_member");
+    if (!form) {
+      return;
+    }
+
+    var termsParagraph = form.querySelector('.profile-form-fields-container p');
+    var emailField = form.querySelector('input[name="member[email]"');
+    if (emailField !== null && termsParagraph !== null) {
+      emailField.addEventListener('focus', function() {
+        termsParagraph.classList.add('visible');
+      });
+    }
+  });
+})();
+
+
+//]]>
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script nonce="NRJIOrCTWR7P1XODcMq72w==">
+//<![CDATA[
+mixpanel.register({'profile_page_new_design': true});
+mixpanel.track('Profile viewed', {
+  'profile' : "新闻实验室",
+  'profile_id' : "172257",
+  'Last page': getReferrer()
+}, function() {
+  mixpanel.register({"First time": false});
+});
+
+
+//]]>
+</script>
+
+<div class='cookie-notice cookie-notice--show'>
+<p class='cookie-notice__message'>By using the Revue Service, you agree to our cookie use in our <a class="cookie-notice__link" href="https://www.getrevue.co/privacy">Website Privacy Policy</a> or <a class="cookie-notice__link" href="https://www.getrevue.co/privacy/platform">Platform Privacy Policy</a>. We use cookies for purposes, including analytics and personalization.</p>
+<a id="hideCookieNotice" class="btn btn-sm cookie-notice__button" href="#">OK</a>
+</div>
+
+</body>
+</html>
