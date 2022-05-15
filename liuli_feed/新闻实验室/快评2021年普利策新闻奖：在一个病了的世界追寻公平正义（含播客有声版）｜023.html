@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title dir='ltr'>快评2021年普利策新闻奖：在一个病了的世界追寻公平正义（含播客有声版）｜023 | Revue</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='新闻实验室 - 疫情、种族主义，还有一位获得“特别贡献奖”的18岁少女。' name='description'>
+<meta content='newsletter, email, digest, curation' name='keywords'>
+<!--[if lt IE 9]>
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/html5shiv-bb669dd537dfdfb80f5581532f95e3d93d4e161976d46f6a8ea5c49c57cafbc8.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="all" href="//d3jbm9h03wxzi9.cloudfront.net/assets/application-4eeb1b015e3c86cc20dbdc72a26232e7574974f39c773bc496318055f4845771.css" nonce="TbqQyoGWH5bgLC5QdKojeQ==" />
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/application-989b33e0ccddb3384b2987632d5a790c45139d7bd4a857507860f6eeeea1fca1.js" nonce="TbqQyoGWH5bgLC5QdKojeQ==" defer="defer"></script>
+<script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+  I18n.defaultLocale = "en";
+  I18n.locale = "en";
+});
+
+
+
+//]]>
+</script><link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='16x16'>
+<link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='32x32'>
+<link color='#E15718' href='//d3jbm9h03wxzi9.cloudfront.net/assets/icon-3ef15b89ab8676cd48dac6b7878bbc0e564d4e4167ea590f1f49d8e596d1ee4b.svg' rel='mask-icon'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="UbJLtM2H0FKG2Z8fAst7mb3Vko8KWWWYYSHX06r6tl7HpCShZs6gRzCr6zRfLeUBllco5UzYa6RdYLn4CFgbvQ==" />
+<meta name="csp-nonce" content="TbqQyoGWH5bgLC5QdKojeQ==" />
+
+<script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+  function getQueryParam(url, param) {
+    // Expects a raw URL
+    param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + param + "=([^&#]*)",
+    regex = new RegExp( regexS ),
+    results = regex.exec(url);
+    if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+      return '';
+    } else {
+      return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+    }
+  };
+
+  function geUtmParams() {
+    var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
+    , kw = ''
+    , params = {}
+    , first_params = {}
+    , result = {};
+
+    var index;
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        params[campaign_keywords[index] + ' [last touch]'] = kw;
+      }
+    }
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        first_params[campaign_keywords[index]] = kw;
+      }
+    };
+
+    result.first_params = first_params;
+    result.params = params;
+
+    return result;
+  }
+
+  function extractReferrer(referrer) {
+    campaign = geUtmParams().first_params["utm_campaign"];
+    ref = getQueryParam(document.URL, 'ref');
+
+    if(!campaign && !ref) {
+      if (/www\.getrevue\.co\/profile\/(.*?)\/issue/.test(window.location.href)) {
+        return 'Revue Profile Issue'
+      } else if(/www\.getrevue\.co\/profile/.test(window.location.href)) {
+        return 'Revue Profile'
+      }
+    }
+
+    if(!!campaign) {
+      return campaign;
+    } else if (referrer.search('https?://(.*)google.([^/?]*)') === 0) {
+      return 'Google';
+    } else if (referrer.search('https?://(.*)bing.([^/?]*)') === 0) {
+      return 'Bing';
+    } else if (referrer.search('https?://(.*)yahoo.([^/?]*)') === 0) {
+      return 'Yahoo';
+    } else if (referrer.search('https?://(.*)facebook.([^/?]*)') === 0) {
+      return 'Facebook';
+    } else if (referrer.search('https?://(.*)twitter.([^/?]*)') === 0 || referrer.search('https?://(.*)t.co/') === 0) {
+      return 'Twitter';
+    } else if (referrer.search('https?://(.*)linkedin.([^/?]*)') === 0) {
+      return 'LinkedIn'
+    } else if (referrer == '$direct' || (!referrer || /^\s*$/.test(referrer))) {
+      return '$direct';
+    } else if (referrer.search('https?://(.*)getrevue.co') == 0) {
+      if(/\/app\//.test(referrer)) {
+        return 'Revue App';
+      } else if (/\/profile\/(.*?)\/issue/.test(referrer)) {
+        return 'Revue Profile Issue'
+      } else if (/\/profile\//.test(referrer)) {
+        return 'Revue Profile'
+      } else if (/blog\.getrevue\.co/.test(referrer)) {
+        return 'Revue Blog'
+      } else {
+        return 'Revue Page'
+      }
+    } else if (referrer.search('https?://(.*)rev.vu([^/?]*)') === 0) {
+      return 'Revue Item';
+    } else if (!!ref) {
+      return ref;
+    } else {
+      tld = new RegExp('\.(asn\.au|com\.au|net\.au|id\.au|org\.au|edu\.au|gov\.au|csiro\.au|act\.au|nsw\.au|nt\.au|qld\.au|sa\.au|tas\.au|vic\.au|wa\.au|co\.at|or\.at|priv\.at|ac\.at|avocat\.fr|aeroport\.fr|veterinaire\.fr|co\.hu|film\.hu|lakas\.hu|ingatlan\.hu|sport\.hu|hotel\.hu|ac\.il|co\.il|org\.il|net\.il|k12\.il|gov\.il|muni\.il|idf\.il|ac\.za|gov\.za|law\.za|mil\.za|nom\.za|school\.za|net\.za|co\.uk|org\.uk|me\.uk|ltd\.uk|plc\.uk|net\.uk|sch\.uk|ac\.uk|gov\.uk|mod\.uk|nhs\.uk|police\.uk)')
+      a = document.createElement('a');
+      a.href = referrer;
+      ref = a.hostname;
+      if(tld.test(ref)) {
+        return ref.replace(tld, '').split('.').pop()
+      } else {
+        return ref.split('.').reverse()[1];
+      }
+    }
+  };
+
+  function getReferrer() {
+    ref = document.referrer;
+    return extractReferrer(ref);
+  }
+
+  function mixpanelLoaded() {
+    try {
+      // Set ref
+      initial_ref = mixpanel.get_property('$initial_referrer');
+      mixpanel.register_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"$created": new Date().toISOString()});
+
+      // Set distinct id
+      var member_distinct_id_element = document.querySelector('#member_distinct_id');
+      member_distinct_id_element.value = mixpanel.get_distinct_id();
+    } catch(e) {}
+  };
+
+//]]>
+</script>
+<script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("2087bc32dd14049d6de8a339112517d9", {loaded: mixpanelLoaded, ip: false});
+//]]>
+</script>
+
+<script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+  var utm = geUtmParams();
+  mixpanel.register(utm.params);
+
+//]]>
+</script>
+<meta content='86400' property='twitter:maxage'>
+<meta content='171913' property='twitter:revue:account:id'>
+<meta content='新闻实验室' property='twitter:newsletter:title'>
+<meta content='新闻实验室免费版。
+付费版请见：https://newslab.info/join/' property='twitter:newsletter:description'>
+<meta content='https://www.getrevue.co/profile/newslab?via=twitter-card' property='twitter:newsletter:profile:url'>
+<meta content='true' property='twitter:newsletter:issue:card'>
+<meta content='https://imgix.revue.co/profiles/images/000/172/257/original/log520.png?ixlib=rails-3.1.0' property='twitter:newsletter:image:src'>
+<meta content='快评2021年普利策新闻奖：在一个病了的世界追寻公平正义（含播客有声版）｜023' property='twitter:issue:title'>
+<meta content='🎙【本期有声版】和上期一样，我也用小宇宙的试播集制作功能录制了一个有声版，如果你更想用声音的方式听我讲这一期的内容，请点击这里🔊。欢迎反馈！' property='twitter:issue:description'>
+<meta content='13' property='twitter:issue:number'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/2021-023-645241?via=twitter-card' property='twitter:issue:url'>
+<meta content='https://revue-direct.imgix.net/cache/7b05a531703964a547228a001c2c2537/ee1b689a6bd604de197ba7f1e0e5d9aa.jpeg?ixlib=rails-3.1.0' property='twitter:issue:image:src'>
+<meta content='29942836' property='twitter:user:id'>
+<meta content='summary_large_image' property='twitter:card'>
+<meta content='@revue' property='twitter:site'>
+<meta content='1073732649320413' property='fb:app_id'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/2021-023-645241' property='og:url'>
+<meta content='article' property='og:type'>
+<meta content='快评2021年普利策新闻奖：在一个病了的世界追寻公平正义（含播客有声版）｜023' property='og:title'>
+<meta content='🎙【本期有声版】和上期一样，我也用小宇宙的试播集制作功能录制了一个有声版，如果你更想用声音的方式听我讲这一期的内容，请点击这里🔊。欢迎反馈！' property='og:description'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/264/132/original/issue_image_645241.jpg?1623491572' property='twitter:image'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/264/132/original/issue_image_645241.jpg?1623491572' property='og:image'>
+<meta content='https://s3.amazonaws.com/revue/items/images/009/655/853/original/Frazier.jpg?1623484013' property='og:image'>
+<meta content='https://s3.amazonaws.com/revue/items/images/009/655/998/original/023banner.jpeg?1623485912' property='og:image'>
+
+
+</head>
+<body class='profiles archive' data-page='ProfilesArchive'>
+<script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58968534-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+//]]>
+</script>
+<style>
+  #profile-nav {border-color: #88B04B !important;}
+  #profile-nav.expanded svg {fill: #88B04B !important;}
+  #nav-back {color: #88B04B !important;}
+  #nav-back:after {border-color: #88B04B !important;}
+  #profile-logo {background-color: #88B04B !important;}
+  .subscribe-form__submit {background-color: #88B04B !important;}
+  section#premium a {color: #B0632E !important;}
+  ::-moz-selection {background-color: #88B04B !important;}
+  ::selection {background-color: #88B04B !important;}
+</style>
+<div id='profile-nav'>
+<a id="nav-back" href="https://www.getrevue.co/profile/newslab">View profile</a>
+<a id="profile-logo" href="https://www.getrevue.co/?ref=Revue+Profile"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg>
+</a></div>
+
+<article id='issue-holder'>
+<form class="subscribe-form" id="EWGpcV1e_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="SPQ5sTdIDI4tt7VwN7ZCFN5p/HRnR4IFw97ybZssASLe4laknAF8m5vFwVtqUNyM9etGHiHGjDn/n5xGOY6swQ==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-header" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='TbqQyoGWH5bgLC5QdKojeQ=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="xpNlLbzoCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_gSyC37" id="confirm_gSyC37" autocomplete="off" />
+</div>
+
+</form><script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+mixpanel.register({'profile_page_new_design': false});
+mixpanel.track('Profile viewed', {
+  'profile' : "新闻实验室",
+  'profile_id' : "172257",
+  'Last page': getReferrer()
+}, function() {
+  mixpanel.register({"First time": false});
+});
+
+
+
+//]]>
+</script><script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+window["xpNlLbzoCaptchaCallback"] = function() {
+  document.getElementById("EWGpcV1e_new_member").submit();
+};
+
+
+//]]>
+</script>
+<section id='issue'>
+<section id='issue-display'>
+<header>
+<span class='issue-nr'></span>
+<time datetime='2021-06-12T17:53:04+08:00'>Jun 12, 2021</time>
+<h1 title='新闻实验室 - 快评2021年普利策新闻奖：在一个病了的世界追寻公平正义（含播客有声版）｜023'>快评2021年普利策新闻奖：在一个病了的世界追寻公平正义（含播客有声版）｜023</h1>
+</header>
+<div id='issue-frame'><!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <title></title>
+  <!--[if !mso]><!-- -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+  #outlook a { padding: 0; }
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height:100%; }
+  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  p { display: block; padding: 0; margin: 0; margin-bottom: 0; }
+  .revue-p + .revue-p, .revue-p + .revue-blockquote {margin-top: 14px !important;}
+  .revue-p + .revue-h2, .revue-h2 + .revue-p, .revue-ul + .revue-h2, .revue-h2 + .revue-ul, .revue-ol + .revue-h2, .revue-h2 + .revue-ol  {margin-top: 14px !important;}
+  .revue-h2 {font-size:20px;line-height:28px;font-weight:700;padding-bottom:0px !important;}
+  [class*="revue-p"] + [class*="revue-p"], [class*="revue-p"] + [class*="revue-blockquote"] {margin-top: 14px !important;}
+  [class*="revue-p"] + [class*="revue-h2"] {margin-top: 14px !important;}
+</style>
+<!--[if !mso]><!-->
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+    @-ms-viewport { width:320px; }
+    @viewport { width:320px; }
+  }
+</style>
+<!--<![endif]-->
+<!--[if mso]>
+<style type="text/css">
+  .revue-p,
+  .revue-h2,
+  .revue-ul,
+  .revue-ol,
+  .revue-blockquote {margin-bottom: 14px !important;}
+</style>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if lte mso 11]>
+<style type="text/css">
+  .outlook-group-fix {
+    width:100% !important;
+  }
+</style>
+<![endif]-->
+<style type="text/css">
+  @media only screen and (min-width:480px) {
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-25 { width:25.9259259259%!important; }
+    .mj-column-per-74 { width:74.0740740741%!important; }
+    .mj-column-per-50 { width:50%!important; }
+    .mj-column-per-60 { width:60%!important; }
+    .mj-column-per-20 { width:20%!important; }
+  }
+
+  @media screen and (max-width:600px) {
+    .title-text{font-size:14px !important; line-height:20px !important;}
+    .title-image{width:44px !important;height:44px !important;}
+    .indented {padding-left: 8px !important; padding-right: 8px !important;}
+    .link-image {width: 112px !important;}
+    .header-text {font-size: 22px !important; line-height: 32px !important;}
+    .revue-h2 {font-size:18px !important; line-height: 24px !important;}
+    .introduction-subject {font-size: 24px !important; line-height: 24px !important;}
+    .introduction-spacer {padding: 30px 0 !important;}
+    .link-title {font-size: 18px !important; line-height: 24px !important;}
+    .text-default,
+    .link-description {font-size: 14px !important; line-height: 22px !important;}
+    .link-url {font-size: 13px !important;}
+    .text-small {font-size:12px !important;}
+  }
+</style>
+</head>
+<body>
+  <div>
+    <div id="preheader" style="display:none;font-size:1px;color:#FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">疫情、种族主义，还有一位获得“特别贡献奖”的18岁少女。 </div>
+
+    
+    
+    
+    
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;" class="indented"><div style="cursor:auto;color:#657786;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:12px;line-height:22px;text-align:center;font-weight:400;" class="text-small"><a target="_blank" style="color: #657786;text-decoration:underline;" href="https://www.getrevue.co/profile/newslab/issues/2021-023-645241?utm_campaign=Issue&amp;utm_content=view_in_browser&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">View online</a></div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
+
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;padding-bottom:28px;" class="indented">
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-right:12px;" width="56">
+<a target="_blank" href="https://www.getrevue.co/profile/newslab">
+<img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" class="title-image" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" /></a></td>
+<td><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody>
+<tr><td><div style="cursor:auto;color:#14171A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:22px;text-align:left;font-weight:700;" class="title-text">方可成</div></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+
+    
+
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented" colspan="2"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;" class="text-default"><div style="margin:0;" class="revue-p">疫情、种族主义，还有一位获得“特别贡献奖”的18岁少女。</div>
+
+  </div></td></tr>
+  <tr><td style="word-break:break-word;font-size:0px;padding:40px 0px;" class="introduction-spacer"><p style="font-size:1px;border-top:1px solid #E1E1E1;width:100%"></p><!--[if mso | IE]><table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" style="font-size:1px;margin:40px auto;border-top:1px solid #E1E1E1;width:100%;" width="30"><tr><td style="height:0;line-height:0;"> </td></tr></table><![endif]--></td></tr>
+  </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr>
+</tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+
+    
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p"><strong>🎙【本期有声版】</strong></div><div style="margin:0;" class="revue-p">和上期一样，我也用小宇宙的试播集制作功能录制了一个有声版，如果你更想用声音的方式听我讲这一期的内容，<a href="https://www.xiaoyuzhoufm.com/episode/60c483667fbe65d3272375fd?s=eyJ1IjogIjVlN2M5MzcyYjNjNWJjYTVmNjQxNGE0NyJ9&amp;utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">请点击这里</a>🔊。欢迎反馈！</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      亲爱的朋友：
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">美国当地时间6月11日，第105届普利策奖公布，从去年的报道中选出了优胜者。往常，普利策奖都是4月颁发，今年推迟了2个月，就是因为疫情的影响。18名评委坚持要在线下见面开会讨论，而4月份之前鉴于美国的疫情情况，很难做到，所以就推迟到了现在。</div><div style="margin:0;" class="revue-p">遵循新闻实验室的传统，我们继续对今年的普利策新闻奖做一番快评，随后也会在会员通讯中提供更为详尽的解读，想要阅读的话就<a href="https://newslab.info/join/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">尽快加入会员</a>吧～往年的解读请点链接：<a href="https://newslab.info/2020/05/2020-pulitzer/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">2020年</a>，<a href="https://newslab2020.github.io/Collection/%E6%96%B0%E9%97%BB%E8%A1%8C%E4%B8%9A/%5B%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4%5D%20-%202019-04-16%20%E5%BF%AB%E8%AF%842019%E5%B9%B4%E6%99%AE%E5%88%A9%E7%AD%96%E6%96%B0%E9%97%BB%E5%A5%96%EF%BC%9A%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%9A%B4%E5%8A%9B%E7%9A%84%E5%B9%B4%E4%BB%A3%E9%87%8C%E5%9D%9A%E6%8C%81%E8%AF%B4%E5%87%BA%E7%9C%9F%E7%9B%B8.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">2019年</a>，<a href="https://newslab2020.github.io/Collection/%E6%96%B0%E9%97%BB%E8%A1%8C%E4%B8%9A/%5B%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4%5D%20-%202018-04-17%20%E5%BF%AB%E8%AF%842018%E5%B9%B4%E6%99%AE%E5%88%A9%E7%AD%96%E6%96%B0%E9%97%BB%E5%A5%96.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">2018年</a>。</div><div style="margin:0;" class="revue-p">首先，每年的普利策奖有那么多奖项，先看哪个呢？一般认为，其中最重磅的奖项是<strong>“公共服务奖”（Public Service）</strong>，获奖的不能是个人，只能是团队。</div><div style="margin:0;" class="revue-p">今年获得这个大奖的是《纽约时报》，<a href="https://www.pulitzer.org/winners/new-york-times-6?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">获奖作品</a>是他们对新冠疫情的持续报道。鉴于疫情是2020年全世界的主题，这个奖项并不意外。但值得我们关注的是，所有媒体都在做疫情报道，甚至可以说2020年的大部分新闻都和疫情有关，那么《纽约时报》的报道过人之处在哪呢？或者说，普利策奖的评委们看重的究竟是报道的哪些角度、哪些面向呢？</div><div style="margin:0;" class="revue-p">我们可以从颁奖词里面找到答案。评委们强调了三个要点。</div><div style="margin:0;" class="revue-p">第一，《纽约时报》的报道暴露了<strong>疫情之下的不平等</strong>。的确，穷人和富人，白领和农民工，老人和年轻人，白人和黑人，发达国家的人和发展中国家的人，大家在面对同一种病毒的时候，其实受到的影响是极为不同的：感染的机率不同，感染之后的死亡率不同，失业的概率不同，生活受到的冲击不同……新冠疫情让这个世界早已存在的不平等被暴露得更加明显。《纽约时报》在这方面的代表作品就是对疫情之下种族不平等的<a href="https://www.nytimes.com/interactive/2020/07/05/us/coronavirus-latinos-african-americans-cdc-data.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">互动式报道</a>。</div><div style="margin:0;" class="revue-p">第二，《纽约时报》的报道揭露了<strong>美国和其他国家政府在应对上的失败</strong>。这方面最震撼的当然就是5月24日整个<a href="https://www.pulitzer.org/cms/sites/default/files/content/an_incalculable_loss_-_the_new_york_times_0.pdf?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">头版</a>上密密麻麻的新冠疫情死难者名单。此外还有<a href="https://www.nytimes.com/2020/03/28/us/testing-coronavirus-pandemic.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">报道</a>揭露美国早期的检测失败导致延误了一个月的宝贵时间。</div><div style="margin:0;" class="revue-p">第三，《纽约时报》的报道提供了<strong>大量的数据</strong>，让地方政府、医护人员、商家以及个体可以更好地做好准备和防护措施。的确，他们做了非常多的数据新闻报道，比如对养老院感染和死亡情况的<a href="https://www.nytimes.com/interactive/2020/us/coronavirus-nursing-homes.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">统计</a>，对大学疫情情况的<a href="https://www.nytimes.com/interactive/2021/us/college-covid-tracker.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">追踪</a>，对居民附近ICU病房使用率的<a href="https://www.nytimes.com/interactive/2020/us/covid-hospitals-near-you.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">追踪</a>。</div><div style="margin:0;" class="revue-p">如果我们继续看其他奖项的分布就会发现，这次普利策奖的最大重点其实还不是疫情，而是<strong>社会正义（social justice）</strong>。</div><div style="margin:0;" class="revue-p">普利策新闻奖是美国的奖项，所以他们最关注的当然是美国的社会正义问题。2020年，黑人乔治·弗洛伊德之死引发了美国历史上最大规模的群众抗议运动，其核心议题是<strong>种族主义和警察暴力问题</strong>。</div><div style="margin:0;" class="revue-p">在今年的普利策奖名单上，与这两个议题相关的获奖作品包括：</div><ul class="revue-ul">
+<li style="margin:0;">明尼苏达州的《明星论坛报》对乔治·弗洛伊德之死的报道获得<a href="https://www.pulitzer.org/winners/staff-star-tribune-minneapolis-minn?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">突发新闻奖</a>，这个事件就发生在明尼苏达，这家当地媒体可以说是不辱使命了；</li>
+<li style="margin:0;">美联社的摄影记者对随后发生的抗议活动的报道获得<a href="https://www.pulitzer.org/winners/photography-staff-associated-press?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">突发新闻摄影奖</a>，这组摄影记者里还包括一位从业30多年的华裔新闻摄影记者，名叫赵汉荣；</li>
+<li style="margin:0;">路透社记者通过分析美国联邦法院的判决，解释了警察为什么在过度使用暴力之后往往可以被免于起诉，这组报道获得了<a href="https://www.pulitzer.org/winners/andrew-chung-lawrence-hurley-andrea-januta-jaimi-dowdell-and-jackie-botts-reuters?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">解释性报道奖</a>；</li>
+<li style="margin:0;">由非营利媒体The Marshall Project和其他多家团队合作的对警犬暴力的调查，获得了<a href="https://www.pulitzer.org/winners/staffs-marshall-project-alcom-birmingham-indystar-indianapolis-and-invisible-institute?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">国内报道奖</a>；</li>
+<li style="margin:0;">一家跑步专业杂志《Runner’s World》详细报道了一名手无寸铁的25岁黑人男性在家附近跑步的时候，被两名白人男子怀疑是小偷，进而被枪杀，这篇报道获得了<a href="https://www.pulitzer.org/winners/mitchell-s-jackson-freelance-contributor-runners-world?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">特稿写作奖</a>；</li>
+<li style="margin:0;">佛罗里达州的《坦帕湾时报》获得了<a href="https://www.pulitzer.org/winners/kathleen-mcgrory-and-neil-bedi-tampa-bay-times?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">地方报道奖</a>，获奖作品揭露了一个地方警长是怎样监控和骚扰当地居民的；</li>
+<li style="margin:0;">《洛杉矶时报》关于警察、监狱等刑事司法制度的一系列<a href="https://www.pulitzer.org/winners/robert-greene-los-angeles-times?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">社论</a>获得了社论写作奖；</li>
+<li style="margin:0;">弗吉尼亚州的《里士满时报》获得了<a href="https://www.pulitzer.org/winners/michael-paul-williams-richmond-va-times-dispatch?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">评论奖</a>，里士满在美国内战时期是主张维护奴隶制的南方邦联首都，所以城市里面有很多邦联时期人物雕像，去年很多雕像被推倒，因为它们象征着白人至上主义，这篇获奖作品就是评论这一事件；</li>
+<li style="margin:0;">《纽约时报》的文化批评作者Wesley Morris获得了<a href="https://www.pulitzer.org/winners/wesley-morris-new-york-times?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">批评奖</a>，他的获奖作品讨论的是美国的种族和文化问题。</li>
+</ul><div style="margin:0;" class="revue-p">尤其值得一提的是，今年普利策奖还颁发了一个<strong>“特别贡献奖”（special citation）</strong>，颁给了18岁的少女Darnella Frazier。她并不是记者，而是一名用手机拍下了弗洛伊德死亡过程的路人。她拍摄的这段视频随后引发了撼动整个美国的反响。</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:650px;">
+    <img alt="Darnella Frazier和她拍摄的视频截图" title="Darnella Frazier和她拍摄的视频截图" height="auto" src="https://s3.amazonaws.com/revue/items/images/009/655/853/mail/Frazier.jpg?1623484013" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="650">
+</td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:16px;" align="center"><div style="cursor:auto;color:#95989C;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight: 400;font-size:13px;line-height:21px;text-align:center;">Darnella Frazier和她拍摄的视频截图</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">普利策奖的评委说，这段视频显示了，<strong>在记者们追寻真相和正义的过程中，公民能够扮演重要的角色。</strong>的确，很难说这个女生是所谓的“公民记者”，但她对那一刻的勇敢记录，让她的作用没有任何记者能够替代。</div><div style="margin:0;" class="revue-p">所以，看了以上的名单，如果让我来总结2021年的普利策新闻奖获奖名单的话，那就是：在一个病了的世界追寻公平正义。</div><div style="margin:0;" class="revue-p">最后来说说三家首次捧得普利策的著名新闻机构。</div><div style="margin:0;" class="revue-p">首先是美国国家公共广播电台（NPR），他们获奖的是播客节目《<a href="https://www.npr.org/podcasts/510356/no-compromise?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">No Compromise</a>》。这个叙事型播客系列一共有7集，讲述了美国的一个右翼拥枪团体如何利用社交媒体来开展运动，试图达到废除一切枪支管理规定的目标。我们知道，NPR出品了非常多优质的播客，为什么今年才首次得到普利策呢？那是因为，去年普利策奖才新增“音频报道奖”这个类别，当时获得这个奖项的是知名叙事型播客《This American Life》。</div><div style="margin:0;" class="revue-p">然后是《大西洋月刊》，他们的科学记者Ed Yong凭借一系列对新冠疫情的<a href="https://www.pulitzer.org/winners/ed-yong-atlantic?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">科学报道</a>获得了解释性报道奖。这个结果可谓是毫不意外，去年他的这些报道在美国乃至全世界都获得了广泛的赞誉。当然了，你可能又会问了：《大西洋月刊》是一份非常老牌的杂志，创刊于1857年，为什么这次才第一次获得普利策奖？原因是：普利策奖本来是只对报纸开放，不对杂志开放的。曾经，报纸和杂志的内容和风格的确很不一样，但现在这个网络时代，它们之间的界限越来越模糊，所以从2017年开始，杂志也可以参与所有奖项的争夺，今年不过是第5个年头。</div><div style="margin:0;" class="revue-p">最后是BuzzFeed News，获得了<a href="https://www.pulitzer.org/winners/megha-rajagopalan-alison-killing-and-christo-buschek-buzzfeed-news?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">国际报道奖</a>。BuzzFeed是一家从猫猫狗狗图片、心理测试题起家的流量型网站，但是10年前，也就是2011年开始，他们<a href="https://newslab2020.github.io/Collection/%E5%88%9B%E6%96%B0%E5%89%8D%E6%B2%BF/%5B%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4%5D%20-%202014-09-22%20BuzzFeed%EF%BC%9A%E6%8A%80%E6%9C%AF%E5%85%AC%E5%8F%B8%E5%81%9A%E4%B8%A5%E8%82%83%E6%96%B0%E9%97%BB%EF%BC%8C%E9%9D%A0%E8%B0%B1%E5%90%97%EF%BC%9F.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">成立</a>了BuzzFeed News这个做严肃新闻报道的分部门，并且邀请了大牌记者加盟。10年之后的今天，终于第一次捧得普利策。</div><div style="margin:0;" class="revue-p">一不小心，这次的免费newsletter写得很长——谈到普利策奖这个话题，总是容易停不下来。不过，以上都还只是算“快评”而已，接下来在新闻实验室会员专属的会员通讯里面，我还会再详细介绍其中的一些作品，比如Ed Yong精彩的科学报道到底是怎么做的，比如那个获得特别贡献奖的18岁女孩又有着怎样的故事。如果有兴趣阅读的话，记得<a href="https://newslab.info/join/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">点这里加入会员计划</a>～</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      我最近读了……
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100" style="vertical-align:top;display:inline-block;font-size:0px;line-height:0px;text-align:left;width:100%;"><!--[if mso | IE]>
+<table  role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#3B424B;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:13px;font-weight: 400;line-height:22px;text-align:left;">
+          <!--[if mso]>
+          <table border="0" cellpadding="0" cellspacing="0" width="140" align="right" style="width:140px;"><tr><td style="padding:0 0 30px 30px;">
+          <![endif]-->
+          <a target="_blank" style="text-decoration: none;" href="https://mp.weixin.qq.com/s/fOoVbfyE2ybrrJeBLUj9OQ?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">
+            <img width="140" height="140" alt="塑料布拦住了高铁" align="right" style="padding-left: 30px; padding-bottom: 36px;border:none;border-radius:0;outline:none;text-decoration:none;" class="link-image" src="https://s3.amazonaws.com/revue/items/images/009/655/863/thumb/0?1623484187" />
+</a>          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+        <div>
+          <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="https://mp.weixin.qq.com/s/fOoVbfyE2ybrrJeBLUj9OQ?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">塑料布拦住了高铁</a></div>
+          <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">五一假期的时候，北京西站几十趟列车停运，引发混乱和不便。当很多人已经淡忘此事的时候，中青报冰点周刊报道了背后的故事。在不动声色的讲述中，我们能读到不断延伸的高铁对沿线居民生活的改变，以及相关的安全管理问题。这是一个典型的“冰点”选题：当热点过去之后，关注那些被遗忘但重要的故事。</div>
+</div>
+          <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="https://mp.weixin.qq.com/s/fOoVbfyE2ybrrJeBLUj9OQ?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">mp.weixin.qq.com</a></div>
+        </div>
+      </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100" style="vertical-align:top;display:inline-block;font-size:0px;line-height:0px;text-align:left;width:100%;"><!--[if mso | IE]>
+<table  role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#3B424B;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:13px;font-weight: 400;line-height:22px;text-align:left;">
+          <!--[if mso]>
+          <table border="0" cellpadding="0" cellspacing="0" width="140" align="right" style="width:140px;"><tr><td style="padding:0 0 30px 30px;">
+          <![endif]-->
+          <a target="_blank" style="text-decoration: none;" href="https://www.theatlantic.com/magazine/archive/2021/07/george-packer-four-americas/619012/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">
+            <img width="140" height="140" alt="George Packer: The Four Americas - The Atlantic" align="right" style="padding-left: 30px; padding-bottom: 36px;border:none;border-radius:0;outline:none;text-decoration:none;" class="link-image" src="https://s3.amazonaws.com/revue/items/images/009/655/896/thumb/original.jpg?1623484719" />
+</a>          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+        <div>
+          <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="https://www.theatlantic.com/magazine/archive/2021/07/george-packer-four-americas/619012/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">George Packer: The Four Americas - The Atlantic</a></div>
+          <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">《大西洋月刊》的这篇长文揭示了美国社会的分裂——存在四个不同的美国。它们分别是：强调个人自由、反对政府干预的“自由美国”；高教育水平、高收入、不跟其他阶层来往的“聪明美国”；白人基督教民族主义者“真实美国”；关心社会公平问题和身份政治的年轻人组成的“公正美国”。</div>
+</div>
+          <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="https://www.theatlantic.com/magazine/archive/2021/07/george-packer-four-americas/619012/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">www.theatlantic.com</a></div>
+        </div>
+      </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      特别推荐
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100" style="vertical-align:top;display:inline-block;font-size:0px;line-height:0px;text-align:left;width:100%;"><!--[if mso | IE]>
+<table  role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#3B424B;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:13px;font-weight: 400;line-height:22px;text-align:left;">
+          <!--[if mso]>
+          <table border="0" cellpadding="0" cellspacing="0" width="140" align="right" style="width:140px;"><tr><td style="padding:0 0 30px 30px;">
+          <![endif]-->
+          <a target="_blank" style="text-decoration: none;" href="https://mp.weixin.qq.com/s/0VUbjMbUCjomL7dL2LhaVQ?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">
+            <img width="140" height="140" alt="我们做了一套表情包！给你更善意的聊天环境～" align="right" style="padding-left: 30px; padding-bottom: 36px;border:none;border-radius:0;outline:none;text-decoration:none;" class="link-image" src="https://s3.amazonaws.com/revue/items/images/009/655/938/thumb/0?1623485136" />
+</a>          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+        <div>
+          <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="https://mp.weixin.qq.com/s/0VUbjMbUCjomL7dL2LhaVQ?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">我们做了一套表情包！给你更善意的聊天环境～</a></div>
+          <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">放晴公园出品了一套可爱的表情包，背后的理念是：信任、倾听、关爱，以及非暴力沟通。我们希望这套表情包可以促进更好的人际交流，给聊天带来一点阳光。</div>
+</div>
+          <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="https://mp.weixin.qq.com/s/0VUbjMbUCjomL7dL2LhaVQ?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">mp.weixin.qq.com</a></div>
+        </div>
+      </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">💌</div><div style="margin:0;" class="revue-p">欢迎通过邮箱或者社交媒体分享本期newsletter，你可以分享网址：<a href="https://www.getrevue.co/profile/newslab%20?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">https://www.getrevue.co/profile/newslab</a> 。也可以分享以下这张图：</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:650px;">
+    <img alt="" title="" height="auto" src="https://s3.amazonaws.com/revue/items/images/009/655/998/mail/023banner.jpeg?1623485912" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="650">
+</td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:16px;" align="center"><div style="cursor:auto;color:#95989C;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight: 400;font-size:13px;line-height:21px;text-align:center;"></div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">以上就是新闻实验室通过免费newsletter与你的第23次见面。如果你是从朋友转发读到的这封信，记得<a href="https://www.getrevue.co/profile/newslab?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">点这里</a>免费订阅和阅读往期内容，比如上一期的《<a href="https://www.getrevue.co/profile/newslab/issues/022-637185?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">短视频是“猪食”吗？</a>》</div><div style="margin:0;" class="revue-p">下周再见！</div><div style="margin:0;" class="revue-p">方可成</div><div style="margin:0;" class="revue-p">2021.6.12</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+
+
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center" colspan="2"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:14px;text-align:center;font-weight:400;">Did you enjoy this issue? <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">Yes</a> <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">No</a></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left" width="76" valign="top">
+      <a style="text-decoration: none;" target="_blank" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=profileimage&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">
+        <img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" />
+</a>    </td>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left">
+
+    <div style="cursor:auto;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:16px;text-align:left;font-weight:400;padding-bottom: 8px;">
+      <span style="font-weight:700;">方可成</span>
+      </div>
+    <div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">
+      <p>新闻实验室免费版。
+<br />付费版请见：https://newslab.info/join/</p>
+    </div></td></tr>
+  </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:32px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:40px;padding-top:40px;" align="center"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">In order to unsubscribe, click <a style="color: #6F7379; text-decoration:underline;" href="#">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">If you were forwarded this newsletter and you like it, you can subscribe <a target="_blank" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=forwarded&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:12px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">Created with <a target="_parent" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/?utm_source=新闻实验室&amp;utm_medium=email&amp;utm_content=footerlink&amp;utm_campaign=Issue">Revue by Twitter</a>.</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+
+  </div>
+</body>
+</html></div>
+</section>
+<section id='issue-share'>
+<span class='share'>Share</span>
+<a class="twitter" target="_blank" href="https://www.twitter.com/share?url=https://www.getrevue.co/profile/newslab/issues/2021-023-645241&amp;via=revue&amp;text=%E5%BF%AB%E8%AF%842021%E5%B9%B4%E6%99%AE%E5%88%A9%E7%AD%96%E6%96%B0%E9%97%BB%E5%A5%96%EF%BC%9A%E5%9C%A8%E4%B8%80%E4%B8%AA%E7%97%85%E4%BA%86%E7%9A%84%E4%B8%96%E7%95%8C%E8%BF%BD%E5%AF%BB%E5%85%AC%E5%B9%B3%E6%AD%A3%E4%B9%89%EF%BC%88%E5%90%AB%E6%92%AD%E5%AE%A2%E6%9C%89%E5%A3%B0%E7%89%88%EF%BC%89%EF%BD%9C023&amp;related=revue"><span class='icon-twitter'></span>
+<span class='name'>Share to Twitter</span>
+</a><a class="facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=https://www.getrevue.co/profile/newslab/issues/2021-023-645241"><span class='icon-facebook'></span>
+<span class='name'>Share to Facebook</span>
+</a></section>
+</section>
+<form class="subscribe-form" id="7gNEues8_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="/iKpgsLO9FsITQZgOJl5pFZJLEHMzGV2PKnnJfZ8kDxoNMaXaYeETr4/cktlf+c8fcuWK4pNa0oA6IkOVN493w==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-footer" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='TbqQyoGWH5bgLC5QdKojeQ=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="rCPRz7ZJCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_veEq51" id="confirm_veEq51" autocomplete="off" />
+</div>
+
+</form><script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+window["rCPRz7ZJCaptchaCallback"] = function() {
+  document.getElementById("7gNEues8_new_member").submit();
+};
+
+
+//]]>
+</script>
+</article>
+<div class='container'>
+<footer class='terms'>
+<div class='footer-privacy'>
+<a target="_blank" href="https://www.getrevue.co/privacy/platform?locale=en&amp;ref=Revue+Profile">Privacy Policy</a>
+<br>
+<a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a>
+</div>
+<div class='footer-custom'>
+</div>
+<div class='footer-powered'>
+<a target="_blank" href="https://www.getrevue.co/?ref=Revue+Profile"><span>Powered by</span>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg>
+</a></div>
+</footer>
+</div>
+
+<section id='subscribe-bar'>
+<div id='subscribe-bar-form'><form class="subscribe-form subscribe-form--inline" id="LbH4j0jk_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="s11zl+9PbPpSOFjOgThCbrjh8lGDzhYe73mAYKduN3YlSxyCRAYc7+RKLOXc3tz2k2NIO8VPGCLTOO5LBcyalQ==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-popup" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='TbqQyoGWH5bgLC5QdKojeQ=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="f4ykwV5XCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_mfAJt_" id="confirm_mfAJt_" autocomplete="off" />
+</div>
+
+</form><script nonce="TbqQyoGWH5bgLC5QdKojeQ==">
+//<![CDATA[
+window["f4ykwV5XCaptchaCallback"] = function() {
+  document.getElementById("LbH4j0jk_new_member").submit();
+};
+
+
+//]]>
+</script></div>
+</section>
+<div class='component__spacer--is-small'></div>
+
+
+<div class='cookie-notice cookie-notice--show'>
+<p class='cookie-notice__message'>By using the Revue Service, you agree to our cookie use in our <a class="cookie-notice__link" href="https://www.getrevue.co/privacy">Website Privacy Policy</a> or <a class="cookie-notice__link" href="https://www.getrevue.co/privacy/platform">Platform Privacy Policy</a>. We use cookies for purposes, including analytics and personalization.</p>
+<a id="hideCookieNotice" class="btn btn-sm cookie-notice__button" href="#">OK</a>
+</div>
+
+</body>
+</html>
