@@ -1,606 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8'>
-<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-<title dir='ltr'>ðæ°é»å®éªå®¤ä¼åè®¡åå¼å­¦å­£ä¼æ ï¼æ¯å¹´ä»æä¸æ¬¡çä¿é | Revue</title>
-<meta content='width=device-width, initial-scale=1.0' name='viewport'>
-<meta content='æ°é»å®éªå®¤ - æ°é»å®éªå®¤åè´¹çã
-ä»è´¹çè¯·è§ï¼https://newslab.info/join/' name='description'>
-<meta content='newsletter, email, digest, curation' name='keywords'>
-<!--[if lt IE 9]>
-<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/html5shiv-bb669dd537dfdfb80f5581532f95e3d93d4e161976d46f6a8ea5c49c57cafbc8.js"></script>
-<![endif]-->
-<link rel="stylesheet" media="all" href="//d3jbm9h03wxzi9.cloudfront.net/assets/application-4eeb1b015e3c86cc20dbdc72a26232e7574974f39c773bc496318055f4845771.css" nonce="5WyP/JMOpS7aADxu/8fZTA==" />
-<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/application-989b33e0ccddb3384b2987632d5a790c45139d7bd4a857507860f6eeeea1fca1.js" nonce="5WyP/JMOpS7aADxu/8fZTA==" defer="defer"></script>
-<script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-document.addEventListener('DOMContentLoaded', function() {
-  I18n.defaultLocale = "en";
-  I18n.locale = "en";
-});
-
-
-
-//]]>
-</script><link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='16x16'>
-<link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='32x32'>
-<link color='#E15718' href='//d3jbm9h03wxzi9.cloudfront.net/assets/icon-3ef15b89ab8676cd48dac6b7878bbc0e564d4e4167ea590f1f49d8e596d1ee4b.svg' rel='mask-icon'>
-<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="lFXykSlFSBbj/kSrEDv7jhyJEapO/gnzKD+VhMTg5q0X1ol8sRzp6tcCmtiLMNnjLY6W+5mA0ADtUTUkFHY38Q==" />
-<meta name="csp-nonce" content="5WyP/JMOpS7aADxu/8fZTA==" />
-
-<script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-  function getQueryParam(url, param) {
-    // Expects a raw URL
-    param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regexS = "[\\?&]" + param + "=([^&#]*)",
-    regex = new RegExp( regexS ),
-    results = regex.exec(url);
-    if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
-      return '';
-    } else {
-      return decodeURIComponent(results[1]).replace(/\+/g, ' ');
-    }
-  };
-
-  function geUtmParams() {
-    var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
-    , kw = ''
-    , params = {}
-    , first_params = {}
-    , result = {};
-
-    var index;
-    for (index = 0; index < campaign_keywords.length; ++index) {
-      kw = getQueryParam(document.URL, campaign_keywords[index]);
-      if (kw.length) {
-        params[campaign_keywords[index] + ' [last touch]'] = kw;
-      }
-    }
-    for (index = 0; index < campaign_keywords.length; ++index) {
-      kw = getQueryParam(document.URL, campaign_keywords[index]);
-      if (kw.length) {
-        first_params[campaign_keywords[index]] = kw;
-      }
-    };
-
-    result.first_params = first_params;
-    result.params = params;
-
-    return result;
-  }
-
-  function extractReferrer(referrer) {
-    campaign = geUtmParams().first_params["utm_campaign"];
-    ref = getQueryParam(document.URL, 'ref');
-
-    if(!campaign && !ref) {
-      if (/www\.getrevue\.co\/profile\/(.*?)\/issue/.test(window.location.href)) {
-        return 'Revue Profile Issue'
-      } else if(/www\.getrevue\.co\/profile/.test(window.location.href)) {
-        return 'Revue Profile'
-      }
-    }
-
-    if(!!campaign) {
-      return campaign;
-    } else if (referrer.search('https?://(.*)google.([^/?]*)') === 0) {
-      return 'Google';
-    } else if (referrer.search('https?://(.*)bing.([^/?]*)') === 0) {
-      return 'Bing';
-    } else if (referrer.search('https?://(.*)yahoo.([^/?]*)') === 0) {
-      return 'Yahoo';
-    } else if (referrer.search('https?://(.*)facebook.([^/?]*)') === 0) {
-      return 'Facebook';
-    } else if (referrer.search('https?://(.*)twitter.([^/?]*)') === 0 || referrer.search('https?://(.*)t.co/') === 0) {
-      return 'Twitter';
-    } else if (referrer.search('https?://(.*)linkedin.([^/?]*)') === 0) {
-      return 'LinkedIn'
-    } else if (referrer == '$direct' || (!referrer || /^\s*$/.test(referrer))) {
-      return '$direct';
-    } else if (referrer.search('https?://(.*)getrevue.co') == 0) {
-      if(/\/app\//.test(referrer)) {
-        return 'Revue App';
-      } else if (/\/profile\/(.*?)\/issue/.test(referrer)) {
-        return 'Revue Profile Issue'
-      } else if (/\/profile\//.test(referrer)) {
-        return 'Revue Profile'
-      } else if (/blog\.getrevue\.co/.test(referrer)) {
-        return 'Revue Blog'
-      } else {
-        return 'Revue Page'
-      }
-    } else if (referrer.search('https?://(.*)rev.vu([^/?]*)') === 0) {
-      return 'Revue Item';
-    } else if (!!ref) {
-      return ref;
-    } else {
-      tld = new RegExp('\.(asn\.au|com\.au|net\.au|id\.au|org\.au|edu\.au|gov\.au|csiro\.au|act\.au|nsw\.au|nt\.au|qld\.au|sa\.au|tas\.au|vic\.au|wa\.au|co\.at|or\.at|priv\.at|ac\.at|avocat\.fr|aeroport\.fr|veterinaire\.fr|co\.hu|film\.hu|lakas\.hu|ingatlan\.hu|sport\.hu|hotel\.hu|ac\.il|co\.il|org\.il|net\.il|k12\.il|gov\.il|muni\.il|idf\.il|ac\.za|gov\.za|law\.za|mil\.za|nom\.za|school\.za|net\.za|co\.uk|org\.uk|me\.uk|ltd\.uk|plc\.uk|net\.uk|sch\.uk|ac\.uk|gov\.uk|mod\.uk|nhs\.uk|police\.uk)')
-      a = document.createElement('a');
-      a.href = referrer;
-      ref = a.hostname;
-      if(tld.test(ref)) {
-        return ref.replace(tld, '').split('.').pop()
-      } else {
-        return ref.split('.').reverse()[1];
-      }
-    }
-  };
-
-  function getReferrer() {
-    ref = document.referrer;
-    return extractReferrer(ref);
-  }
-
-  function mixpanelLoaded() {
-    try {
-      // Set ref
-      initial_ref = mixpanel.get_property('$initial_referrer');
-      mixpanel.register_once({"Source": extractReferrer(initial_ref)});
-      // mixpanel.people.set_once({"Source": extractReferrer(initial_ref)});
-      // mixpanel.people.set_once({"$created": new Date().toISOString()});
-
-      // Set distinct id
-      var member_distinct_id_element = document.querySelector('#member_distinct_id');
-      member_distinct_id_element.value = mixpanel.get_distinct_id();
-    } catch(e) {}
-  };
-
-//]]>
-</script>
-<script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("2087bc32dd14049d6de8a339112517d9", {loaded: mixpanelLoaded, ip: false});
-//]]>
-</script>
-
-<script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-  var utm = geUtmParams();
-  mixpanel.register(utm.params);
-
-//]]>
-</script>
-<meta content='86400' property='twitter:maxage'>
-<meta content='171913' property='twitter:revue:account:id'>
-<meta content='æ°é»å®éªå®¤' property='twitter:newsletter:title'>
-<meta content='æ°é»å®éªå®¤åè´¹çã
-ä»è´¹çè¯·è§ï¼https://newslab.info/join/' property='twitter:newsletter:description'>
-<meta content='https://www.getrevue.co/profile/newslab?via=twitter-card' property='twitter:newsletter:profile:url'>
-<meta content='true' property='twitter:newsletter:issue:card'>
-<meta content='https://imgix.revue.co/profiles/images/000/172/257/original/log520.png?ixlib=rails-3.1.0' property='twitter:newsletter:image:src'>
-<meta content='ðæ°é»å®éªå®¤ä¼åè®¡åå¼å­¦å­£ä¼æ ï¼æ¯å¹´ä»æä¸æ¬¡çä¿é' property='twitter:issue:title'>
-<meta content='æä»5å¹´åå¼å§åä¸ä»½ä»è´¹çnewsletterï¼å«åãæ°é»å®éªå®¤ä¼åéè®¯ããä»ä¸å¼å§çæ¶åï¼æå°±æè¿ä»½éè®¯å®ä½æï¼ä¸ºæ°é»ä¼ æ­ä¸ä¸çå­¦çï¼ä»¥åä¼ åªä¸çä»ä¸èï¼è¿æå¯¹ä¼ åªä¸æå´è¶£çäººï¼æä¾å³äºä¼ åªä¸çåæ²¿èµè®¯åæ·±åº¦åæãæ¯å¦è¯´ï¼æ¯å¹´çæ®å©ç­æ°é»å¥åºççæ¶åï¼æé½ä¼åä¸ä¸¤æçæ·±åº¦åæãåæ¯å¦è¯´ï¼æå¤§äºåççæ¶åï¼æä¼ä»åªä½ä¼ æ­çè§åº¦æä¾è§£è¯»ï¼åæ¯æè¿çï¼å¥¥è¿ä¼åç¤¾äº¤åªä½ãé¿å¯æ±æ¤åä¸­çåªä½è¡¨ç°ãå¡å©ç­æä¹ä½¿ç¨ç¤¾äº¤åªä½ãæ²³åæ´é¨ä¸­çåªä½è¡¨ç°ï¼ç­ç­ãæä¹ä¼ä»ç»å¨å¨çä¼ åªçæèµ·æ³¢æ¾çéå¤§æ¥éï¼ä»¥åæè§å¾æææçæ°é»ä¼ æ­å­¦è®ºæãéæ©è¿æ ·çå®ä½ï¼åå ä¹å¾ç®åââè¿æ¯ä»è´¹åå®¹ï¼å¦æä¸åå¾æ·±åº¦ä¸ç¹ãä¸ä¸ä¸ç¹ï¼æä¹å¥½æææ¾äººæ¶é±åï¼æä¹å¾é«å´ï¼è¿æ ·çåå®¹å¾å°äºä¸å°äººçæ¯æãæ¯å¦ï¼æè¯»èåä¿¡è¯´ï¼ãæè°¢æ¹èå¸ï¼æä¹æ¯ä»å¤§å­¦æ¶æå¼å§å³æ³¨æ°é»å®éªå®¤çå¬ä¼å·ï¼æå¾ä»ä¸åçè§è§çä¸çï¼åæ¥è®¢éäºä¼åéè®¯ï¼ä¸ç´çå°ä»å¤©ï¼è½ç¶å¹³æ¥éæ¶é´æéä¸è½åå°ææé½çï¼ä½è¿æ¯ä¹ æ¯å¨å¨æ«æ½åºæ¶é´è¿è¡ä¸æ¬¡æ·±åº¦éè¯»ï¼æ·±æå¦ä»çæ¶ä»£ï¼ç¢çåéè¯»å­¦å°çä¸æ¯ç¥è¯ï¼æ¯ä¿¡æ¯ï¼åªæç³»ç»æ§çéè¯»æè½å­¦å°ç¥è¯ããç±»ä¼¼äºè¿ä½æåè¿æ ·çåé¦ï¼è®©æè§å¾ï¼ä¼ æ­ç¥â¦' property='twitter:issue:description'>
-<meta content='26' property='twitter:issue:number'>
-<meta content='https://www.getrevue.co/profile/newslab/issues/issue-751066?via=twitter-card' property='twitter:issue:url'>
-<meta content='https://imgix.revue.co/items/images/011/033/413/mail/2021_3F_3F_3F_3F.jpg?ixlib=rails-3.1.0' property='twitter:issue:image:src'>
-<meta content='29942836' property='twitter:user:id'>
-<meta content='summary_large_image' property='twitter:card'>
-<meta content='@revue' property='twitter:site'>
-<meta content='1073732649320413' property='fb:app_id'>
-<meta content='https://www.getrevue.co/profile/newslab/issues/issue-751066' property='og:url'>
-<meta content='article' property='og:type'>
-<meta content='ðæ°é»å®éªå®¤ä¼åè®¡åå¼å­¦å­£ä¼æ ï¼æ¯å¹´ä»æä¸æ¬¡çä¿é' property='og:title'>
-<meta content='æä»5å¹´åå¼å§åä¸ä»½ä»è´¹çnewsletterï¼å«åãæ°é»å®éªå®¤ä¼åéè®¯ããä»ä¸å¼å§çæ¶åï¼æå°±æè¿ä»½éè®¯å®ä½æï¼ä¸ºæ°é»ä¼ æ­ä¸ä¸çå­¦çï¼ä»¥åä¼ åªä¸çä»ä¸èï¼è¿æå¯¹ä¼ åªä¸æå´è¶£çäººï¼æä¾å³äºä¼ åªä¸çåæ²¿èµè®¯åæ·±åº¦åæãæ¯å¦è¯´ï¼æ¯å¹´çæ®å©ç­æ°é»å¥åºççæ¶åï¼æé½ä¼åä¸ä¸¤æçæ·±åº¦åæãåæ¯å¦è¯´ï¼æå¤§äºåççæ¶åï¼æä¼ä»åªä½ä¼ æ­çè§åº¦æä¾è§£è¯»ï¼åæ¯æè¿çï¼å¥¥è¿ä¼åç¤¾äº¤åªä½ãé¿å¯æ±æ¤åä¸­çåªä½è¡¨ç°ãå¡å©ç­æä¹ä½¿ç¨ç¤¾äº¤åªä½ãæ²³åæ´é¨ä¸­çåªä½è¡¨ç°ï¼ç­ç­ãæä¹ä¼ä»ç»å¨å¨çä¼ åªçæèµ·æ³¢æ¾çéå¤§æ¥éï¼ä»¥åæè§å¾æææçæ°é»ä¼ æ­å­¦è®ºæãéæ©è¿æ ·çå®ä½ï¼åå ä¹å¾ç®åââè¿æ¯ä»è´¹åå®¹ï¼å¦æä¸åå¾æ·±åº¦ä¸ç¹ãä¸ä¸ä¸ç¹ï¼æä¹å¥½æææ¾äººæ¶é±åï¼æä¹å¾é«å´ï¼è¿æ ·çåå®¹å¾å°äºä¸å°äººçæ¯æãæ¯å¦ï¼æè¯»èåä¿¡è¯´ï¼ãæè°¢æ¹èå¸ï¼æä¹æ¯ä»å¤§å­¦æ¶æå¼å§å³æ³¨æ°é»å®éªå®¤çå¬ä¼å·ï¼æå¾ä»ä¸åçè§è§çä¸çï¼åæ¥è®¢éäºä¼åéè®¯ï¼ä¸ç´çå°ä»å¤©ï¼è½ç¶å¹³æ¥éæ¶é´æéä¸è½åå°ææé½çï¼ä½è¿æ¯ä¹ æ¯å¨å¨æ«æ½åºæ¶é´è¿è¡ä¸æ¬¡æ·±åº¦éè¯»ï¼æ·±æå¦ä»çæ¶ä»£ï¼ç¢çåéè¯»å­¦å°çä¸æ¯ç¥è¯ï¼æ¯ä¿¡æ¯ï¼åªæç³»ç»æ§çéè¯»æè½å­¦å°ç¥è¯ããç±»ä¼¼äºè¿ä½æåè¿æ ·çåé¦ï¼è®©æè§å¾ï¼ä¼ æ­ç¥â¦' property='og:description'>
-<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/317/112/original/issue_image_751066.jpg?1631358930' property='twitter:image'>
-<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/317/112/original/issue_image_751066.jpg?1631358930' property='og:image'>
-<meta content='https://s3.amazonaws.com/revue/items/images/011/033/413/original/2021_3F_3F_3F_3F.jpg?1631354000' property='og:image'>
-
-
-</head>
-<body class='profiles archive' data-page='ProfilesArchive'>
-<script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-58968534-1', 'auto');
-ga('set', 'anonymizeIp', true);
-ga('send', 'pageview');
-
-//]]>
-</script>
-<style>
-  #profile-nav {border-color: #88B04B !important;}
-  #profile-nav.expanded svg {fill: #88B04B !important;}
-  #nav-back {color: #88B04B !important;}
-  #nav-back:after {border-color: #88B04B !important;}
-  #profile-logo {background-color: #88B04B !important;}
-  .subscribe-form__submit {background-color: #88B04B !important;}
-  section#premium a {color: #B0632E !important;}
-  ::-moz-selection {background-color: #88B04B !important;}
-  ::selection {background-color: #88B04B !important;}
-</style>
-<div id='profile-nav'>
-<a id="nav-back" href="https://www.getrevue.co/profile/newslab">View profile</a>
-<a id="profile-logo" href="https://www.getrevue.co/?ref=Revue+Profile"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
-  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
-  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
-  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
-</svg>
-</a></div>
-
-<article id='issue-holder'>
-<form class="subscribe-form" id="RIN5IYLQ_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="32TKKY8Y9c/V0rO9A+jhIF96fw1na/LvwVciQKsLFyNc57HEF0FUM+Eubc6Y48NNbn34XLAVKxwEOYLge53Gfw==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
-<input value="issue-page-header" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
-<div class='subscribe-form__fields'>
-<div class='subscribe-form__copy'>
-<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
-<label class='subscribe-form__sublabel'>By subscribing, you agree with Revueâs <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that æ°é»å®éªå®¤ will receive your email address.</label>
-</div>
-<div class='subscribe-form__input'>
-<div class='input-group'>
-<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of æ°é»å®éªå®¤" type="email" name="member[email]" id="member_email" />
-<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='5WyP/JMOpS7aADxu/8fZTA=='></script>
-<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="xXxMLWu7CaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of æ°é»å®éªå®¤" value="Subscribe now"/>
-</div>
-</div>
-</div>
-</div>
-<div class='subscribe-form__error'>
-<span class='error-message'>
-
-
-</span>
-</div>
-<div style='width: 1px; height: 1px; overflow: hidden;'>
-<input type="text" name="confirm_4kn6D4" id="confirm_4kn6D4" autocomplete="off" />
-</div>
-
-</form><script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-mixpanel.register({'profile_page_new_design': false});
-mixpanel.track('Profile viewed', {
-  'profile' : "æ°é»å®éªå®¤",
-  'profile_id' : "172257",
-  'Last page': getReferrer()
-}, function() {
-  mixpanel.register({"First time": false});
-});
-
-
-
-//]]>
-</script><script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-window["xXxMLWu7CaptchaCallback"] = function() {
-  document.getElementById("RIN5IYLQ_new_member").submit();
-};
-
-
-//]]>
-</script>
-<section id='issue'>
-<section id='issue-display'>
-<header>
-<span class='issue-nr'></span>
-<time datetime='2021-09-11T19:15:28+08:00'>Sep 11, 2021</time>
-<h1 title='æ°é»å®éªå®¤ - ðæ°é»å®éªå®¤ä¼åè®¡åå¼å­¦å­£ä¼æ ï¼æ¯å¹´ä»æä¸æ¬¡çä¿é'>ðæ°é»å®éªå®¤ä¼åè®¡åå¼å­¦å­£ä¼æ ï¼æ¯å¹´ä»æä¸æ¬¡çä¿é</h1>
-</header>
-<div id='issue-frame'><!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-  <title></title>
-  <!--[if !mso]><!-- -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!--<![endif]-->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style type="text/css">
-  #outlook a { padding: 0; }
-  .ReadMsgBody { width: 100%; }
-  .ExternalClass { width: 100%; }
-  .ExternalClass * { line-height:100%; }
-  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
-  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-  img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
-  p { display: block; padding: 0; margin: 0; margin-bottom: 0; }
-  .revue-p + .revue-p, .revue-p + .revue-blockquote {margin-top: 14px !important;}
-  .revue-p + .revue-h2, .revue-h2 + .revue-p, .revue-ul + .revue-h2, .revue-h2 + .revue-ul, .revue-ol + .revue-h2, .revue-h2 + .revue-ol  {margin-top: 14px !important;}
-  .revue-h2 {font-size:20px;line-height:28px;font-weight:700;padding-bottom:0px !important;}
-  [class*="revue-p"] + [class*="revue-p"], [class*="revue-p"] + [class*="revue-blockquote"] {margin-top: 14px !important;}
-  [class*="revue-p"] + [class*="revue-h2"] {margin-top: 14px !important;}
-</style>
-<!--[if !mso]><!-->
-<style type="text/css">
-  @media only screen and (max-width:480px) {
-    @-ms-viewport { width:320px; }
-    @viewport { width:320px; }
-  }
-</style>
-<!--<![endif]-->
-<!--[if mso]>
-<style type="text/css">
-  .revue-p,
-  .revue-h2,
-  .revue-ul,
-  .revue-ol,
-  .revue-blockquote {margin-bottom: 14px !important;}
-</style>
-<xml>
-  <o:OfficeDocumentSettings>
-    <o:AllowPNG/>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-<!--[if lte mso 11]>
-<style type="text/css">
-  .outlook-group-fix {
-    width:100% !important;
-  }
-</style>
-<![endif]-->
-<style type="text/css">
-  @media only screen and (min-width:480px) {
-    .mj-column-per-100 { width:100%!important; }
-    .mj-column-per-100 { width:100%!important; }
-    .mj-column-per-25 { width:25.9259259259%!important; }
-    .mj-column-per-74 { width:74.0740740741%!important; }
-    .mj-column-per-50 { width:50%!important; }
-    .mj-column-per-60 { width:60%!important; }
-    .mj-column-per-20 { width:20%!important; }
-  }
-
-  @media screen and (max-width:600px) {
-    .title-text{font-size:14px !important; line-height:20px !important;}
-    .title-image{width:44px !important;height:44px !important;}
-    .indented {padding-left: 8px !important; padding-right: 8px !important;}
-    .link-image {width: 112px !important;}
-    .header-text {font-size: 22px !important; line-height: 32px !important;}
-    .revue-h2 {font-size:18px !important; line-height: 24px !important;}
-    .introduction-subject {font-size: 24px !important; line-height: 24px !important;}
-    .introduction-spacer {padding: 30px 0 !important;}
-    .link-title {font-size: 18px !important; line-height: 24px !important;}
-    .text-default,
-    .link-description {font-size: 14px !important; line-height: 22px !important;}
-    .link-url {font-size: 13px !important;}
-    .text-small {font-size:12px !important;}
-  }
-</style>
-</head>
-<body>
-  <div>
-    <div id="preheader" style="display:none;font-size:1px;color:#FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;"></div>
-
-    
-    
-    
-    
-    <!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
-  <tr>
-    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;" class="indented"><div style="cursor:auto;color:#657786;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:12px;line-height:22px;text-align:center;font-weight:400;" class="text-small"><a target="_blank" style="color: #657786;text-decoration:underline;" href="https://www.getrevue.co/profile/newslab/issues/issue-751066?utm_campaign=Issue&amp;utm_content=view_in_browser&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">View online</a></div></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]-->
-    
-    
-<!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
-  <tr>
-    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
-
-<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;padding-bottom:28px;" class="indented">
-<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-right:12px;" width="56">
-<a target="_blank" href="https://www.getrevue.co/profile/newslab">
-<img alt="æ¹å¯æ" title="æ¹å¯æ" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" class="title-image" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" /></a></td>
-<td><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody>
-<tr><td><div style="cursor:auto;color:#14171A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:22px;text-align:left;font-weight:700;" class="title-text">æ¹å¯æ</div></td></tr>
-
-</tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]-->
-    
-
-    
-
-    
-
-    
-
-      <!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
-  <tr>
-    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
-<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:650px;">
-    <img alt="æ¬¢è¿è½¬åè¿å¼ æµ·æ¥ï½" title="æ¬¢è¿è½¬åè¿å¼ æµ·æ¥ï½" height="auto" src="https://s3.amazonaws.com/revue/items/images/011/033/413/mail/2021_3F_3F_3F_3F.jpg?1631354000" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="650">
-</td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:16px;" align="center"><div style="cursor:auto;color:#95989C;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight: 400;font-size:13px;line-height:21px;text-align:center;">æ¬¢è¿è½¬åè¿å¼ æµ·æ¥ï½</div></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]-->
-      <!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
-  <tr>
-    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
-<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
-      <div style="margin:0;" class="revue-p">æä»5å¹´åå¼å§åä¸ä»½ä»è´¹çnewsletterï¼å«åã<a href="http://newslab.info/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">æ°é»å®éªå®¤ä¼åéè®¯</a>ãã</div><div style="margin:0;" class="revue-p">ä»ä¸å¼å§çæ¶åï¼æå°±æè¿ä»½éè®¯å®ä½æï¼ä¸ºæ°é»ä¼ æ­ä¸ä¸çå­¦çï¼ä»¥åä¼ åªä¸çä»ä¸èï¼è¿æå¯¹ä¼ åªä¸æå´è¶£çäººï¼æä¾å³äºä¼ åªä¸çåæ²¿èµè®¯åæ·±åº¦åæã</div><div style="margin:0;" class="revue-p">æ¯å¦è¯´ï¼æ¯å¹´çæ®å©ç­æ°é»å¥åºççæ¶åï¼æé½ä¼åä¸ä¸¤æçæ·±åº¦åæãåæ¯å¦è¯´ï¼æå¤§äºåççæ¶åï¼æä¼ä»åªä½ä¼ æ­çè§åº¦æä¾è§£è¯»ï¼åæ¯æè¿çï¼å¥¥è¿ä¼åç¤¾äº¤åªä½ãé¿å¯æ±æ¤åä¸­çåªä½è¡¨ç°ãå¡å©ç­æä¹ä½¿ç¨ç¤¾äº¤åªä½ãæ²³åæ´é¨ä¸­çåªä½è¡¨ç°ï¼ç­ç­ãæä¹ä¼ä»ç»å¨å¨çä¼ åªçæèµ·æ³¢æ¾çéå¤§æ¥éï¼ä»¥åæè§å¾æææçæ°é»ä¼ æ­å­¦è®ºæã</div><div style="margin:0;" class="revue-p">éæ©è¿æ ·çå®ä½ï¼åå ä¹å¾ç®åââè¿æ¯ä»è´¹åå®¹ï¼å¦æä¸åå¾æ·±åº¦ä¸ç¹ãä¸ä¸ä¸ç¹ï¼æä¹å¥½æææ¾äººæ¶é±åï¼</div><div style="margin:0;" class="revue-p">æä¹å¾é«å´ï¼è¿æ ·çåå®¹å¾å°äºä¸å°äººçæ¯æãæ¯å¦ï¼æè¯»èåä¿¡è¯´ï¼</div><div style="margin:0;display:block;margin:0;margin-bottom:14px;padding:0 20px;border-color:#E0E4E8;border-left:2px solid #E0E4E8;color:#7A889A;line-height:inherit;" class="revue-blockquote">ãæè°¢æ¹èå¸ï¼æä¹æ¯ä»å¤§å­¦æ¶æå¼å§å³æ³¨æ°é»å®éªå®¤çå¬ä¼å·ï¼æå¾ä»ä¸åçè§è§çä¸çï¼åæ¥è®¢éäºä¼åéè®¯ï¼ä¸ç´çå°ä»å¤©ï¼è½ç¶å¹³æ¥éæ¶é´æéä¸è½åå°ææé½çï¼ä½è¿æ¯ä¹ æ¯å¨å¨æ«æ½åºæ¶é´è¿è¡ä¸æ¬¡æ·±åº¦éè¯»ï¼æ·±æå¦ä»çæ¶ä»£ï¼ç¢çåéè¯»å­¦å°çä¸æ¯ç¥è¯ï¼æ¯ä¿¡æ¯ï¼åªæç³»ç»æ§çéè¯»æè½å­¦å°ç¥è¯ãã</div><div style="margin:0;" class="revue-p">ç±»ä¼¼äºè¿ä½æåè¿æ ·çåé¦ï¼è®©æè§å¾ï¼ä¼ æ­ç¥è¯çç®çåºè¯¥å¨ä¸å®ç¨åº¦ä¸è¾¾å°äºã</div><div style="margin:0;" class="revue-p">è®©ææ²¡ææ³å°çæ¯ï¼è¿ä¸ªä¼åè®¡åï¼å¨ç¥è¯ä¹å¤ï¼è¿å¸¦æ¥äºå¶ä»çä»·å¼ï¼å°¤å¶æ¯èç»åéªä¼´çä»·å¼ã</div><div style="margin:0;" class="revue-p">æ¯å¦ï¼ææåè¯´ï¼</div><div style="margin:0;display:block;margin:0;margin-bottom:14px;padding:0 20px;border-color:#E0E4E8;border-left:2px solid #E0E4E8;color:#7A889A;line-height:inherit;" class="revue-blockquote">ãä»å»å¹´å¬å¤©ç¬¬ä¸æ¬¡è®¢éä¼åè®¡åä»¥æ¥å·²ç»ä¹ä¸ªæå¤äºï¼ä¼åéè®¯çæç« å·²ç»å¸®å©äºæå¾å¤â¦â¦å¸æä¼åéè®¯è®¡åå¯ä»¥ç»§ç»­éªä¼´æå°æ¬ç§æ¯ä¸åä»¥åççæ´»ãã</div><div style="margin:0;" class="revue-p">è¿ææåè¯´ï¼</div><div style="margin:0;display:block;margin:0;margin-bottom:14px;padding:0 20px;border-color:#E0E4E8;border-left:2px solid #E0E4E8;color:#7A889A;line-height:inherit;" class="revue-blockquote">ãæè°¢æ¹èå¸æ¯æçæ°é»å®éªå®¤æ¨éï¼ä¸ä»å­¦å°å¾å¤çå°äºå¾å¤ï¼ä¹å æ­¤ç»è¯äºä¸äºæåï¼ç¥éèªå·±å¹¶ä¸å­¤åï¼å¯ä»¥å¨è¿ç§æ¶æåæ¥ä¸æ¥çæ¥å­éäºç¸éªä¼´ãæ¯æãã</div><div style="margin:0;" class="revue-p">è¿ä¸ªä¼åè®¡åï¼ææ¶åä¹ä¼ä¸¾è¡çº¿ä¸çäº¤æµæ´»å¨ï¼æä»¥ç¡®å®è½å½¢æä¸ä¸ªæææçå°ç¤¾ç¾¤ï¼è®©å¤§å®¶è·å¾éªä¼´ã</div><div style="margin:0;" class="revue-p">æè¿è¿æä¸ä½æåçæ¥ä¿¡è®©æå°è±¡å¾æ·±ï¼</div><div style="margin:0;display:block;margin:0;margin-bottom:14px;padding:0 20px;border-color:#E0E4E8;border-left:2px solid #E0E4E8;color:#7A889A;line-height:inherit;" class="revue-blockquote">ãæå·²ç»ä¸å¨å¬å±åªä½ï¼å¾®åãæååæå¬ä¼å·ç­ï¼ä¸è·åç¤¾ä¼æ§æ°é»äºï¼å¦ææå¯¹æä¸ªäºä»¶æå´è¶£ï¼æä¼ç¬¬ä¸æ¶é´ç¿»éæ¨çé®ä»¶ã</div><div style="margin:0;display:block;margin:0;margin-bottom:14px;padding:0 20px;border-color:#E0E4E8;border-left:2px solid #E0E4E8;color:#7A889A;line-height:inherit;" class="revue-blockquote">å¨ä¸åçé¢åï¼å¦åªä½ãçè´¢ãè¿å¨ç­æ¹é¢ï¼æåå«éæ©äºä¸äºé¿æ¶é´å³æ³¨ãéè¿äºæ£éªçãåæ¨ä¸æ ·çäººã</div><div style="margin:0;display:block;margin:0;margin-bottom:14px;padding:0 20px;border-color:#E0E4E8;border-left:2px solid #E0E4E8;color:#7A889A;line-height:inherit;" class="revue-blockquote">æä¸ºèªå·±æå»ºäºä¸ä¸ªä¸çï¼æç¥éæ¨ä»¬ææ¨ä»¬çå±éæä½ä¸ºä¸ä¸ªâäººâçç«åºï¼ä¸ç®¡è¿ç®æ¯åæ¸©å±è¿æ¯ä¿¡æ¯è§æ¿ï¼è³å°æ¯ä¸ç§ææ¿æææ³¨ä¿¡ä»»çæå¼ãã</div><div style="margin:0;" class="revue-p">å¶å®è¿ä½æåçæ¥ä¿¡åé¢è¿æä¸å¥è¯ï¼æçäºä¹åè§å¾å¾ä¸å¥½ææãtaè¯´ï¼ãå¨è¿å¨è¡çæ¶ä»£ï¼æ´éè¦æ¨è¿æ ·çä¸ä¸ªè·¯æ å¼çå­å¨ããæä¸è§å¾èªå·±æ¯ä»ä¹è·¯æ ï¼ææåçï¼åªä¸è¿æ¯ï¼åææ¯ä¸åå¤©å¹³å¿éæ°å°åä¸å°é¿ä¿¡ï¼ä»ç»ææäºè§£çä¸äºäºæåæ°ç¥ï¼ä»æ­¤èå·²ã</div><div style="margin:0;" class="revue-p">ä½æå¿½ç¶æè¯å°ï¼å¨è¿æ ·ä¸ä¸ªæ¶ä»£éï¼è½æä¸ä¸ªäººçæ¥ä¿¡åæ¶åºç°å¨é®ç®±éé¢ï¼ç¨å¹³éçå£å»è®²è®²äºæï¼è¿å¯è½å·²ç»æ¯è«å¤§çå®æ°äºã</div><div style="margin:0;" class="revue-p">ææ³ï¼æ­£æ¯å ä¸ºè¿ä¸ªåå ï¼æä¸å°ä¸æ¯æ°é»ä¼ æ­ä¸ä¸ãä¸å¨ä¼ åªä¸å·¥ä½çäººï¼ä¹è®¢éäºè¿ä»½ä¼åéè®¯å§ã</div><div style="margin:0;" class="revue-p">åè¿ä¸ªä¼åè®¡åä»¥æ¥ï¼æå¾å°åä¿éï¼åªæå¨æ¯å¹´9æå¼å­¦å­£çæ¶ååä¸æ¬¡é¢åæ°ä¼åçä¿éãé£ä¹ï¼ç°å¨åæ¯æ°ä¸å¹´çå¼å­¦å­£äºï¼æ¯æ¶åæä¸ªæï¼æ¬¢è¿æ°æåçå å¥å¦ã</div><div style="margin:0;" class="revue-p">å¨ä»å¹´ç9æ11æ¥-22æ¥æé´ââ</div><ul class="revue-ul">
-<li style="margin:0;">å¦æä½ æ¯ä¸ä¸ªäººå å¥çè¯ï¼ç´æ¥ç»ä½ æ9æï¼åå¹´ä»149ï¼å¹´ä»270ï¼ã</li>
-<li style="margin:0;">å¦æä½ æ¯ä¸¤ä¸ªäººä¸èµ·å å¥çè¯ï¼å°±å¯ä»¥äº«å8æï¼æ¯äººåå¹´ä»132ï¼å¹´ä»240ï¼ã</li>
-<li style="margin:0;">å¦ææä¸äººåä»¥ä¸å å¥ï¼é£å°±å¯ä»¥äº«åæ´ä¸ºè¶å¼ç7æå¦ï¼æ¯äººåå¹´ä»115ï¼å¹´ä»210ï¼ã</li>
-</ul><div style="margin:0;" class="revue-p"><a href="https://wj.qq.com/s2/9015985/ca42/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">åå¤å¥½äºåï¼ç¹å»è¿éä»¥ä¼æ ä»·æ ¼å å¥å§ï¼</a></div><div style="margin:0;" class="revue-p"></div><div style="margin:0;" class="revue-p">æ¹å¯æ</div><div style="margin:0;" class="revue-p">2021.9.11</div>
-
-    </div></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]-->
-
-    
-
-
-    <!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
-  <tr>
-    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
-<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
-    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
-    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center" colspan="2"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:14px;text-align:center;font-weight:400;">Did you enjoy this issue? <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">Yes</a> <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">No</a></div></td></tr>
-    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
-    <tr>
-    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left" width="76" valign="top">
-      <a style="text-decoration: none;" target="_blank" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=profileimage&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">
-        <img alt="æ¹å¯æ" title="æ¹å¯æ" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" />
-</a>    </td>
-    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left">
-
-    <div style="cursor:auto;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:16px;text-align:left;font-weight:400;padding-bottom: 8px;">
-      <span style="font-weight:700;">æ¹å¯æ</span>
-      </div>
-    <div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">
-      <p>æ°é»å®éªå®¤åè´¹çã
-<br />ä»è´¹çè¯·è§ï¼https://newslab.info/join/</p>
-    </div></td></tr>
-  </tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]-->
-
-    
-<!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
-  <tr>
-    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:32px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
-<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
-    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:40px;padding-top:40px;" align="center"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
-    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">In order to unsubscribe, click <a style="color: #6F7379; text-decoration:underline;" href="#">here</a>.</div></td></tr>
-    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">If you were forwarded this newsletter and you like it, you can subscribe <a target="_blank" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=forwarded&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">here</a>.</div></td></tr>
-    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:12px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">Created with <a target="_parent" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/?utm_source=æ°é»å®éªå®¤&amp;utm_medium=email&amp;utm_content=footerlink&amp;utm_campaign=Issue">Revue by Twitter</a>.</div></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
-</td></tr></table>
-<![endif]-->
-
-
-  </div>
-</body>
-</html></div>
-</section>
-<section id='issue-share'>
-<span class='share'>Share</span>
-<a class="twitter" target="_blank" href="https://www.twitter.com/share?url=https://www.getrevue.co/profile/newslab/issues/issue-751066&amp;via=revue&amp;text=%F0%9F%8E%81%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%BC%9A%E5%91%98%E8%AE%A1%E5%88%92%E5%BC%80%E5%AD%A6%E5%AD%A3%E4%BC%98%E6%83%A0%EF%BC%8C%E6%AF%8F%E5%B9%B4%E4%BB%85%E6%9C%89%E4%B8%80%E6%AC%A1%E7%9A%84%E4%BF%83%E9%94%80&amp;related=revue"><span class='icon-twitter'></span>
-<span class='name'>Share to Twitter</span>
-</a><a class="facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=https://www.getrevue.co/profile/newslab/issues/issue-751066"><span class='icon-facebook'></span>
-<span class='name'>Share to Facebook</span>
-</a></section>
-</section>
-<form class="subscribe-form" id="k4IU9Dqu_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="z6m1TvIy/QrveSqqyy3TATmqqc+ke1v3JzLnFiSJTIVMKs6jamtc9tuF9NlQJvFsCK0unnMFggTiXEe29B+d2Q==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
-<input value="issue-page-footer" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
-<div class='subscribe-form__fields'>
-<div class='subscribe-form__copy'>
-<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
-<label class='subscribe-form__sublabel'>By subscribing, you agree with Revueâs <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that æ°é»å®éªå®¤ will receive your email address.</label>
-</div>
-<div class='subscribe-form__input'>
-<div class='input-group'>
-<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of æ°é»å®éªå®¤" type="email" name="member[email]" id="member_email" />
-<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='5WyP/JMOpS7aADxu/8fZTA=='></script>
-<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="iuKLxilECaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of æ°é»å®éªå®¤" value="Subscribe now"/>
-</div>
-</div>
-</div>
-</div>
-<div class='subscribe-form__error'>
-<span class='error-message'>
-
-
-</span>
-</div>
-<div style='width: 1px; height: 1px; overflow: hidden;'>
-<input type="text" name="confirm_Bg03qx" id="confirm_Bg03qx" autocomplete="off" />
-</div>
-
-</form><script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-window["iuKLxilECaptchaCallback"] = function() {
-  document.getElementById("k4IU9Dqu_new_member").submit();
-};
-
-
-//]]>
-</script>
-</article>
-<div class='container'>
-<footer class='terms'>
-<div class='footer-privacy'>
-<a target="_blank" href="https://www.getrevue.co/privacy/platform?locale=en&amp;ref=Revue+Profile">Privacy Policy</a>
-<br>
-<a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a>
-</div>
-<div class='footer-custom'>
-</div>
-<div class='footer-powered'>
-<a target="_blank" href="https://www.getrevue.co/?ref=Revue+Profile"><span>Powered by</span>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
-  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
-  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
-  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
-</svg>
-</a></div>
-</footer>
-</div>
-
-<section id='subscribe-bar'>
-<div id='subscribe-bar-form'><form class="subscribe-form subscribe-form--inline" id="Zp4jm2c2_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7rCZoLAGFMM5A61ngj/wxI2KWP8yIBD0WTRHUBoiLdhtM+JNKF+1Pw3/cxQZNNKpvI3fruVeyQecWufwyrT8hA==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
-<input value="issue-page-popup" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
-<div class='subscribe-form__fields'>
-<div class='subscribe-form__copy'>
-<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
-<label class='subscribe-form__sublabel'>By subscribing, you agree with Revueâs <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that æ°é»å®éªå®¤ will receive your email address.</label>
-</div>
-<div class='subscribe-form__input'>
-<div class='input-group'>
-<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of æ°é»å®éªå®¤" type="email" name="member[email]" id="member_email" />
-<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='5WyP/JMOpS7aADxu/8fZTA=='></script>
-<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="uV2GVZsgCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of æ°é»å®éªå®¤" value="Subscribe now"/>
-</div>
-</div>
-</div>
-</div>
-<div class='subscribe-form__error'>
-<span class='error-message'>
-
-
-</span>
-</div>
-<div style='width: 1px; height: 1px; overflow: hidden;'>
-<input type="text" name="confirm_qvXicW" id="confirm_qvXicW" autocomplete="off" />
-</div>
-
-</form><script nonce="5WyP/JMOpS7aADxu/8fZTA==">
-//<![CDATA[
-window["uV2GVZsgCaptchaCallback"] = function() {
-  document.getElementById("Zp4jm2c2_new_member").submit();
-};
-
-
-//]]>
-</script></div>
-</section>
-<div class='component__spacer--is-small'></div>
-
-
-<div class='cookie-notice cookie-notice--show'>
-<p class='cookie-notice__message'>By using the Revue Service, you agree to our cookie use in our <a class="cookie-notice__link" href="https://www.getrevue.co/privacy">Website Privacy Policy</a> or <a class="cookie-notice__link" href="https://www.getrevue.co/privacy/platform">Platform Privacy Policy</a>. We use cookies for purposes, including analytics and personalization.</p>
-<a id="hideCookieNotice" class="btn btn-sm cookie-notice__button" href="#">OK</a>
-</div>
-
-</body>
-</html>
