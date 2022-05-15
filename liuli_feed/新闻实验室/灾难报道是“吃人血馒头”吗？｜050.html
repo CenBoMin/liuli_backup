@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title dir='ltr'>灾难报道是“吃人血馒头”吗？｜050 | Revue</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='新闻实验室 - 新闻伦理问题是最容易离地高谈阔论，但又最应该贴地具体分析的。' name='description'>
+<meta content='newsletter, email, digest, curation' name='keywords'>
+<!--[if lt IE 9]>
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/html5shiv-bb669dd537dfdfb80f5581532f95e3d93d4e161976d46f6a8ea5c49c57cafbc8.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="all" href="//d3jbm9h03wxzi9.cloudfront.net/assets/application-4eeb1b015e3c86cc20dbdc72a26232e7574974f39c773bc496318055f4845771.css" nonce="UidKpXkzNuniLVqHXeVtDQ==" />
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/application-989b33e0ccddb3384b2987632d5a790c45139d7bd4a857507860f6eeeea1fca1.js" nonce="UidKpXkzNuniLVqHXeVtDQ==" defer="defer"></script>
+<script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+  I18n.defaultLocale = "en";
+  I18n.locale = "en";
+});
+
+
+
+//]]>
+</script><link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='16x16'>
+<link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='32x32'>
+<link color='#E15718' href='//d3jbm9h03wxzi9.cloudfront.net/assets/icon-3ef15b89ab8676cd48dac6b7878bbc0e564d4e4167ea590f1f49d8e596d1ee4b.svg' rel='mask-icon'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="QHo8lFC61m6k8BgfzkcAuUoAIjO2hIvOEhpIHpGwI8WgiU66lCRhMbVPG69ROBdu8u0r3mtJjZ1bCk+V9impvA==" />
+<meta name="csp-nonce" content="UidKpXkzNuniLVqHXeVtDQ==" />
+
+<script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+  function getQueryParam(url, param) {
+    // Expects a raw URL
+    param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + param + "=([^&#]*)",
+    regex = new RegExp( regexS ),
+    results = regex.exec(url);
+    if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+      return '';
+    } else {
+      return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+    }
+  };
+
+  function geUtmParams() {
+    var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
+    , kw = ''
+    , params = {}
+    , first_params = {}
+    , result = {};
+
+    var index;
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        params[campaign_keywords[index] + ' [last touch]'] = kw;
+      }
+    }
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        first_params[campaign_keywords[index]] = kw;
+      }
+    };
+
+    result.first_params = first_params;
+    result.params = params;
+
+    return result;
+  }
+
+  function extractReferrer(referrer) {
+    campaign = geUtmParams().first_params["utm_campaign"];
+    ref = getQueryParam(document.URL, 'ref');
+
+    if(!campaign && !ref) {
+      if (/www\.getrevue\.co\/profile\/(.*?)\/issue/.test(window.location.href)) {
+        return 'Revue Profile Issue'
+      } else if(/www\.getrevue\.co\/profile/.test(window.location.href)) {
+        return 'Revue Profile'
+      }
+    }
+
+    if(!!campaign) {
+      return campaign;
+    } else if (referrer.search('https?://(.*)google.([^/?]*)') === 0) {
+      return 'Google';
+    } else if (referrer.search('https?://(.*)bing.([^/?]*)') === 0) {
+      return 'Bing';
+    } else if (referrer.search('https?://(.*)yahoo.([^/?]*)') === 0) {
+      return 'Yahoo';
+    } else if (referrer.search('https?://(.*)facebook.([^/?]*)') === 0) {
+      return 'Facebook';
+    } else if (referrer.search('https?://(.*)twitter.([^/?]*)') === 0 || referrer.search('https?://(.*)t.co/') === 0) {
+      return 'Twitter';
+    } else if (referrer.search('https?://(.*)linkedin.([^/?]*)') === 0) {
+      return 'LinkedIn'
+    } else if (referrer == '$direct' || (!referrer || /^\s*$/.test(referrer))) {
+      return '$direct';
+    } else if (referrer.search('https?://(.*)getrevue.co') == 0) {
+      if(/\/app\//.test(referrer)) {
+        return 'Revue App';
+      } else if (/\/profile\/(.*?)\/issue/.test(referrer)) {
+        return 'Revue Profile Issue'
+      } else if (/\/profile\//.test(referrer)) {
+        return 'Revue Profile'
+      } else if (/blog\.getrevue\.co/.test(referrer)) {
+        return 'Revue Blog'
+      } else {
+        return 'Revue Page'
+      }
+    } else if (referrer.search('https?://(.*)rev.vu([^/?]*)') === 0) {
+      return 'Revue Item';
+    } else if (!!ref) {
+      return ref;
+    } else {
+      tld = new RegExp('\.(asn\.au|com\.au|net\.au|id\.au|org\.au|edu\.au|gov\.au|csiro\.au|act\.au|nsw\.au|nt\.au|qld\.au|sa\.au|tas\.au|vic\.au|wa\.au|co\.at|or\.at|priv\.at|ac\.at|avocat\.fr|aeroport\.fr|veterinaire\.fr|co\.hu|film\.hu|lakas\.hu|ingatlan\.hu|sport\.hu|hotel\.hu|ac\.il|co\.il|org\.il|net\.il|k12\.il|gov\.il|muni\.il|idf\.il|ac\.za|gov\.za|law\.za|mil\.za|nom\.za|school\.za|net\.za|co\.uk|org\.uk|me\.uk|ltd\.uk|plc\.uk|net\.uk|sch\.uk|ac\.uk|gov\.uk|mod\.uk|nhs\.uk|police\.uk)')
+      a = document.createElement('a');
+      a.href = referrer;
+      ref = a.hostname;
+      if(tld.test(ref)) {
+        return ref.replace(tld, '').split('.').pop()
+      } else {
+        return ref.split('.').reverse()[1];
+      }
+    }
+  };
+
+  function getReferrer() {
+    ref = document.referrer;
+    return extractReferrer(ref);
+  }
+
+  function mixpanelLoaded() {
+    try {
+      // Set ref
+      initial_ref = mixpanel.get_property('$initial_referrer');
+      mixpanel.register_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"$created": new Date().toISOString()});
+
+      // Set distinct id
+      var member_distinct_id_element = document.querySelector('#member_distinct_id');
+      member_distinct_id_element.value = mixpanel.get_distinct_id();
+    } catch(e) {}
+  };
+
+//]]>
+</script>
+<script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("2087bc32dd14049d6de8a339112517d9", {loaded: mixpanelLoaded, ip: false});
+//]]>
+</script>
+
+<script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+  var utm = geUtmParams();
+  mixpanel.register(utm.params);
+
+//]]>
+</script>
+<meta content='86400' property='twitter:maxage'>
+<meta content='171913' property='twitter:revue:account:id'>
+<meta content='新闻实验室' property='twitter:newsletter:title'>
+<meta content='新闻实验室免费版。
+付费版请见：https://newslab.info/join/' property='twitter:newsletter:description'>
+<meta content='https://www.getrevue.co/profile/newslab?via=twitter-card' property='twitter:newsletter:profile:url'>
+<meta content='true' property='twitter:newsletter:issue:card'>
+<meta content='https://imgix.revue.co/profiles/images/000/172/257/original/log520.png?ixlib=rails-3.1.0' property='twitter:newsletter:image:src'>
+<meta content='灾难报道是“吃人血馒头”吗？｜050' property='twitter:issue:title'>
+<meta content='东航MU5735空难发生第二天，《人物》杂志迅速推出的报道《MU5735航班上的人们》获得了很多关注，不少人说被这些人物故事深深触动，对这场灾难有了更加真切的感受。但是，社交媒体上也有很多批评的声音，批评者大多以“新闻伦理”为旗号，指责《人物》违反伦理、侵犯隐私、给家属带来“二次伤害”、“吃人血馒头”等。这里想先说一句，鲁迅先生小说《药》里面的“人血馒头”真不是“利用他人的不幸获利”的意思，而是愚昧、无知和麻木的象征。读一遍《药》并不是难事，这里就不详细展开了。为了方便讨论，我们暂且认为，“人血馒头”的定义已经成功被当代网友改变了，它不再指代愚昧和麻木，而是等同于“嗜血”，是从他人的不幸中攫取利益。那么，媒体做灾难报道真的是“吃人血馒头”吗？或者更具体说，《人物》的这篇报道是不是“吃人血馒头”呢？灾难报道究竟应该遵循怎样的伦理守则呢？（点这里可以听本期内容的播客版，内容与文字版一致）灾难报道的意义是什么？我想先讨论宏观层面的问题，那就是：灾难发生之后，媒体是否应当跟进报道？媒体做灾难报道的意义究竟是什么？灾难发生后，人们的信息需求是比平时更加强烈的，不仅是被灾难影响的人，也包括并没有…' property='twitter:issue:description'>
+<meta content='42' property='twitter:issue:number'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/050-1080032?via=twitter-card' property='twitter:issue:url'>
+<meta content='https://imgix.revue.co/items/images/014/853/690/mail/050banner.jpeg?ixlib=rails-3.1.0' property='twitter:issue:image:src'>
+<meta content='29942836' property='twitter:user:id'>
+<meta content='summary_large_image' property='twitter:card'>
+<meta content='@revue' property='twitter:site'>
+<meta content='1073732649320413' property='fb:app_id'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/050-1080032' property='og:url'>
+<meta content='article' property='og:type'>
+<meta content='灾难报道是“吃人血馒头”吗？｜050' property='og:title'>
+<meta content='东航MU5735空难发生第二天，《人物》杂志迅速推出的报道《MU5735航班上的人们》获得了很多关注，不少人说被这些人物故事深深触动，对这场灾难有了更加真切的感受。但是，社交媒体上也有很多批评的声音，批评者大多以“新闻伦理”为旗号，指责《人物》违反伦理、侵犯隐私、给家属带来“二次伤害”、“吃人血馒头”等。这里想先说一句，鲁迅先生小说《药》里面的“人血馒头”真不是“利用他人的不幸获利”的意思，而是愚昧、无知和麻木的象征。读一遍《药》并不是难事，这里就不详细展开了。为了方便讨论，我们暂且认为，“人血馒头”的定义已经成功被当代网友改变了，它不再指代愚昧和麻木，而是等同于“嗜血”，是从他人的不幸中攫取利益。那么，媒体做灾难报道真的是“吃人血馒头”吗？或者更具体说，《人物》的这篇报道是不是“吃人血馒头”呢？灾难报道究竟应该遵循怎样的伦理守则呢？（点这里可以听本期内容的播客版，内容与文字版一致）灾难报道的意义是什么？我想先讨论宏观层面的问题，那就是：灾难发生之后，媒体是否应当跟进报道？媒体做灾难报道的意义究竟是什么？灾难发生后，人们的信息需求是比平时更加强烈的，不仅是被灾难影响的人，也包括并没有…' property='og:description'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/466/895/original/issue_image_1080032.jpg?1648043561' property='twitter:image'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/466/895/original/issue_image_1080032.jpg?1648043561' property='og:image'>
+<meta content='https://s3.amazonaws.com/revue/items/images/014/853/690/original/050banner.jpeg?1648042935' property='og:image'>
+
+
+</head>
+<body class='profiles archive' data-page='ProfilesArchive'>
+<script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58968534-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+//]]>
+</script>
+<style>
+  #profile-nav {border-color: #88B04B !important;}
+  #profile-nav.expanded svg {fill: #88B04B !important;}
+  #nav-back {color: #88B04B !important;}
+  #nav-back:after {border-color: #88B04B !important;}
+  #profile-logo {background-color: #88B04B !important;}
+  .subscribe-form__submit {background-color: #88B04B !important;}
+  section#premium a {color: #B0632E !important;}
+  ::-moz-selection {background-color: #88B04B !important;}
+  ::selection {background-color: #88B04B !important;}
+</style>
+<div id='profile-nav'>
+<a id="nav-back" href="https://www.getrevue.co/profile/newslab">View profile</a>
+<a id="profile-logo" href="https://www.getrevue.co/?ref=Revue+Profile"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg>
+</a></div>
+
+<article id='issue-holder'>
+<form class="subscribe-form" id="4HkBWwPx_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Io8itSUnShKULhZ8oTO8fpm/3w6nAbIb3MSUG/F8jZrCfFCb4bn9TYWRFcw+TKupIVLW43rMtEiV1JOQluUH4w==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-header" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='UidKpXkzNuniLVqHXeVtDQ=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="rNpDwaGTCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_O4e4R5" id="confirm_O4e4R5" autocomplete="off" />
+</div>
+
+</form><script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+mixpanel.register({'profile_page_new_design': false});
+mixpanel.track('Profile viewed', {
+  'profile' : "新闻实验室",
+  'profile_id' : "172257",
+  'Last page': getReferrer()
+}, function() {
+  mixpanel.register({"First time": false});
+});
+
+
+
+//]]>
+</script><script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+window["rNpDwaGTCaptchaCallback"] = function() {
+  document.getElementById("4HkBWwPx_new_member").submit();
+};
+
+
+//]]>
+</script>
+<section id='issue'>
+<section id='issue-display'>
+<header>
+<span class='issue-nr'></span>
+<time datetime='2022-03-23T21:52:37+08:00'>Mar 23, 2022</time>
+<h1 title='新闻实验室 - 灾难报道是“吃人血馒头”吗？｜050'>灾难报道是“吃人血馒头”吗？｜050</h1>
+</header>
+<div id='issue-frame'><!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <title></title>
+  <!--[if !mso]><!-- -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+  #outlook a { padding: 0; }
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height:100%; }
+  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  p { display: block; padding: 0; margin: 0; margin-bottom: 0; }
+  .revue-p + .revue-p, .revue-p + .revue-blockquote {margin-top: 14px !important;}
+  .revue-p + .revue-h2, .revue-h2 + .revue-p, .revue-ul + .revue-h2, .revue-h2 + .revue-ul, .revue-ol + .revue-h2, .revue-h2 + .revue-ol  {margin-top: 14px !important;}
+  .revue-h2 {font-size:20px;line-height:28px;font-weight:700;padding-bottom:0px !important;}
+  [class*="revue-p"] + [class*="revue-p"], [class*="revue-p"] + [class*="revue-blockquote"] {margin-top: 14px !important;}
+  [class*="revue-p"] + [class*="revue-h2"] {margin-top: 14px !important;}
+</style>
+<!--[if !mso]><!-->
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+    @-ms-viewport { width:320px; }
+    @viewport { width:320px; }
+  }
+</style>
+<!--<![endif]-->
+<!--[if mso]>
+<style type="text/css">
+  .revue-p,
+  .revue-h2,
+  .revue-ul,
+  .revue-ol,
+  .revue-blockquote {margin-bottom: 14px !important;}
+</style>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if lte mso 11]>
+<style type="text/css">
+  .outlook-group-fix {
+    width:100% !important;
+  }
+</style>
+<![endif]-->
+<style type="text/css">
+  @media only screen and (min-width:480px) {
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-25 { width:25.9259259259%!important; }
+    .mj-column-per-74 { width:74.0740740741%!important; }
+    .mj-column-per-50 { width:50%!important; }
+    .mj-column-per-60 { width:60%!important; }
+    .mj-column-per-20 { width:20%!important; }
+  }
+
+  @media screen and (max-width:600px) {
+    .title-text{font-size:14px !important; line-height:20px !important;}
+    .title-image{width:44px !important;height:44px !important;}
+    .indented {padding-left: 8px !important; padding-right: 8px !important;}
+    .link-image {width: 112px !important;}
+    .header-text {font-size: 22px !important; line-height: 32px !important;}
+    .revue-h2 {font-size:18px !important; line-height: 24px !important;}
+    .introduction-subject {font-size: 24px !important; line-height: 24px !important;}
+    .introduction-spacer {padding: 30px 0 !important;}
+    .link-title {font-size: 18px !important; line-height: 24px !important;}
+    .text-default,
+    .link-description {font-size: 14px !important; line-height: 22px !important;}
+    .link-url {font-size: 13px !important;}
+    .text-small {font-size:12px !important;}
+  }
+</style>
+</head>
+<body>
+  <div>
+    <div id="preheader" style="display:none;font-size:1px;color:#FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">新闻伦理问题是最容易离地高谈阔论，但又最应该贴地具体分析的。 </div>
+
+    
+    
+    
+    
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;" class="indented"><div style="cursor:auto;color:#657786;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:12px;line-height:22px;text-align:center;font-weight:400;" class="text-small"><a target="_blank" style="color: #657786;text-decoration:underline;" href="https://www.getrevue.co/profile/newslab/issues/050-1080032?utm_campaign=Issue&amp;utm_content=view_in_browser&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">View online</a></div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
+
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;padding-bottom:28px;" class="indented">
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-right:12px;" width="56">
+<a target="_blank" href="https://www.getrevue.co/profile/newslab">
+<img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" class="title-image" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" /></a></td>
+<td><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody>
+<tr><td><div style="cursor:auto;color:#14171A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:22px;text-align:left;font-weight:700;" class="title-text">方可成</div></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+
+    
+
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented" colspan="2"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;" class="text-default"><div style="margin:0;" class="revue-p">新闻伦理问题是最容易离地高谈阔论，但又最应该贴地具体分析的。</div>
+
+  </div></td></tr>
+  <tr><td style="word-break:break-word;font-size:0px;padding:40px 0px;" class="introduction-spacer"><p style="font-size:1px;border-top:1px solid #E1E1E1;width:100%"></p><!--[if mso | IE]><table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" style="font-size:1px;margin:40px auto;border-top:1px solid #E1E1E1;width:100%;" width="30"><tr><td style="height:0;line-height:0;"> </td></tr></table><![endif]--></td></tr>
+  </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr>
+</tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+
+    
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      亲爱的朋友：
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">东航MU5735空难发生第二天，《人物》杂志迅速推出的报道《MU5735航班上的人们》获得了很多关注，不少人说被这些人物故事深深触动，对这场灾难有了更加真切的感受。但是，社交媒体上也有很多批评的声音，批评者大多以“新闻伦理”为旗号，指责《人物》违反伦理、侵犯隐私、给家属带来“二次伤害”、“吃人血馒头”等。</div><div style="margin:0;" class="revue-p">这里想先说一句，鲁迅先生小说《药》里面的“人血馒头”真不是“利用他人的不幸获利”的意思，而是愚昧、无知和麻木的象征。读一遍《药》并不是难事，这里就不详细展开了。</div><div style="margin:0;" class="revue-p">为了方便讨论，我们暂且认为，“人血馒头”的定义已经成功被当代网友改变了，它不再指代愚昧和麻木，而是等同于“嗜血”，是从他人的不幸中攫取利益。那么，媒体做灾难报道真的是“吃人血馒头”吗？或者更具体说，《人物》的这篇报道是不是“吃人血馒头”呢？灾难报道究竟应该遵循怎样的伦理守则呢？</div><div style="margin:0;" class="revue-p">
+<strong>（</strong><a href="https://www.xiaoyuzhoufm.com/episodes/623b22fda36f87d90b3ad8b1?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;"><strong>点这里可以听本期内容的播客版</strong></a><strong>，内容与文字版一致）</strong>
+</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">灾难报道的意义是什么？</div><div style="margin:0;" class="revue-p">我想先讨论宏观层面的问题，那就是：灾难发生之后，媒体是否应当跟进报道？媒体做灾难报道的意义究竟是什么？</div><div style="margin:0;" class="revue-p">灾难发生后，人们的信息需求是比平时更加强烈的，不仅是被灾难影响的人，也包括并没有直接被卷入灾难的人，因为我们会关心同类的命运，我们也担心自己今后会遇到同样的厄运。而这时为我们提供信息的，媒体是一支最主要的力量。我们不能仅仅“等官方通报”，因为信息量不够，且可能隐藏甚至扭曲部分信息。</div><div style="margin:0;" class="revue-p">如果你认为媒体就应该乖乖等着转发官方发布的信息，如果你认为媒体去现场采访就是添乱、采访遇难者家属就是伤害、发出追问就是不安好心、记录悲伤就是赚取流量，那么也就不必再读下去了，因为我们对媒体在社会中发挥的作用有着根本不同的看法。<strong>接下来的讨论需要建立于一组基本的共识，那就是：媒体做灾难报道是必要的；现场采访和家属采访要非常小心注意，但都是可以做的；我们应该探讨的是怎样做更好的报道，而不是该不该做报道。</strong>
+</div><div style="margin:0;" class="revue-p">国际记者中心（ICFJ）出品的《<a href="https://www.newslab.org/wp-content/uploads/2013/11/Disaster-Coverage-Guide.pdf?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">灾难和危机报道手册</a>》中提出，在灾难和危机中，新闻媒体扮演了四种关键的角色：</div><ul class="revue-ul">
+<li style="margin:0;">第一，提供关键的信息，告诉大家发生了什么、谁受到了影响、事情在如何发展，以及为什么会发生这样的灾难。</li>
+<li style="margin:0;">第二，提供一条沟通的生命线，传递关键信息，把受影响的相关方的信息传出来，也把关键信息传递给他们；</li>
+<li style="margin:0;">第三，成为一座警告的灯塔，为避免下一次的灾难传递及时、可靠的信息；</li>
+<li style="margin:0;">第四，成为一个社区的论坛，让公民们可以走到一起来，分享自己共同的担忧，在困难的时刻彼此提供支持。</li>
+</ul><div style="margin:0;" class="revue-p">这四种角色，显然不是一篇报道能够同时承担的，甚至不是一家媒体能够同时承担的。所以，我们需要更多媒体的参与，需要更多样的声音和多元的角度，有的记者去前线采访救灾现场，有的记者挖掘调查背后的深层原因，有的媒体传递共情、抚慰心灵，让人们可以更紧密、更坚强地站在一起。在理想状态下，我们应该看到这些场面同时上演。</div><div style="margin:0;" class="revue-p">这里顺便再说一句媒体的“流量诉求”。大多数媒体都是按照商业规则运行的，追求注意力，不管是发行量、收视率还是点击率，都是正常的市场逻辑。纸媒年代，如果一张报纸能做到一纸风行、洛阳纸贵，那是很骄傲的事情。哪怕是非商业的公共媒体（比如BBC），也很强调报道内容是否覆盖到了更广泛的受众。所以，“追求流量”并不是原罪，关键是通过什么样的方式去追求，能否做到流量和公共价值的更好平衡，乃至双赢。一些人在媒体做了什么报道之后就骂“人血馒头”，下一次媒体没报道的时候又喊“媒体已死”，那是自相矛盾的。</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">还原失联/遇难者人生的报道有何意义？</div><div style="margin:0;" class="revue-p">上面提到，灾难报道有几种不同的意义。可以理解的是，在灾难刚刚发生的时候，人们最关心的还是信息层面的意义，尤其是灾难发生的原因。</div><div style="margin:0;" class="revue-p">但是，很多时候，这样的原因不是马上能够调查出来的。更何况是空难这样高度专业和复杂的领域，对“为什么会发生这起空难”这个问题，注定不可能在短期内提供回答。而在中国的具体语境下，提供这方面的信息就更为困难了。</div><div style="margin:0;" class="revue-p">一些对《人物》的报道不满的人，提出的批评是：有这个时间精力，怎么不去调查一下空难发生的原因？这样的批评有些求全责备了，因为那需要时间，还不一定被允许发表，而且，还原失联/遇难者的人生，这样的报道本身就是有其意义的。</div><div style="margin:0;" class="revue-p">其实，这个角度的报道在全球范围内都是灾难报道中的常见操作。它将抽象的数字还原为具体的人，让悲伤更为可知可感，由此也将灾难的记忆更深地刻进我们的社会，让人们更难遗忘这样的经历，也间接地促使人们不断去追问和反思灾难发生的原因。《中国青年报》“冰点”周刊主编从玉华曾经<a href="https://book.douban.com/annotation/78988643/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">说</a>，“再广大的悲伤，也比不上一个小人物具体的悲伤。”还原他们的故事，可以激发人们的共情。这符合上文所说的灾难报道意义第四点，那就是将人们联结起来。这次不少人提起的《<a href="http://zqb.cyol.com/content/2008-05/28/content_2200571.htm?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">回家</a>》和《<a href="http://zqb.cyol.com/html/2011-07/27/nw.D110000zgqnb_20110727_1-12.htm?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">永不抵达的列车</a>》都有这样的效果。</div><div style="margin:0;" class="revue-p">曾经担任《焦点访谈》主编，现在在南京大学新闻传播学院任教的庄永志曾经<a href="http://www.360doc.com/content/15/0104/17/1739700_438142858.shtml?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">回忆</a>，美国“911”事件一周年的时候，他看了将近十部美国各大电视台播出的非虚构节目，其中印象很深的是ABC的著名记者戴安娜·索耶讲述了几十个不幸失去父亲的宝宝的故事。“几十位妈妈（有的还是未婚妈妈）痛失亲人的绝望、苦苦寻亲的痴情、茫然无助的惶恐和为爱而生的勇气以及宝宝们懵懂无忧的笑脸，在镜头前毫无遮掩。反复观看，每次都热泪盈眶，既慨叹命运无常，更感动于生命的坚强。”</div><div style="margin:0;" class="revue-p">我在这里再举一个国外的例子。埃博拉病毒一度在多个国家肆虐，西方媒体的关注焦点是感染遇难的美国人，它们呈现了不少死者的故事。但是，实际上无论从死者数量还是从疫情本身的重要性来看，非洲才是埃博拉病毒的中心。这时，如果有更多对非洲埃博拉死者的人情味报道，将能够有效激发受众对非洲的关注和同情，也能更好地影响资源的调配和投入。</div><div style="margin:0;" class="revue-p">采取这种较为软性的方式做报道，在中国的语境下还有一层原因，那就是：它是狭小空间中一个尚且能做出报道的领域。资深传媒人朱学东就总结<a href="https://mp.weixin.qq.com/s/Og8thZW2m3nLjXkuWqOapA?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">说</a>：“灾难中遇难者的报道，不再仅仅是传统意义上对消逝的生命的追怀，也已经成为媒体人突破阻力，尽可能向读者呈现灾难局部真相、铭刻记忆的一种努力。这种努力，颇有些‘曲线救国’式的苍凉。”</div><div style="margin:0;" class="revue-p">当然，肯定了这类报道的意义，并不意味着就不可以对这类报道提出具体的批评意见了。</div><div style="margin:0;" class="revue-p">有一种常见的批评意见是，这样的报道过于“煽情”，笔法过于文学化，读起来让人不太舒服。我觉得，对风格的偏好是一个见仁见智的问题，有人读了很感动、很喜欢，有人读了不舒服、不喜欢，这都很正常。</div><div style="margin:0;" class="revue-p">而且，“情绪”并不一定就是坏东西。在新闻学界，这两年讨论很多的一个概念叫做“<a href="https://www.tandfonline.com/doi/full/10.1080/21670811.2019.1697626?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">the emotional turn of journalism</a>”，也就是新闻学中的“情感转向”。大家越来越意识到，其实新闻从来不是冰冷的、纯理性的，即便是所谓的硬新闻，在它的采访、写作、阅读、传播的过程中，也一直伴随着情感的因素。优秀的新闻作品，往往是既能传递重要信息，又能调动受众情感。所以，你可以说一篇报道在情感方面把握得不好，可能过度了，或者走偏了，但不要因为一篇报道有情感在其中就认为它是不好的。</div><div style="margin:0;" class="revue-p">我在和朋友的交流过程中，还听到了另一种批评意见，我觉得是更值得参考的。这位朋友说：这类报道“是否也陷入同质化问题，千篇一律，满篇都是‘人’，但又让我感觉不到‘人’的真实复杂的存在。这一视角不限于对这一篇的观感。“</div><div style="margin:0;" class="revue-p">我觉得这个批评意见相当一针见血。我们需要看到活生生的、有血有肉的人，我们期待呈现充沛而复杂的情感，但是《人物》杂志的这篇文章因为操作时间有限，其实呈现出来的整体面貌是比较单一和浅层的，或者说是高度可预测的，有经验的读者还没点开就能猜出里面大概会写什么。</div><div style="margin:0;" class="revue-p">所以，还原人生是重要的，但如何更好地还原，可以思考和改进。</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">能不能采访亲属和朋友？</div><div style="margin:0;" class="revue-p">接下来谈谈能不能采访失联/遇难者亲属和朋友的事情。</div><div style="margin:0;" class="revue-p">这依然是一个“怎样可以做得更好”的事情，而不是一个绝对的禁区。家属的心情当然是焦虑、伤心乃至绝望的，但是采访他们并不一定就是伤害他们。相反，正如不少有过灾难报道经验的记者指出的，很多时候家属是希望对媒体说话的，他们中的一些人需要倾诉，一些人希望自己亲友的故事被记录下来，他们也需要通过媒体的关注来更好地表达诉求，获得更好的解决方案。</div><div style="margin:0;" class="revue-p">正如资深媒体人李思磐<a href="https://weibo.com/1407955112/LkYgRAy2A?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">说</a>的，“在市场化报纸兴盛的年代（距离今天也不过十年），很多媒体都有讣闻栏目。许多逝者的亲属打电话给报社，希望写一写自己天人永隔的亲人，即便她们并不是公众人物。这是新闻的社会服务，也是媒体与社区连结的方式。”她还举例说，可以了解一下天津爆炸案当中，“记者们如何迅速推动问责，如何帮助编外消防员家属得到同样的抚恤，如何让殃及的住宅业主得以维权”。</div><div style="margin:0;" class="revue-p">所以，采访家属不仅是可以的，在一些情况下还是必要的。当然，如果有家属明确拒绝采访，那记者应该尊重他们的意见。</div><div style="margin:0;" class="revue-p">一篇流传很广的文章《<a href="https://mp.weixin.qq.com/s/pSCjmTtzMXqliOJIa4phKA?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">「人物」报道笔下的侵扰悲痛问题</a>》当中声称，记者不能做“死亡敲门（death knock）”。作者说，《人物》杂志采访了一位乘客的老师和学弟，而他们本来还不知道这位乘客就在飞机上的事情，作者认为这是违反伦理的做法。</div><div style="margin:0;" class="revue-p">这其实是一种误解。“死亡敲门”确实需要谨慎，但是，正如英国行业媒体Press Gazette的<a href="https://pressgazette.co.uk/why-death-knocks-are-a-difficult-but-essential-part-of-the-job-for-journalists/5/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">文章</a>所说：“死亡敲门”是记者工作当中艰难但是必要的部分。它很难，因为确实可能给家人带来情绪上的巨大冲击；但另一方面，让报道中呈现家人的声音，这其实也是一种尊重。</div><div style="margin:0;" class="revue-p">而且，“死亡敲门”的对象一般指的是直系亲属，老师和学弟显然不包括在内。这里我们应该想一想，为什么在西方的一些伦理规范里面会对“死亡敲门”特别谨慎？因为那确实对于父母、家人来说是天打雷劈般的消息，但我不认为这对老师和学弟来说是什么天打雷劈的消息。因此，把“死亡敲门”的概念用在这里，纯粹是一种生搬硬套。</div><div style="margin:0;" class="revue-p">那篇文章还提出了一个概念叫做”侵扰悲痛“。这个概念听起来很玄乎，其实可以落实到一些具体的细节。我在开头提到的国际记者中心（ICFJ）出品的《<a href="https://www.newslab.org/wp-content/uploads/2013/11/Disaster-Coverage-Guide.pdf?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">灾难和危机报道手册</a>》中给出了采访灾难幸存者和家属的一些注意事项，可以作为一种参考（以下是我的翻译）：</div><ul class="revue-ul">
+<li style="margin:0;">在开口问问题或拍摄之前，平静、清晰地介绍你自己。被访者需要知道你是谁，需要知道采访材料可能会被发表或播出。</li>
+<li style="margin:0;">带着尊严和尊重对待他们。记者们需要保持平衡：既要敏感，又不能胆怯。</li>
+<li style="margin:0;">永远不要问“你感觉如何？”永远不要说“我理解你的感受。”最好是告诉他们，“我对你的损失/你经历的这一切感到非常抱歉/难过。”</li>
+<li style="margin:0;">用开放式的问题开始采访，小心地引导他们讲述自己的故事。“你是什么时候知道的？你目前已经和谁聊过了？”如果一个母亲在一场空难中失去了儿子，那么你可以这样问：“可以跟我说一说他的一生吗？”问他们看到了什么、听到了什么。这些问题不带任何判断，并且给他们一个机会可以讲述自己的感受和想法。</li>
+<li style="margin:0;">人们在不同的情况下会有不同的反应——有人会回避，但有人会从倾诉中找到安慰。</li>
+<li style="margin:0;">如果有人拒绝受访，或者对于采访表现出情绪化的反应，那么就不去打扰他们，友善地感谢他们，然后走开。有的记者会给他们留下一张名片，告诉他们“如果你们之后想聊的话，可以找我。”</li>
+<li style="margin:0;">给他们一种掌控感。问他们是站着还是坐着更舒服，问他们想不想去其他地方聊，到一个安静的地方聊。一种友善的姿态是问他们：“你想不想有谁陪着你一起？”</li>
+</ul><div style="margin:0;" class="revue-p">可以看出来，这里的关键词是：尊重，倾听，理解。记者当然要对家属的情绪保持高度的敏感，但另一方面，并不是所有的采访都是打扰和伤害。</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">能不能使用社交媒体上的内容？</div><div style="margin:0;" class="revue-p">在和一些记者的交流中，我们形成的一个共识是：《人物》的报道里面如果说有什么比较明显的问题，那就是对机上乘客的社交媒体内容的使用。</div><div style="margin:0;" class="revue-p">这个问题在几年前就曾引发过一轮讨论。那是在2014年跨年夜上海外滩发生的踩踏事件当中，一名遇难的复旦学生吸引了相当多的关注。一些媒体在报道中引用了遇难者生前在社交媒体发布的信息和照片，引发了不少质疑。复旦大学的<a href="http://weibo.com/1729332983/BDA9OgRh6?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">官方微博</a>呼吁“媒体尊重她、保护她，不要再挖掘她的隐私，不要再刊登她的照片，让逝者安宁”。</div><div style="margin:0;" class="revue-p">觉得媒体可以使用社交媒体内容的人，给出的理由是：如果说朋友圈里的内容不能随便使用的话，那么发布在微博和微信公号上的内容，本来就是公开可见的，所以媒体使用也就没有什么问题。</div><div style="margin:0;" class="revue-p">但是，著名的互联网研究者danah boyd曾经<a href="https://www.danah.org/papers/talks/2010/SXSW2010.html?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">论述</a>，公开可见（publicly available）并不能简单等同于公开推介（publicized）。一个普通人在微博和公号上写东西的时候，心里的预期是，可能就几百个人看见，大多数还是自己的亲朋好友。现在，媒体突然让百万千万人发现了这些账号，这其实是他们在发布内容的时候完全没有预料到的，因此，不能假定他们默认了媒体可以使用这些内容。</div><div style="margin:0;" class="revue-p">在英国一项关于《星期日泰晤士报》是否可以引用一名自杀身亡的学生在Myspace发布的言论和照片的<a href="http://www.pcc.org.uk/cases/adjudicated.html?article=NjE1NQ%3D%3D&amp;utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">裁决</a>中，新闻投诉委员会指出：“报纸在报道遇难者时，有权使用来自社交媒体的公开信息。不过，在将这些信息从原来的语境中抽离，用于报道个人悲剧时，编辑需要考虑它们对遇难者亲属的影响。”</div><div style="margin:0;" class="revue-p">在《人物》的文章中，写到了一位机上乘客记录自己爱情故事的微信公号，这个公号很快就被大家找出来了。虽然很多人看了之后是觉得感动和惋惜，但严格来说，披露这样的信息，最好应该征得他妻子的同意。</div><div style="margin:0;" class="revue-p">使用社交媒体内容做报道的另一个问题是：它呈现出的人物形象可能是片面的，甚至是失真的。</div><div style="margin:0;" class="revue-p">在读到《人物》杂志的报道（以及此前灾难中类似的一些报道）之后，一些人心里不免会犯嘀咕：如果自己不幸遭遇了这样的灾难，记者会根据我的社交媒体账号拼凑出一个怎样的我？那样的我是真实的我吗？是我希望留给世界的印象吗？甚至有人在想到这些之后，吓得把自己的微博和朋友圈都删光了。</div><div style="margin:0;" class="revue-p">但我们同样很难说：社交媒体上的内容一概不能使用。原因很简单：它们的确呈现了人物的一个侧面，提供了一些宝贵的信息。所以，我们能做的，可能只是尽量保持一种平衡：不要过度使用社交媒体内容，不要故意拼凑和引发联想，要清晰地向读者说明这些内容的局限性，要征求其他相关方的意见，要通过其他渠道的采访来验证或补充社交媒体上的信息。当然，这些都是比较理想化的原则，在实际操作中肯定会有各种各样更加具体的问题需要考虑。</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">总结：理解报道的艰难，鼓励媒体做到更好</div><div style="margin:0;" class="revue-p">从上面的分析中可以看出：“新闻伦理”的讨论绝不是挥舞道德大棒，拿一些令人哭笑不得的帽子往媒体和记者身上扣。实际上，伦理问题是没有绝对正确的答案的，它所回应的具体实践问题更是找不到标准答案。我们当然可以有一些原则性的指引，但是要认识到，即便有原则指引，实际的操作过程中依然是充满了张力、矛盾，充满了困难的抉择，绝对不是1+1=2那么简单。</div><div style="margin:0;" class="revue-p">所以，<strong>新闻伦理问题是最容易离地高谈阔论，但又最应该贴地具体分析的。</strong>
+</div><div style="margin:0;" class="revue-p">在新闻业的空间日益逼仄的当下，对新闻伦理的讨论更应该怀着同情的理解，出发点应该是怎样鼓励和鞭策媒体做到更好，而不是捂住媒体的嘴巴。</div><div style="margin:0;" class="revue-p">最近几年，在微博等社交媒体上，在一些大V和机构账号的引导下，骂媒体成了一种政治正确，成了一种本能反应，“媒体是坏人”成了一些人脑中的基本预设。此次针对《人物》杂志报道的批评当中，我们同样能看到这种声音的大量存在。他们打着关怀家属的旗号，其实心里毫不关心具体的人（他们可以对不同的声音随意地攻击、挂人），他们实际上想要推动的是反媒体的、倡导舆论一元的叙事。</div><div style="margin:0;" class="revue-p">说到最后，如果要我总结一下对《人物》杂志报道的看法，那就是：它当然算不上佳作，操作上也有瑕疵，但这样的报道有其意义，绝不是什么“吃人血馒头”。如果能有更多的时间操作，质量应该会更好，但也可能失去发表的机会。</div><div style="margin:0;" class="revue-p">虽然这次的相关讨论当中有很多噪音，但如果大家能从这篇报道引发的讨论当中，更多思考灾难报道的意义、思考媒体的角色，乃至思考如何鞭策和支持媒体做更好的报道，那也是一件好事。因为今天重重挑战之下的新闻媒体，真的非常需要公众的支持。</div><div style="margin:0;" class="revue-p">
+<strong>（想要阅读更多对传媒现象的深度分析，</strong><a href="https://newslab.info/join/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;"><strong>欢迎点这里加入新闻实验室会员计划</strong></a><strong>。）</strong>
+</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">💌</div><div style="margin:0;" class="revue-p">欢迎通过邮箱或者社交媒体分享本期newsletter，你可以分享网址：<a href="https://www.getrevue.co/profile/newslab?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">https://www.getrevue.co/profile/newslab</a> 。也可以分享以下这张图：</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:650px;">
+    <img alt="欢迎转发此图" title="欢迎转发此图" height="auto" src="https://s3.amazonaws.com/revue/items/images/014/853/690/mail/050banner.jpeg?1648042935" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="650">
+</td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:16px;" align="center"><div style="cursor:auto;color:#95989C;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight: 400;font-size:13px;line-height:21px;text-align:center;">欢迎转发此图</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">以上就是新闻实验室通过免费newsletter与你的第50次见面。如果你是从朋友转发读到的这封信，记得<a href="https://www.getrevue.co/profile/newslab?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">点这里</a>免费订阅和阅读往期内容，比如上一期的《<a href="https://www.getrevue.co/profile/newslab/issues/049-1061654?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">仇恨和恐惧止步于理解</a>》。</div><div style="margin:0;" class="revue-p">下期再见！</div><div style="margin:0;" class="revue-p">方可成</div><div style="margin:0;" class="revue-p">2022.3.23</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+
+
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center" colspan="2"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:14px;text-align:center;font-weight:400;">Did you enjoy this issue? <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">Yes</a> <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">No</a></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left" width="76" valign="top">
+      <a style="text-decoration: none;" target="_blank" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=profileimage&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">
+        <img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" />
+</a>    </td>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left">
+
+    <div style="cursor:auto;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:16px;text-align:left;font-weight:400;padding-bottom: 8px;">
+      <span style="font-weight:700;">方可成</span>
+      </div>
+    <div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">
+      <p>新闻实验室免费版。
+<br />付费版请见：https://newslab.info/join/</p>
+    </div></td></tr>
+  </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:32px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:40px;padding-top:40px;" align="center"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">In order to unsubscribe, click <a style="color: #6F7379; text-decoration:underline;" href="#">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">If you were forwarded this newsletter and you like it, you can subscribe <a target="_blank" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=forwarded&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:12px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">Created with <a target="_parent" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/?utm_source=新闻实验室&amp;utm_medium=email&amp;utm_content=footerlink&amp;utm_campaign=Issue">Revue by Twitter</a>.</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+
+  </div>
+</body>
+</html></div>
+</section>
+<section id='issue-share'>
+<span class='share'>Share</span>
+<a class="twitter" target="_blank" href="https://www.twitter.com/share?url=https://www.getrevue.co/profile/newslab/issues/050-1080032&amp;via=revue&amp;text=%E7%81%BE%E9%9A%BE%E6%8A%A5%E9%81%93%E6%98%AF%E2%80%9C%E5%90%83%E4%BA%BA%E8%A1%80%E9%A6%92%E5%A4%B4%E2%80%9D%E5%90%97%EF%BC%9F%EF%BD%9C050&amp;related=revue"><span class='icon-twitter'></span>
+<span class='name'>Share to Twitter</span>
+</a><a class="facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=https://www.getrevue.co/profile/newslab/issues/050-1080032"><span class='icon-facebook'></span>
+<span class='name'>Share to Facebook</span>
+</a></section>
+</section>
+<form class="subscribe-form" id="GbJZ79P6_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="GKJkQOMFmEcbokzJG/6wOYilIq/Q42QHzUTVXpxELQn4URZuJ5svGAodT3mEgafuMEgrQg0uYlSEVNLV+92ncA==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-footer" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='UidKpXkzNuniLVqHXeVtDQ=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="rQaKFobbCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_WUTKMx" id="confirm_WUTKMx" autocomplete="off" />
+</div>
+
+</form><script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+window["rQaKFobbCaptchaCallback"] = function() {
+  document.getElementById("GbJZ79P6_new_member").submit();
+};
+
+
+//]]>
+</script>
+</article>
+<div class='container'>
+<footer class='terms'>
+<div class='footer-privacy'>
+<a target="_blank" href="https://www.getrevue.co/privacy/platform?locale=en&amp;ref=Revue+Profile">Privacy Policy</a>
+<br>
+<a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a>
+</div>
+<div class='footer-custom'>
+</div>
+<div class='footer-powered'>
+<a target="_blank" href="https://www.getrevue.co/?ref=Revue+Profile"><span>Powered by</span>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg>
+</a></div>
+</footer>
+</div>
+
+<section id='subscribe-bar'>
+<div id='subscribe-bar-form'><form class="subscribe-form subscribe-form--inline" id="KSNaU1SI_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="C084qZ3FSbAfFWTJ7Zm+iotNrInZbXi6Z8qFhYr1eqDrvEqHWVv+7w6qZ3ly5qldM6ClZASgfuku2oIO7Wzw2Q==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-popup" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='UidKpXkzNuniLVqHXeVtDQ=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="et6M2MUYCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_j4jWse" id="confirm_j4jWse" autocomplete="off" />
+</div>
+
+</form><script nonce="UidKpXkzNuniLVqHXeVtDQ==">
+//<![CDATA[
+window["et6M2MUYCaptchaCallback"] = function() {
+  document.getElementById("KSNaU1SI_new_member").submit();
+};
+
+
+//]]>
+</script></div>
+</section>
+<div class='component__spacer--is-small'></div>
+
+
+<div class='cookie-notice cookie-notice--show'>
+<p class='cookie-notice__message'>By using the Revue Service, you agree to our cookie use in our <a class="cookie-notice__link" href="https://www.getrevue.co/privacy">Website Privacy Policy</a> or <a class="cookie-notice__link" href="https://www.getrevue.co/privacy/platform">Platform Privacy Policy</a>. We use cookies for purposes, including analytics and personalization.</p>
+<a id="hideCookieNotice" class="btn btn-sm cookie-notice__button" href="#">OK</a>
+</div>
+
+</body>
+</html>
