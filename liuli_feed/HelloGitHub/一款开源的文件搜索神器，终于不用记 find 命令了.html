@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="IjRkYmNmNjIyZjE2M2M0M2MxMjA5ZDVkOGIwMjJlNTY2YmRjN2UyMDMi.YoFMeA.UlsmHTYQHtX8QvrudlajXoxZwsQ">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.hellogithub.com/favicon/apple-touch-icon.png">
+    <link rel="android-chrome" sizes="192x192" href="https://img.hellogithub.com/favicon/android-chrome-192x192.png">
+    <link rel="android-chrome" sizes="512x512" href="https://img.hellogithub.com/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.hellogithub.com/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.hellogithub.com/favicon/favicon-16x16.png">
+    <link rel="icon" href="https://img.hellogithub.com/favicon/favicon.ico">
+    <title>HelloGitHub </title>
+    <link rel="stylesheet" href="/static/css/pure.min.css?q=1634283466">
+    
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="分享 GitHub 入门级、有趣的开源项目。推广自己的开源项目、编程实践项目、适合练手的开源项目、HelloGitHub月刊">
+<link rel="stylesheet" href="/static/css/side-menu.css?q=1634283466">
+<link rel="stylesheet" href="/static/css/notice.css?q=1634283466">
+<link rel="stylesheet" href="/static/css/article.css?q=1645505249">
+<link rel="stylesheet" href="/static/css/md.css?q=1642173721">
+
+
+
+    <script data-ad-client="ca-pub-1361072126478946" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?73e0d9a1bd6e22a206afe0551e5e603d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101093029-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+
+
+<div id="notice" dir="ltr" class="cc-banner active" role="alert">
+    <div class="cc-container">
+      <svg class="cc-icon cc-v-center" x="0px" y="0px" viewBox="0 0 44 44" height="30px" fill="none" stroke="currentColor">
+        <circle cx="22" cy="22" r="20" stroke-width="2"></circle>
+        <line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line>
+        <line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line>
+      </svg>
+      <span class="cc-v-center cc-text">
+          <strong>公告：</strong>又拍云为开发者提供免费的云存储服务。<a id="notice_url" href="https://www.upyun.com/league" onclick="track_notice()" target="_blank" class="cc-link cc-v-center">点击获取</a>
+      </span>
+    </div>
+</div>
+
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="/">HelloGitHub</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link">首页</a></li>
+                <li class="pure-menu-item"><a href="/periodical/volume/" class="pure-menu-link">月刊</a></li>
+                <li class="pure-menu-item"><a href="/report/tiobe/?url=/periodical/volume/" class="pure-menu-link">编程语言月报</a></li>
+                <li class="pure-menu-item"><a href="/report/netcraft/?url=/periodical/volume/" class="pure-menu-link">服务器月报</a></li>
+                <li class="pure-menu-item"><a href="/report/db-engines/?url=/periodical/volume/" class="pure-menu-link">数据库月报</a></li>
+                <li class="menu-item-divided pure-menu-selected">
+                    <a href="/article/?page=1&url=/periodical/volume/&sort=new" class="pure-menu-link">返回</a>
+                </li>
+                <li class="pure-menu-item"><a href="/onefile/?url=/periodical/volume/" class="pure-menu-link">编程挑战</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="markdown-body">
+            <h1>一款开源的文件搜索神器，终于不用记 find 命令了</h1>
+            <p><img src="https://img.hellogithub.com/article/nrpbFsYfJIV1woE_1649811627.jpg" alt="cover.jpeg" /></p>
+
+<p>这是 HelloGitHub 推出的<a href="https://github.com/HelloGitHub-Team/Article">《讲解开源项目》</a>系列，用一篇文章带你快速上手有趣的开源项目。</p>
+
+<p>今天给大家推荐一个好用+开源的文件搜索工具——<a href="https://github.com/sharkdp/fd">fd</a></p>
+
+<p><img src="https://img.hellogithub.com/article/bqOPiEQym2AGrBI_1649811635.png" alt="1.png" /></p>
+
+<p>该工具支持大多数主流操作系统，快来更新你的工具箱感受开源项目带来的便利吧！</p>
+
+<h2>一、fd 简介</h2>
+
+<p>你还在为寻找文件而烦恼吗？你还在为记不住 <code>find</code> 一大堆参数而烦恼吗？那就赶快来看看我这次推荐的项目 fd 吧！</p>
+
+<blockquote>
+  <p>项目地址：<a href="https://github.com/sharkdp/fd">https://github.com/sharkdp/fd</a> </p>
+  
+  <p>官方简介：A simple, fast and user-friendly alternative to 'find'</p>
+</blockquote>
+
+<p>我这里先放一个图，让大家直观地感受下</p>
+
+<p><img src="https://img.hellogithub.com/article/7Mr0WE6mx8XkGOJ_1649811653.gif" alt="2.gif" /></p>
+
+<p>fd 是一个命令行工具，提供了多种方便的选项进行文件的搜索，而且默认是彩色输出。项目本身是由 Rust 语言编写的，作为系统级编程语言 Rust 拥有媲美 C++ 的运行速度，那 fd 的速度自然也不在话下，更优秀的是，它提供了强大功能方便用户按照各种条件进行搜索。</p>
+
+<p><img src="https://img.hellogithub.com/article/uF7mIwH2Cafbd8N_1649811661.png" alt="3.png" /></p>
+
+<p>这个优秀的项目是不是成功地引起了你的注意呢～</p>
+
+<h2>二、fd 如何安装</h2>
+
+<p>作为使用的第一步当然是要先安装啦～</p>
+
+<p>fd 提供了各个操作系统平台的安装方式，再不济可以直接通过源码进行安装（前提是有 Rust 的环境噢）</p>
+
+<h3>2.1 一键安装</h3>
+
+<p>我这里以我本地的 Mac 使用 <code>brew</code> 为例</p>
+
+<pre><code>$ brew install fd
+</code></pre>
+
+<p><code>brew</code> 也可以一键升级</p>
+
+<pre><code>$ brew upgrade fd
+</code></pre>
+
+<p>具体到各个平台的详细安装方法，你可以看这里 <a href="https://github.com/chinanf-boy/fd-zh#%E5%AE%89%E8%A3%85">安装文档</a></p>
+
+<h3>2.2 源码安装</h3>
+
+<pre><code>$ git clone https://github.com/sharkdp/fd.git
+$ cd fd
+$ cargo install --path .
+</code></pre>
+
+<h3>2.3 查看帮助</h3>
+
+<p>无论哪种方式安装完成后，就可以直接使用了 <code>-h</code> 或 <code>--help</code> 获取帮助了，<code>--help</code> 就不演示了，区别就是换成了详细的帮助说明，如果你以后忘记了某一个参数也记得使用 <code>--help</code> 来查看哦～</p>
+
+<pre><code>$ fd -h
+fd 8.2.1
+
+USAGE:
+    fd [FLAGS/OPTIONS] [&lt;pattern&gt;] [&lt;path&gt;...]
+
+FLAGS:
+    -H, --hidden            搜索隐藏的文件和目录
+    -I, --no-ignore         不要忽略 .(git | fd)ignore 文件匹配
+        --no-ignore-vcs     不要忽略.gitignore文件的匹配
+    -s, --case-sensitive    区分大小写的搜索（默认值：智能案例）
+    -i, --ignore-case       不区分大小写的搜索（默认值：智能案例）
+    -F, --fixed-strings     将模式视为文字字符串
+    -a, --absolute-path     显示绝对路径而不是相对路径
+    -L, --follow            遵循符号链接
+    -p, --full-path         搜索完整路径（默认值：仅限 file-/dirname）
+    -0, --print0            用null字符分隔结果
+    -h, --help              打印帮助信息
+    -V, --version           打印版本信息
+
+OPTIONS:
+    -d, --max-depth &lt;depth&gt;        设置最大搜索深度（默认值：无）
+    -t, --type &lt;filetype&gt;...       按类型过滤：文件（f），目录（d），符号链接（l），
+                                   可执行（x），空（e）
+    -e, --extension &lt;ext&gt;...       按文件扩展名过滤
+    -x, --exec &lt;cmd&gt;               为每个搜索结果执行命令
+    -E, --exclude &lt;pattern&gt;...     排除与给定glob模式匹配的条目
+        --ignore-file &lt;path&gt;...    以.gitignore格式添加自定义忽略文件
+    -c, --color &lt;when&gt;             何时使用颜色：never，*auto*, always
+    -j, --threads &lt;num&gt;            设置用于搜索和执行的线程数
+    -S, --size &lt;size&gt;...           根据文件大小限制结果。
+...
+</code></pre>
+
+<h2>三、fd 快速上手演示</h2>
+
+<p>为了能让之后的演示有一个统一的认识，我这里新建了一个目录作为 fd 的测试目录，我虚构了一些文件和目录来模拟实际情况，包括一个隐藏目录，我之后的演示都会基于该根目录下，选项如果有短名称和长名称，示例中以短名称为例。</p>
+
+<p>该目录大致是这样：</p>
+
+<pre><code>.
+├── .hg
+│   ├── HelloDjango.md
+│   ├── HelloRust.md
+│   ├── HelloVue.md
+│   ├── HelloZooKeeper.md
+├── dir1
+│   ├── Hello.java
+│   ├── World.java
+│   └── dir2
+│       ├── demo.py
+│       ├── demo1.py
+│       ├── dir3
+│       │   ├── fd_demo.rs
+│       │   └── fd_help.rs
+│       └── sss.py
+├── hello_fd.md
+├── hello_java.md
+├── java
+│   ├── Hello.java
+│   └── World.java
+├── my_java.txt
+├── python
+│   ├── demo.py
+│   ├── demo1.py
+│   └── sss.py
+└── rust
+│   ├── fd_demo.rs
+│   └── fd_help.rs
+├── softdir3 -&gt; dir1/dir2/dir3
+└── sss.py -&gt; dir1/dir2/sss.py
+</code></pre>
+
+<h3>3.1 简单搜索</h3>
+
+<p><code>fd</code> 直接跟想要搜索的内容，会递归搜索当前目录下的所有文件，列出文件名中包含目标内容的结果（结果为当前目录的相对路径）</p>
+
+<pre><code>$ fd Hello
+dir1/Hello.java
+java/Hello.java
+</code></pre>
+
+<h3>3.2 包含隐藏目录</h3>
+
+<p>选项 <code>-H</code> 或 <code>--hidden</code></p>
+
+<pre><code>$ fd -H Hello
+.hg/HelloDjango.md
+.hg/HelloRust.md
+.hg/HelloVue.md
+.hg/HelloZooKeeper.md
+dir1/Hello.java
+java/Hello.java
+</code></pre>
+
+<h3>3.3 大小写</h3>
+
+<p>默认 <code>fd</code> 是匹配智能大小写的，如果你搜索的内容是包含大写会按照大小写精确匹配，但如果是小写会忽略大小写匹配，所以 <code>fd</code> 另外提供了两种选项来严格控制大小写匹配</p>
+
+<p>选项 <code>-i</code> 或 <code>--ignore-case</code> 忽略大小写。</p>
+
+<pre><code>$ fd -i Hello
+dir1/Hello.java
+hello_fd.md
+hello_java.md
+java/Hello.java
+</code></pre>
+
+<p>选项 <code>-s</code> 或 <code>--case-sensitive</code> 严格匹配大小写。</p>
+
+<pre><code>$ fd -s hello
+hello_fd.md
+hello_java.md
+</code></pre>
+
+<h3>3.4 返回绝对路径</h3>
+
+<p>选项 <code>-a</code> 或 <code>--absolute-path</code>：</p>
+
+<pre><code>$ fd -a Hello
+/Users/junjiexun/fd_test/dir1/Hello.java
+/Users/junjiexun/fd_test/java/Hello.java
+</code></pre>
+
+<h3>3.5 返回文件列表详情</h3>
+
+<p>选项 <code>-l</code> 或 <code>--list-details</code> 获得类似 <code>ls -l</code> 的效果。</p>
+
+<pre><code>$ fd -l hello
+-rw-r--r--  1 junjiexun  staff     0B  3  1 18:42 dir1/Hello.java
+-rw-r--r--  1 junjiexun  staff     0B  3  1 18:37 hello_fd.md
+-rw-r--r--  1 junjiexun  staff     0B  3  1 18:37 hello_java.md
+-rw-r--r--  1 junjiexun  staff     0B  3  1 18:38 java/Hello.java
+</code></pre>
+
+<h3>3.6 搜索内容包含路径</h3>
+
+<p>选项 <code>-p</code> 或 <code>--full-path</code> 不单单搜索文件名，还列出目录中包含目标内容的结果。</p>
+
+<p>因为这个测试的目录就在 <code>/Users/junjiexun</code> 下面，所以这样搜索相当于全部的文件都会被搜索出来。</p>
+
+<pre><code>$ fd xun
+Nothing return...
+$ fd -p xun
+dir1
+dir1/Hello.java
+dir1/World.java
+dir1/dir2
+...（略）
+</code></pre>
+
+<h3>3.7 包括 .gitignore 里的文件</h3>
+
+<p>选项 <code>-I</code> 或 <code>--no-ignore</code> 我这里新建了一个 <code>.gitignore</code> 文件内容只有一个 <code>*.java</code> 用来演示，并且需要把当前目录通过 <code>git init</code> 初始化成 git 的项目。</p>
+
+<p>不加该参数，可以看到结果集中 <code>.java</code> 的文件都被过滤了。</p>
+
+<pre><code>$ fd java
+hello_java.md
+java
+my_java.txt
+</code></pre>
+
+<p>加上了 <code>-I</code> 之后结果中又包括了 <code>.java</code> 结尾的文件了。</p>
+
+<pre><code>$ fd -I java
+dir1/Hello.java
+dir1/World.java
+hello_java.md
+java
+java/Hello.java
+java/World.java
+my_java.txt
+</code></pre>
+
+<p><code>-I</code> 功能我演示完了，为了之后的演示，我将 <code>.gitignore</code> 和 <code>.git</code> 目录给删除了。</p>
+
+<p>这些简单的功能已经可以满足一半的日常搜索需求了，接下来我们看看 <code>fd</code> 提供的更高级的搜索选项吧！</p>
+
+<p><img src="https://img.hellogithub.com/article/wFAUWeS7ndQqHX9_1649811705.jpg" alt="4.jpeg" /></p>
+
+<h2>四、高级搜索选项</h2>
+
+<h3>4.1 按深度</h3>
+
+<p>选项 <code>-d</code> 或 <code>--max-depth &lt;depth&gt;</code>，当前路径算深度 1，<code>dir3</code> 下面的 <code>rs</code> 文件就是深度 4 了。</p>
+
+<pre><code>$ fd rs
+dir1/dir2/dir3/fd_demo.rs
+dir1/dir2/dir3/fd_help.rs
+rust/fd_demo.rs
+rust/fd_help.rs
+</code></pre>
+
+<pre><code>$ fd -d 3 rs
+rust/fd_demo.rs
+rust/fd_help.rs
+</code></pre>
+
+<h3>4.2 按文件类型</h3>
+
+<p>选项 <code>-t</code> 或 <code>--type &lt;filetype&gt;</code>，<code>fd</code> 提供了以下几种 <code>filetype</code> 选项：</p>
+
+<ul>
+<li>f：file</li>
+<li>d：directory</li>
+<li>l：symlink</li>
+<li>x：executable</li>
+<li>e：empty</li>
+<li>s：socket</li>
+<li>p：pipe</li>
+</ul>
+
+<pre><code>$ fd -t l
+softdir3
+sss.py
+</code></pre>
+
+<pre><code>$ fd -t d
+dir1
+dir1/dir2
+dir1/dir2/dir3
+java
+python
+rust
+</code></pre>
+
+<p>我给所有的 py 文件都加了可执行权限</p>
+
+<pre><code>$ fd -t x
+python/demo.py
+python/demo1.py
+python/sss.py
+</code></pre>
+
+<h3>4.3 按扩展名</h3>
+
+<p>选项 <code>-e</code> 或 <code>--extension &lt;ext&gt;</code></p>
+
+<pre><code>$ fd -e md
+hello_fd.md
+hello_java.md
+</code></pre>
+
+<h3>4.4 排除</h3>
+
+<p>选项 <code>-E</code> 或 <code>--exclude &lt;pattern&gt;</code> 支持通配符，排除所有包含字母 <code>s</code> 的结果。</p>
+
+<pre><code>$ fd -E '*s*'
+dir1
+dir1/Hello.java
+dir1/World.java
+dir1/dir2
+dir1/dir2/demo.py
+dir1/dir2/demo1.py
+dir1/dir2/dir3
+hello_fd.md
+hello_java.md
+java
+java/Hello.java
+java/World.java
+my_java.txt
+python
+python/demo.py
+python/demo1.py
+</code></pre>
+
+<p>可以看到所有的 rust、rs、sss、soft 都没有出现在结果集中。</p>
+
+<h3>4.5 按所有者</h3>
+
+<p>选项 <code>-o</code> 或 <code>--owner &lt;user:group&gt;</code></p>
+
+<pre><code>$ fd -l -o junjiexun
+drwxr-xr-x  5 junjiexun  staff   160B  3  1 18:42 dir1
+-rw-r--r--  1 junjiexun  staff     0B  3  1 18:42 dir1/Hello.java
+-rw-r--r--  1 junjiexun  staff     0B  3  1 18:42 dir1/World.java
+drwxr-xr-x  6 junjiexun  staff   192B  3  1 18:42 dir1/dir2
+-rw-r--r--  1 junjiexun  staff     0B  3  1 18:42 dir1/dir2/demo.py
+...(略)
+</code></pre>
+
+<p>或者 <code>fd -l -o junjiexun:staff</code> 也可以达到同样的效果，但是 <code>fd</code> 不支持单独搜索 group，也不支持通配符，如果你有想法的话可以给他提 issue 哦～</p>
+
+<h3>4.6 组合命令</h3>
+
+<p><code>fd</code> 提供了 <code>-x</code> 或 <code>--exec &lt;cmd&gt;</code>、<code>-X</code> 或 <code>--exec-batch &lt;cmd&gt;</code> 来进行对搜索结果集的进一步处理</p>
+
+<p>找到所有和 java 匹配的内容并且删除！（仅仅用做演示，<code>rm -rf</code> 慎用）</p>
+
+<pre><code>$ fd java -X rm -rf
+</code></pre>
+
+<p>找到所有的 py 并且通过 vim 打开</p>
+
+<pre><code>$ fd py -X vim
+</code></pre>
+
+<p>还可以使用诸如 <code>unzip</code>、<code>ls</code>、<code>convert</code> 等等其他常用的命令，也可以直接使用 *unix 语法 <code>|</code> 管道符语法进一步处理。</p>
+
+<h3>4.7 正则表达式</h3>
+
+<p>对于文件的内容搜索，我之前演示的是诸如 Hello、java、py 都是这样的完整文本，实际 <code>fd</code> 默认就是支持正则表达式对内容进行搜索的，但是正则表达式需要使用单引号 <code>'</code> 包裹起来，我下面演示：将所有 s 开头的文件都能被搜索出来。</p>
+
+<pre><code>$ fd '^s.*'
+dir1/dir2/sss.py
+python/sss.py
+softdir3
+sss.py
+</code></pre>
+
+<p>如果你不想使用正则表达式，想换成更简单的通配符匹配的话就可以使用选项 <code>-g</code> 或 <code>--glob</code> 可以达到同样的效果。</p>
+
+<pre><code>$ fd -g 's*'
+dir1/dir2/sss.py
+python/sss.py
+softdir3
+sss.py
+</code></pre>
+
+<p>上面的选项大部分都是可以同时使用的，篇幅有限我这里就不继续演示了。</p>
+
+<h2>五、总结</h2>
+
+<p><code>fd</code> 是一个简单友好的命令行文件搜索工具，而且其开源的属性作为 Rust 源码学习的对象也是非常优秀的，赶紧学起来吧！</p>
+
+<blockquote>
+  <p>《讲解开源项目》：https://github.com/HelloGitHub-Team/Article</p>
+</blockquote>
+
+<p>如果你也对开源项目感兴趣，希望自己的文章或项目被更多人喜欢，<a href="https://hellogithub.yuque.com/docs/share/92166c1f-2208-414d-a92e-b873ae03c12f">点击加入</a>《讲解开源项目》让我们一起分享有趣、入门级的开源项目吧！</p>
+
+            <p><img src="https://img.hellogithub.com/ad/footer.png" alt=""></p>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/static/js/ui.js?q=1634283466"></script>
+<script src="/static/js/scroll_before_location.js?q=1634283466"></script>
+<script>
+    function track_notice() {
+        var raw_url = document.location.toString();
+        var arrUrl = raw_url.split("//");
+
+        var start = arrUrl[1].indexOf("/");
+        var path = arrUrl[1].substring(start);
+
+        if(path.indexOf("?") !== -1){
+            path = path.split("?")[0];
+        }
+        var url = document.getElementById("notice_url").href;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "https://hellogithub.com/periodical/statistics/notice/?target="+url+"&path="+path, true);
+        xmlhttp.send(null);
+    }
+</script>
+
+<link rel="stylesheet" href="/static/css/atom-one-light.min.css?q=1634283466">
+<script src="/static/js/highlight.pack.js?q=1634283466"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>
