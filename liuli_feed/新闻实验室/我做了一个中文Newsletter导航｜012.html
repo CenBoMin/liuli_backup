@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title dir='ltr'>我做了一个中文Newsletter导航｜012 | Revue</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='新闻实验室 - 如果你想感受氛围，那么就去刷社交媒体；如果你想获取信息，那就订阅newsletter。' name='description'>
+<meta content='newsletter, email, digest, curation' name='keywords'>
+<!--[if lt IE 9]>
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/html5shiv-bb669dd537dfdfb80f5581532f95e3d93d4e161976d46f6a8ea5c49c57cafbc8.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="all" href="//d3jbm9h03wxzi9.cloudfront.net/assets/application-4eeb1b015e3c86cc20dbdc72a26232e7574974f39c773bc496318055f4845771.css" nonce="RK7eo8USAwd4gcO6+WDbuA==" />
+<script src="//d3jbm9h03wxzi9.cloudfront.net/assets/application-989b33e0ccddb3384b2987632d5a790c45139d7bd4a857507860f6eeeea1fca1.js" nonce="RK7eo8USAwd4gcO6+WDbuA==" defer="defer"></script>
+<script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {
+  I18n.defaultLocale = "en";
+  I18n.locale = "en";
+});
+
+
+
+//]]>
+</script><link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='16x16'>
+<link href='//d3jbm9h03wxzi9.cloudfront.net/assets/favicon-4bca5727fc21fa6ee2a6ae554a6c236825acdd046c481ffce5748911f8b1f4a3.ico' rel='icon' size='32x32'>
+<link color='#E15718' href='//d3jbm9h03wxzi9.cloudfront.net/assets/icon-3ef15b89ab8676cd48dac6b7878bbc0e564d4e4167ea590f1f49d8e596d1ee4b.svg' rel='mask-icon'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Tm0rnvnpqm3Mm0CaR3dQpqjI6vsNipt3tREctvyupkGKjo+O5jZ5mJZFHQ1eQ6BpZ1fJ4saV/BDcUO7Bk2J2iw==" />
+<meta name="csp-nonce" content="RK7eo8USAwd4gcO6+WDbuA==" />
+
+<script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+  function getQueryParam(url, param) {
+    // Expects a raw URL
+    param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + param + "=([^&#]*)",
+    regex = new RegExp( regexS ),
+    results = regex.exec(url);
+    if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+      return '';
+    } else {
+      return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+    }
+  };
+
+  function geUtmParams() {
+    var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
+    , kw = ''
+    , params = {}
+    , first_params = {}
+    , result = {};
+
+    var index;
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        params[campaign_keywords[index] + ' [last touch]'] = kw;
+      }
+    }
+    for (index = 0; index < campaign_keywords.length; ++index) {
+      kw = getQueryParam(document.URL, campaign_keywords[index]);
+      if (kw.length) {
+        first_params[campaign_keywords[index]] = kw;
+      }
+    };
+
+    result.first_params = first_params;
+    result.params = params;
+
+    return result;
+  }
+
+  function extractReferrer(referrer) {
+    campaign = geUtmParams().first_params["utm_campaign"];
+    ref = getQueryParam(document.URL, 'ref');
+
+    if(!campaign && !ref) {
+      if (/www\.getrevue\.co\/profile\/(.*?)\/issue/.test(window.location.href)) {
+        return 'Revue Profile Issue'
+      } else if(/www\.getrevue\.co\/profile/.test(window.location.href)) {
+        return 'Revue Profile'
+      }
+    }
+
+    if(!!campaign) {
+      return campaign;
+    } else if (referrer.search('https?://(.*)google.([^/?]*)') === 0) {
+      return 'Google';
+    } else if (referrer.search('https?://(.*)bing.([^/?]*)') === 0) {
+      return 'Bing';
+    } else if (referrer.search('https?://(.*)yahoo.([^/?]*)') === 0) {
+      return 'Yahoo';
+    } else if (referrer.search('https?://(.*)facebook.([^/?]*)') === 0) {
+      return 'Facebook';
+    } else if (referrer.search('https?://(.*)twitter.([^/?]*)') === 0 || referrer.search('https?://(.*)t.co/') === 0) {
+      return 'Twitter';
+    } else if (referrer.search('https?://(.*)linkedin.([^/?]*)') === 0) {
+      return 'LinkedIn'
+    } else if (referrer == '$direct' || (!referrer || /^\s*$/.test(referrer))) {
+      return '$direct';
+    } else if (referrer.search('https?://(.*)getrevue.co') == 0) {
+      if(/\/app\//.test(referrer)) {
+        return 'Revue App';
+      } else if (/\/profile\/(.*?)\/issue/.test(referrer)) {
+        return 'Revue Profile Issue'
+      } else if (/\/profile\//.test(referrer)) {
+        return 'Revue Profile'
+      } else if (/blog\.getrevue\.co/.test(referrer)) {
+        return 'Revue Blog'
+      } else {
+        return 'Revue Page'
+      }
+    } else if (referrer.search('https?://(.*)rev.vu([^/?]*)') === 0) {
+      return 'Revue Item';
+    } else if (!!ref) {
+      return ref;
+    } else {
+      tld = new RegExp('\.(asn\.au|com\.au|net\.au|id\.au|org\.au|edu\.au|gov\.au|csiro\.au|act\.au|nsw\.au|nt\.au|qld\.au|sa\.au|tas\.au|vic\.au|wa\.au|co\.at|or\.at|priv\.at|ac\.at|avocat\.fr|aeroport\.fr|veterinaire\.fr|co\.hu|film\.hu|lakas\.hu|ingatlan\.hu|sport\.hu|hotel\.hu|ac\.il|co\.il|org\.il|net\.il|k12\.il|gov\.il|muni\.il|idf\.il|ac\.za|gov\.za|law\.za|mil\.za|nom\.za|school\.za|net\.za|co\.uk|org\.uk|me\.uk|ltd\.uk|plc\.uk|net\.uk|sch\.uk|ac\.uk|gov\.uk|mod\.uk|nhs\.uk|police\.uk)')
+      a = document.createElement('a');
+      a.href = referrer;
+      ref = a.hostname;
+      if(tld.test(ref)) {
+        return ref.replace(tld, '').split('.').pop()
+      } else {
+        return ref.split('.').reverse()[1];
+      }
+    }
+  };
+
+  function getReferrer() {
+    ref = document.referrer;
+    return extractReferrer(ref);
+  }
+
+  function mixpanelLoaded() {
+    try {
+      // Set ref
+      initial_ref = mixpanel.get_property('$initial_referrer');
+      mixpanel.register_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"Source": extractReferrer(initial_ref)});
+      // mixpanel.people.set_once({"$created": new Date().toISOString()});
+
+      // Set distinct id
+      var member_distinct_id_element = document.querySelector('#member_distinct_id');
+      member_distinct_id_element.value = mixpanel.get_distinct_id();
+    } catch(e) {}
+  };
+
+//]]>
+</script>
+<script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("2087bc32dd14049d6de8a339112517d9", {loaded: mixpanelLoaded, ip: false});
+//]]>
+</script>
+
+<script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+  var utm = geUtmParams();
+  mixpanel.register(utm.params);
+
+//]]>
+</script>
+<meta content='86400' property='twitter:maxage'>
+<meta content='171913' property='twitter:revue:account:id'>
+<meta content='新闻实验室' property='twitter:newsletter:title'>
+<meta content='新闻实验室免费版。
+付费版请见：https://newslab.info/join/' property='twitter:newsletter:description'>
+<meta content='https://www.getrevue.co/profile/newslab?via=twitter-card' property='twitter:newsletter:profile:url'>
+<meta content='true' property='twitter:newsletter:issue:card'>
+<meta content='https://imgix.revue.co/profiles/images/000/172/257/original/log520.png?ixlib=rails-3.1.0' property='twitter:newsletter:image:src'>
+<meta content='我做了一个中文Newsletter导航｜012' property='twitter:issue:title'>
+<meta content='周末好！如上一封信中所说，我希望在中文世界推动newsletter的发展。最近一周，我通过邮件、朋友圈、即刻等渠道征集了一些中文newsletter，非常感谢参与了分享的朋友们，尤其是陈恒一的协助。现在，我可以与大家分享初步的成果了：点这里可以查看中文Newsletter导航，或者在浏览器里面输入网址：https://www.notion.so/Newsletter-68ee46c0a4574f659fb8a873ead438c6如果你有知道但还没有收入的中文newsletter，也欢迎通过页面里面的提示进行填写和提交（需要登陆你的Notion账户），或者直接回信告知。接下来，我会不断更新这个中文Newsletter列表，请大家收藏这个导航页面。同时我也知道，有越来越多的朋友也想自己尝试写newsletter，但不知道该如何选择工具、如何做内容定位。所以，接下来我也将会逐步在页面上提供Newsletter工具选用、内容创作等方面的教程，请大家期待呀。最近几天，社交媒体上很热闹。但我印象最深的一句话，是@VicodinXYZ 说的：互联网最大的问题之一大概是，懂得说「我没有足够的信息使…' property='twitter:issue:description'>
+<meta content='2' property='twitter:issue:number'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/newsletter-012-475233?via=twitter-card' property='twitter:issue:url'>
+<meta content='https://imgix.revue.co/items/images/008/487/657/mail/0?ixlib=rails-3.1.0' property='twitter:issue:image:src'>
+<meta content='29942836' property='twitter:user:id'>
+<meta content='summary_large_image' property='twitter:card'>
+<meta content='@revue' property='twitter:site'>
+<meta content='1073732649320413' property='fb:app_id'>
+<meta content='https://www.getrevue.co/profile/newslab/issues/newsletter-012-475233' property='og:url'>
+<meta content='article' property='og:type'>
+<meta content='我做了一个中文Newsletter导航｜012' property='og:title'>
+<meta content='周末好！如上一封信中所说，我希望在中文世界推动newsletter的发展。最近一周，我通过邮件、朋友圈、即刻等渠道征集了一些中文newsletter，非常感谢参与了分享的朋友们，尤其是陈恒一的协助。现在，我可以与大家分享初步的成果了：点这里可以查看中文Newsletter导航，或者在浏览器里面输入网址：https://www.notion.so/Newsletter-68ee46c0a4574f659fb8a873ead438c6如果你有知道但还没有收入的中文newsletter，也欢迎通过页面里面的提示进行填写和提交（需要登陆你的Notion账户），或者直接回信告知。接下来，我会不断更新这个中文Newsletter列表，请大家收藏这个导航页面。同时我也知道，有越来越多的朋友也想自己尝试写newsletter，但不知道该如何选择工具、如何做内容定位。所以，接下来我也将会逐步在页面上提供Newsletter工具选用、内容创作等方面的教程，请大家期待呀。最近几天，社交媒体上很热闹。但我印象最深的一句话，是@VicodinXYZ 说的：互联网最大的问题之一大概是，懂得说「我没有足够的信息使…' property='og:description'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/200/108/original/issue_image_475233.jpg?1616856127' property='twitter:image'>
+<meta content='https://s3.amazonaws.com/revue/issue_images/images/000/200/108/original/issue_image_475233.jpg?1616856127' property='og:image'>
+
+
+</head>
+<body class='profiles archive' data-page='ProfilesArchive'>
+<script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58968534-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+
+//]]>
+</script>
+<style>
+  #profile-nav {border-color: #88B04B !important;}
+  #profile-nav.expanded svg {fill: #88B04B !important;}
+  #nav-back {color: #88B04B !important;}
+  #nav-back:after {border-color: #88B04B !important;}
+  #profile-logo {background-color: #88B04B !important;}
+  .subscribe-form__submit {background-color: #88B04B !important;}
+  section#premium a {color: #B0632E !important;}
+  ::-moz-selection {background-color: #88B04B !important;}
+  ::selection {background-color: #88B04B !important;}
+</style>
+<div id='profile-nav'>
+<a id="nav-back" href="https://www.getrevue.co/profile/newslab">View profile</a>
+<a id="profile-logo" href="https://www.getrevue.co/?ref=Revue+Profile"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg>
+</a></div>
+
+<article id='issue-holder'>
+<form class="subscribe-form" id="AMyFFuwj_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="saIGUWHqiBcQHPDLhNPDuC21RmKZ9lPW8rhZasctdcR1QaJBfjVb4krCrVyd5zN34iple1LpNLGb+asdqOGlDg==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-header" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='RK7eo8USAwd4gcO6+WDbuA=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="vPxbg6HvCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_caW4Zn" id="confirm_caW4Zn" autocomplete="off" />
+</div>
+
+</form><script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+mixpanel.register({'profile_page_new_design': false});
+mixpanel.track('Profile viewed', {
+  'profile' : "新闻实验室",
+  'profile_id' : "172257",
+  'Last page': getReferrer()
+}, function() {
+  mixpanel.register({"First time": false});
+});
+
+
+
+//]]>
+</script><script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+window["vPxbg6HvCaptchaCallback"] = function() {
+  document.getElementById("AMyFFuwj_new_member").submit();
+};
+
+
+//]]>
+</script>
+<section id='issue'>
+<section id='issue-display'>
+<header>
+<span class='issue-nr'></span>
+<time datetime='2021-03-27T22:42:05+08:00'>Mar 27, 2021</time>
+<h1 title='新闻实验室 - 我做了一个中文Newsletter导航｜012'>我做了一个中文Newsletter导航｜012</h1>
+</header>
+<div id='issue-frame'><!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <title></title>
+  <!--[if !mso]><!-- -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+  #outlook a { padding: 0; }
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height:100%; }
+  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  p { display: block; padding: 0; margin: 0; margin-bottom: 0; }
+  .revue-p + .revue-p, .revue-p + .revue-blockquote {margin-top: 14px !important;}
+  .revue-p + .revue-h2, .revue-h2 + .revue-p, .revue-ul + .revue-h2, .revue-h2 + .revue-ul, .revue-ol + .revue-h2, .revue-h2 + .revue-ol  {margin-top: 14px !important;}
+  .revue-h2 {font-size:20px;line-height:28px;font-weight:700;padding-bottom:0px !important;}
+  [class*="revue-p"] + [class*="revue-p"], [class*="revue-p"] + [class*="revue-blockquote"] {margin-top: 14px !important;}
+  [class*="revue-p"] + [class*="revue-h2"] {margin-top: 14px !important;}
+</style>
+<!--[if !mso]><!-->
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+    @-ms-viewport { width:320px; }
+    @viewport { width:320px; }
+  }
+</style>
+<!--<![endif]-->
+<!--[if mso]>
+<style type="text/css">
+  .revue-p,
+  .revue-h2,
+  .revue-ul,
+  .revue-ol,
+  .revue-blockquote {margin-bottom: 14px !important;}
+</style>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if lte mso 11]>
+<style type="text/css">
+  .outlook-group-fix {
+    width:100% !important;
+  }
+</style>
+<![endif]-->
+<style type="text/css">
+  @media only screen and (min-width:480px) {
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-100 { width:100%!important; }
+    .mj-column-per-25 { width:25.9259259259%!important; }
+    .mj-column-per-74 { width:74.0740740741%!important; }
+    .mj-column-per-50 { width:50%!important; }
+    .mj-column-per-60 { width:60%!important; }
+    .mj-column-per-20 { width:20%!important; }
+  }
+
+  @media screen and (max-width:600px) {
+    .title-text{font-size:14px !important; line-height:20px !important;}
+    .title-image{width:44px !important;height:44px !important;}
+    .indented {padding-left: 8px !important; padding-right: 8px !important;}
+    .link-image {width: 112px !important;}
+    .header-text {font-size: 22px !important; line-height: 32px !important;}
+    .revue-h2 {font-size:18px !important; line-height: 24px !important;}
+    .introduction-subject {font-size: 24px !important; line-height: 24px !important;}
+    .introduction-spacer {padding: 30px 0 !important;}
+    .link-title {font-size: 18px !important; line-height: 24px !important;}
+    .text-default,
+    .link-description {font-size: 14px !important; line-height: 22px !important;}
+    .link-url {font-size: 13px !important;}
+    .text-small {font-size:12px !important;}
+  }
+</style>
+</head>
+<body>
+  <div>
+    <div id="preheader" style="display:none;font-size:1px;color:#FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">如果你想感受氛围，那么就去刷社交媒体；如果你想获取信息，那就订阅newsletter。 </div>
+
+    
+    
+    
+    
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;" class="indented"><div style="cursor:auto;color:#657786;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:12px;line-height:22px;text-align:center;font-weight:400;" class="text-small"><a target="_blank" style="color: #657786;text-decoration:underline;" href="https://www.getrevue.co/profile/newslab/issues/newsletter-012-475233?utm_campaign=Issue&amp;utm_content=view_in_browser&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">View online</a></div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
+
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;padding-top:34px;padding-bottom:28px;" class="indented">
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-right:12px;" width="56">
+<a target="_blank" href="https://www.getrevue.co/profile/newslab">
+<img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" class="title-image" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" /></a></td>
+<td><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody>
+<tr><td><div style="cursor:auto;color:#14171A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:22px;text-align:left;font-weight:700;" class="title-text">方可成</div></td></tr>
+
+</tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+    
+
+    
+
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented" colspan="2"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;" class="text-default"><div style="margin:0;" class="revue-p">如果你想感受氛围，那么就去刷社交媒体；如果你想获取信息，那就订阅newsletter。</div>
+
+  </div></td></tr>
+  <tr><td style="word-break:break-word;font-size:0px;padding:40px 0px;" class="introduction-spacer"><p style="font-size:1px;border-top:1px solid #E1E1E1;width:100%"></p><!--[if mso | IE]><table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" style="font-size:1px;margin:40px auto;border-top:1px solid #E1E1E1;width:100%;" width="30"><tr><td style="height:0;line-height:0;"> </td></tr></table><![endif]--></td></tr>
+  </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr>
+</tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+
+    
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      亲爱的朋友：
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">周末好！</div><div style="margin:0;" class="revue-p">如上一封信中所说，我希望在中文世界推动newsletter的发展。最近一周，我通过邮件、朋友圈、<a href="https://web.okjike.com/originalPost/6053450f8b630000112bd3ae?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">即刻</a>等渠道征集了一些中文newsletter，非常感谢参与了分享的朋友们，尤其是<a href="https://enzochen.substack.com/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">陈恒一</a>的协助。</div><div style="margin:0;" class="revue-p">现在，我可以与大家分享初步的成果了：<a href="https://www.notion.so/Newsletter-68ee46c0a4574f659fb8a873ead438c6?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">点这里可以查看中文Newsletter导航</a>，或者在浏览器里面输入网址：https://www.notion.so/Newsletter-68ee46c0a4574f659fb8a873ead438c6</div><div style="margin:0;" class="revue-p">如果你有知道但还没有收入的中文newsletter，也欢迎通过页面里面的提示进行填写和提交（需要登陆你的Notion账户），或者直接回信告知。</div><div style="margin:0;" class="revue-p">接下来，我会不断更新这个中文Newsletter列表，请大家收藏这个导航页面。同时我也知道，有越来越多的朋友也想自己尝试写newsletter，但不知道该如何选择工具、如何做内容定位。所以，接下来我也将会逐步在页面上提供Newsletter工具选用、内容创作等方面的教程，请大家期待呀。</div><div style="margin:0;" class="revue-p">最近几天，社交媒体上很热闹。但我印象最深的一句话，是@VicodinXYZ <a href="https://weibo.com/1977585731/K7IFC0LHk?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">说的</a>：</div><div style="margin:0;display:block;margin:0;margin-bottom:14px;padding:0 20px;border-color:#E0E4E8;border-left:2px solid #E0E4E8;color:#7A889A;line-height:inherit;" class="revue-blockquote">互联网最大的问题之一大概是，懂得说「我没有足够的信息使得我可以拥有一个观点」的人实在是太少了。​</div><div style="margin:0;" class="revue-p">实际上，问题不仅在于懂得这样说的人太少了，还在于：主流的互联网产品都是在鼓励大家发表观点（点赞和转发也是发表观点的方式），并且，发表出来就好了，并不在乎观点的论证和讨论。社交媒体不是一个能够容纳讨论和商议（deliberation）的地方，这不仅因为它短小、快速，还因为它的社交传播机制更鼓励表态而不是讨论。用学者Kevin Munger的<a href="https://kevinmunger.substack.com/p/what-medium-is-twitter?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">说法</a>，推特就是一个关于vibe（气氛）的平台，重要的是营造一种氛围，无关讨论，无关说服。按照同样的逻辑，微博和其他一些社交媒体也是如此。</div><div style="margin:0;" class="revue-p">所以我们或许可以简单粗暴地说，如果你想感受氛围，那么就去刷社交媒体；如果你想获取信息，那就订阅newsletter；如果你想和人讨论，那么……好像除了面对面、电话/视频或者一来一回地长篇通信之外，还没有特别适合的工具。</div><div style="margin:0;" class="revue-p">以下，照例分享一些最近我读的和写的内容。</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      我最近读了……
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;padding-right:30px;padding-left:30px;" class="indented" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:650px;">
+      <a target="_blank" style="text-decoration: none;" href="https://mp.weixin.qq.com/s/z8RpfOXSJ3yhy29VJAN_Xw?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">
+        <img width="600" height="auto" alt="展望杂志丨自由主义的未来" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:100%;height:auto;" src="https://s3.amazonaws.com/revue/items/images/008/487/657/mail/0?1616843272" />
+</a>  </td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-right:30px;padding-left:30px;" align="left" class="indented">
+    <div>
+      <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="https://mp.weixin.qq.com/s/z8RpfOXSJ3yhy29VJAN_Xw?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">展望杂志丨自由主义的未来</a></div>
+      <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">牛津大学著名的公共知识分子Timothy Garton Ash去年底发表在英国《Prospect》杂志的<a href="https://www.prospectmagazine.co.uk/magazine/the-future-of-liberalism-brexit-trump-philosophy?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">文章</a>，对自由主义的内核及其面临的危机做了清晰的梳理。他认为，当前（西方的）自由主义忽视了两对价值，分别是<strong>平等和团结</strong>，以及<strong>社区和身份</strong>。</div><div style="margin:0;" class="revue-p">关于前者，不平等现象在西方社会日益严重，这种不平等不仅是金钱上的，也是机会上的（例如，顶尖大学青睐精英家庭学生），还是心态上的（精英对底层的傲慢和无视）。作者认为，必须采取更激进的措施来解决这些不平等现象，让人们团结起来。</div><div style="margin:0;" class="revue-p">关于后者，人有自由的需求，也有归属感的需求，自由主义者在对地球另一边的事情侃侃而谈的时候，往往忽略了身边的社区。这就给了民粹主义者可乘之机，他们借机渲染排外、仇外情绪。作者提出，为了应对这一问题，自由主义中应该包含一种自由开明的爱国主义。</div><div style="margin:0;" class="revue-p">文中让我印象最深刻的一个细节是：当奥巴马政府提议对一种叫做“附带权益”的收入类型（通常是对冲基金和私募基金经理人收入的重要组成部分，但税率低于其他收入）加税时，美国金融家、黑石集团共同创始人苏世民（Stephen Schwarzman）宣称：“那是一场战争……就像1939年希特勒入侵波兰。”</div><div style="margin:0;" class="revue-p">给金融业加税，就被说成是“一场战争”，难怪作者会感叹，“这真是龌龊不堪。”作者建议：我们应该少一点尊重给银行家，多一点尊重给清洁工。</div><div style="margin:0;" class="revue-p">其实，给了银行家过多尊重、给了清洁工太少尊重的，又何止是美国？苏世民和中国有许多的生意往来，还给清华大学捐款了1亿美元，冠名了“苏世民书院”，他在中国也享有了政要接见和民众敬仰的地位。中国早已镶嵌进这种国际体系，西方自由主义的问题和危机，并不是一个与我们无关的话题。</div>
+</div>
+      <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="https://mp.weixin.qq.com/s/z8RpfOXSJ3yhy29VJAN_Xw?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">mp.weixin.qq.com</a></div>
+    </div>
+  </td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100" style="vertical-align:top;display:inline-block;font-size:0px;line-height:0px;text-align:left;width:100%;"><!--[if mso | IE]>
+<table  role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#3B424B;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:13px;font-weight: 400;line-height:22px;text-align:left;">
+          <!--[if mso]>
+          <table border="0" cellpadding="0" cellspacing="0" width="140" align="right" style="width:140px;"><tr><td style="padding:0 0 30px 30px;">
+          <![endif]-->
+          <a target="_blank" style="text-decoration: none;" href="https://www.profgalloway.com/the-sonic-entrepreneurship-boom/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">
+            <img width="140" height="140" alt="The Sonic (Entrepreneurship) Boom" align="right" style="padding-left: 30px; padding-bottom: 36px;border:none;border-radius:0;outline:none;text-decoration:none;" class="link-image" src="https://s3.amazonaws.com/revue/items/images/008/487/974/thumb/1yroldbusinessesv2.png?1616845792" />
+</a>          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+        <div>
+          <div class="link-title" style="padding-bottom: 4px;font-weight:700;font-family:Helvetica,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color: #000000;font-size:20px;line-height:28px;"><a target="_blank" style="color: #000000;text-decoration: none;" href="https://www.profgalloway.com/the-sonic-entrepreneurship-boom/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">The Sonic (Entrepreneurship) Boom</a></div>
+          <div class="serif small-text link-description" style="padding-bottom: 4px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:16px;line-height:24px;color: #000000;"><div style="margin:0;" class="revue-p">纽约大学商学院教授Scott Galloway对新冠疫情结束之后的商业发展，尤其是科技创业有非常乐观的预测。各国政府出台的刺激政策，让民众有了更强的消费能力。而社会对打破巨头垄断已经形成了共识，大家都期待新产品的出现。他尤其提出了对几个行业的关注：地产（是的，远程办公将在疫情后保留，不再需要那么多办公室，但很多办公楼将会改造，成为住宅或社区空间）、高等教育、医疗科技（这两者在美国都是极贵但服务并不好的行业）、虚拟货币。当然，乐观预测背后还有一个非常重要的原因：经济刺激政策和股票市场的上涨，造就了很多寻求投资机会的资本。仅2020年，就有225家美国公司成为独角兽（估值超过10亿美元的创业公司），2021年到现在又有超过60家公司加入这个行列。2021年1月，风投一共新投资了400亿美元，创下了历史记录。</div><div style="margin:0;" class="revue-p">疫情以来，美国一部分底层民众度过了最惨的一段日子，而资本则狂欢至今。结合上面那篇文章，我们能够看到，不平等仍在扩大，危机仍未有解法。在新的创业春天中，是否会有走向平等的机会（比如会有更关注本地社区、共享收益的项目），还是继续发展这场危机？</div>
+</div>
+          <div class="link-url" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:14px;line-height:24px;"><a target="_blank" style="color: #B0632E;text-decoration:none;font-weight:400;" href="https://www.profgalloway.com/the-sonic-entrepreneurship-boom/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">www.profgalloway.com</a></div>
+        </div>
+      </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:24px;" align="left"><div style="cursor:auto;color:#030A10;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:24px;font-weight:700;line-height:32px;text-align:left;color: #88B04B;" class="header-text">
+      我最近写了……
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">与各位分享最近几期<a href="http://newslab.info/join/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">新闻实验室会员通讯</a>的主题：</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">中国的政府主导式新媒体创新（会员通讯474期）</div><div style="margin:0;" class="revue-p">这是对我和Maria Repnikova教授最近发表的一篇<a href="https://journals.sagepub.com/doi/full/10.1177/1940161221991779?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">论文</a>的介绍。在论文中，我们研究了澎湃、上观、界面、上游、九派、无界等一批新闻客户端的创新模式，并提出了“state-preneurship”这个概念进行总结，强调在这种模式中，政府在创新过程中占据了主导性的地位。我们分析了这种模式与西方新闻创新实验相比的优势与劣势，并试图探讨：中国的创新能力如何？政府主导的模式能否支持和推动创新？</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">阿里巴巴与“资本操控舆论”（会员通讯473期）</div><div style="margin:0;" class="revue-p">最近两年，关于“资本操控舆论”的说法在中文社交媒体上颇为流行，阿里巴巴时常被作为“资本控制媒体和舆论”的案例。最近，有外媒报道：阿里巴巴被要求出售旗下的媒体资产。在这期会员通讯里，我借由阿里巴巴的案例来谈谈：“资本操控舆论”究竟是怎么回事？怎样避免资本对舆论的过大影响？</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">外卖骑手何时罢工抗议？（会员通讯472期）</div><div style="margin:0;" class="revue-p">平台上的劳工权益问题日益获得全球性的关注。去年，《人物》杂志的深度报道《外卖骑手，困在系统里》引发了全社会的讨论。在这期会员通讯中，我介绍了一则关于中国外卖骑手劳动权益的重要研究，作者是哈佛大学社会学系副教授雷雅雯。文章研究的核心问题是：外卖骑手，在什么样的情况下会进行集体行动、罢工抗议？</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">知乎的上市与下沉（会员通讯471期）</div><div style="margin:0;" class="revue-p">知乎昨天在美国正式上市，这是这家成立已经超过10年的创业公司终于迈出的重要一步。上市让早期投资者获得了丰厚回报，但对于知乎这一社交产品来说，上市的压力却并不一定发挥了积极作用。在这期会员通讯里，我重点探讨了：知乎的核心到底是什么：知识还是社区？知乎的氛围是怎么发生变化的？</div><div style="margin:0;margin:0;display:block;font-weight:700;padding-bottom:8px;" class="revue-h2">吴修铭：拜登政府的反垄断特别助理（会员通讯470期）</div><div style="margin:0;" class="revue-p">美国总统拜登任命了一名新的政府官员。这一任命引发了科技界的广泛关注，因为他将会极大影响接下来硅谷科技巨头们的命运。被任命的人叫Tim Wu，中文名吴修铭。那么，他究竟是谁？作为一名学者和公共知识分子，他有哪些主要的观点和主张？作为一名新上任的政府官员，他会在科技反垄断这一议题上做出重要的推进吗？</div><div style="margin:0;" class="revue-p">如果希望在以后读到类似以上主题的深度分析，<a href="http://newslab.info/join/?utm_campaign=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;utm_medium=email&amp;utm_source=Revue%20newsletter" target="_blank" style="color:#B0632E;text-decoration:underline;">欢迎点这里订阅新闻实验室会员通讯。</a>
+</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+      <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin: 0px 20px; max-width: 650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height: 24px;text-align:left;font-weight:400;" class="text-default">
+      <div style="margin:0;" class="revue-p">💌</div><div style="margin:0;" class="revue-p">以上就是新闻实验室通过免费newsletter与你的第12次见面。</div><div style="margin:0;" class="revue-p">祝阅读愉快！下周再见！</div><div style="margin:0;" class="revue-p"></div><div style="margin:0;" class="revue-p">方可成</div><div style="margin:0;" class="revue-p">2021.3.27</div>
+
+    </div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+
+
+    <!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="center" colspan="2"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:14px;text-align:center;font-weight:400;">Did you enjoy this issue? <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">Yes</a> <a target="_blank" style="text-decoration:underline;color:#6F7379" href="#">No</a></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:40px;padding-bottom:40px;" align="center" colspan="2"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left" width="76" valign="top">
+      <a style="text-decoration: none;" target="_blank" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=profileimage&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">
+        <img alt="方可成" title="方可成" height="56" width="56" style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;width:56px;height:56px;" src="https://s3.amazonaws.com/revue/profiles/images/000/172/257/small/log520.png?1615620626" />
+</a>    </td>
+    <td style="word-break:break-word;font-size:0px;padding:0px;" align="left">
+
+    <div style="cursor:auto;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:16px;line-height:16px;text-align:left;font-weight:400;padding-bottom: 8px;">
+      <span style="font-weight:700;">方可成</span>
+      </div>
+    <div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">
+      <p>新闻实验室免费版。
+<br />付费版请见：https://newslab.info/join/</p>
+    </div></td></tr>
+  </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+    
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="width:650px;">
+  <tr>
+    <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style="margin:0 20px; max-width:650px;"><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="left" border="0"><tbody><tr><td style="text-align:left;vertical-align:top;direction:ltr;font-size:0px;padding:0px;padding-bottom:32px;padding-left:30px;padding-right:30px;" class="indented"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:650px;">
+<![endif]--><div aria-labelledby="mj-column-per-100" class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-bottom:40px;padding-top:40px;" align="center"><div style="cursor:auto;background-color:#e1e1e1;height:1px;width:100%;"></div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">In order to unsubscribe, click <a style="color: #6F7379; text-decoration:underline;" href="#">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">If you were forwarded this newsletter and you like it, you can subscribe <a target="_blank" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/profile/newslab?utm_campaign=Issue&amp;utm_content=forwarded&amp;utm_medium=email&amp;utm_source=%E6%96%B0%E9%97%BB%E5%AE%9E%E9%AA%8C%E5%AE%A4">here</a>.</div></td></tr>
+    <tr><td style="word-break:break-word;font-size:0px;padding:0px;padding-top:12px;" align="left"><div style="cursor:auto;color:#6F7379;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;font-size:14px;line-height:22px;text-align:left;font-weight:400;">Created with <a target="_parent" style="color: #6F7379; text-decoration:underline;" href="https://www.getrevue.co/?utm_source=新闻实验室&amp;utm_medium=email&amp;utm_content=footerlink&amp;utm_campaign=Issue">Revue by Twitter</a>.</div></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+
+
+  </div>
+</body>
+</html></div>
+</section>
+<section id='issue-share'>
+<span class='share'>Share</span>
+<a class="twitter" target="_blank" href="https://www.twitter.com/share?url=https://www.getrevue.co/profile/newslab/issues/newsletter-012-475233&amp;via=revue&amp;text=%E6%88%91%E5%81%9A%E4%BA%86%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87Newsletter%E5%AF%BC%E8%88%AA%EF%BD%9C012&amp;related=revue"><span class='icon-twitter'></span>
+<span class='name'>Share to Twitter</span>
+</a><a class="facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=https://www.getrevue.co/profile/newslab/issues/newsletter-012-475233"><span class='icon-facebook'></span>
+<span class='name'>Share to Facebook</span>
+</a></section>
+</section>
+<form class="subscribe-form" id="WoBwohxv_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="5U6BFafnzLDqAtpWESz280JEOArurIDq360Ei6WPjJEhrSUFuDgfRbDch8EIGAY8jdsbEyWz54227Pb8ykNcWw==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-footer" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='RK7eo8USAwd4gcO6+WDbuA=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="9FOVMbxwCaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_zaWCeo" id="confirm_zaWCeo" autocomplete="off" />
+</div>
+
+</form><script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+window["9FOVMbxwCaptchaCallback"] = function() {
+  document.getElementById("WoBwohxv_new_member").submit();
+};
+
+
+//]]>
+</script>
+</article>
+<div class='container'>
+<footer class='terms'>
+<div class='footer-privacy'>
+<a target="_blank" href="https://www.getrevue.co/privacy/platform?locale=en&amp;ref=Revue+Profile">Privacy Policy</a>
+<br>
+<a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a>
+</div>
+<div class='footer-custom'>
+</div>
+<div class='footer-powered'>
+<a target="_blank" href="https://www.getrevue.co/?ref=Revue+Profile"><span>Powered by</span>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="basic" id="Layer_1" x="0px" y="0px" width="69px" height="28px" viewBox="0 0 69 28" xml:space="preserve">
+  <path d="M64.5293352,10.7041667 C65.0574432,10.6932778 65.3370748,10.9435278 65.3487341,11.5175278 C65.4141025,14.6482778 61.2060582,14.9296389 61.2060582,14.9296389 C61.4291136,13.3777778 62.6296371,10.7436389 64.5293352,10.7041667 L64.5293352,10.7041667 Z M67.1731247,18.3427222 C66.183615,19.4257778 64.9358809,20.2513889 63.5530139,20.2803611 C60.9010055,20.3353889 61.2215402,16.9429167 61.2215402,16.9429167 C61.2215402,16.9429167 68.9206787,17.2128056 68.8088643,11.8327222 C68.7618449,9.56880556 66.6052604,8.54427778 64.6474571,8.58491667 C60.6521468,8.66833333 57.2805125,12.3923333 57.3781828,17.0982778 C57.3877396,17.5509444 57.4292161,17.9754167 57.5007008,18.3722778 C56.9821496,19.0516667 56.0666094,20.0699722 55.2370803,20.0699722 C54.781795,20.0699722 54.6111108,19.6655278 54.6111108,19.2105278 C54.6111108,15.7544722 56.2048006,12.3516944 56.2048006,10.3425 C56.2048006,9.12255556 55.3743158,8.77313889 54.3454321,8.77313889 C53.0770554,8.77313889 52.3717645,9.60088889 52.3717645,9.60088889 C53.0636759,11.5056667 50.6058615,20.0699722 48.0218975,20.0699722 C47.4106454,20.0699722 47.3039917,19.5891111 47.3039917,19.1971111 C47.3039917,16.6306389 48.8831551,12.3316667 48.8831551,10.4099722 C48.8831551,9.13286111 48.0360416,8.75369444 47.0310499,8.75369444 C45.8419945,8.75369444 45.0539418,9.60088889 45.0539418,9.60088889 C45.9052604,11.2443333 43.6670609,17.5278056 43.6670609,19.3456667 C43.6670609,21.1633333 44.6720526,22.5985278 46.4427341,22.5985278 C49.3199003,22.5985278 50.9894709,18.98225 50.9894709,18.98225 C50.9894709,18.98225 50.6058615,22.5985278 54.0992493,22.5985278 C55.8911468,22.5985278 57.3170194,21.0725278 58.0666537,20.0585 C58.9885014,21.7876944 60.7930139,22.6360556 63.2355374,22.5855 C64.9924571,22.54875 66.2531884,22.0451389 67.2291274,21.1678056 C68.7343213,19.8129167 67.7318144,17.7308056 67.1731247,18.3427222 L67.1731247,18.3427222 Z" id="logo-3"></path>
+  <path d="M26.7737202,10.6613889 C27.2463989,10.6401944 27.5780194,10.8772222 27.6036316,11.4508333 C27.7467922,14.6338889 23.4097313,14.9679444 23.4097313,14.9679444 C23.595133,13.4112222 25.0563657,10.7385833 26.7737202,10.6613889 L26.7737202,10.6613889 Z M40.7751773,8.25183333 C39.5069917,8.25183333 38.5365956,9.352 38.5365956,10.5278056 C38.5365956,12.46525 40.1209197,12.5216389 40.0922493,14.0808889 C40.0631967,15.6401389 37.5797701,20.0656944 35.9027452,20.0656944 C35.2813629,20.0656944 35.1850305,19.4376389 35.1850305,19.1428611 C35.1850305,16.1589167 36.764385,11.9 36.764385,10.4646111 C36.764385,9.11166667 35.9434571,8.76633333 34.9608283,8.76633333 C33.6624432,8.76633333 32.9456842,9.59233333 32.9456842,9.59233333 C33.3958089,10.5264444 32.953903,12.7576944 32.4514072,14.90125 C31.5830776,17.3673889 28.768795,20.3318889 26.2513463,20.3453056 C22.962856,20.3620278 23.4431801,16.8923611 23.4431801,16.8923611 C23.4431801,16.8923611 31.1772964,17.0648333 30.9355097,11.6886389 C30.8334432,9.42666667 28.6531579,8.45425 26.6968837,8.54233333 C22.7048227,8.72180556 19.5250886,12.5216389 19.7366759,17.2235 C19.9035374,20.9350556 22.6740499,22.7052778 25.6234654,22.5730556 C28.2326593,22.4552222 30.1816704,21.2733889 31.5830776,19.8959444 C31.766759,21.4402222 32.7354349,22.5901667 34.5905983,22.5901667 C39.4282438,22.5901667 43.2540166,15.6076667 43.2540166,11.2779722 C43.2540166,9.69344444 42.4260166,8.25183333 40.7751773,8.25183333 L40.7751773,8.25183333 Z" id="logo-2"></path>
+  <path d="M28.5526205,23.9979444 C27.8781025,24.3351111 26.6978393,24.9295278 24.176759,24.9295278 C16.3352244,24.9295278 14.7163047,14.8510833 14.7163047,14.8510833 C14.7163047,14.8510833 20.6525983,12.3402222 20.6525983,7.24869444 C20.6525983,2.14919444 16.5122161,0 12.3303573,0 C7.68422992,0 2.5235651,2.50327778 0.296451524,7.35233333 C-1.10954294,10.4138611 2.93030194,11.3689722 3.13080332,10.4148333 C3.78850139,7.28272222 7.27940443,2.35063889 12.3638061,2.35063889 C15.0450582,2.35063889 16.6133269,4.12183333 16.6133269,7.24947222 C16.6133269,11.1274722 12.1436177,13.1708889 10.1611579,13.8335556 C11.0426759,9.77763889 11.3523158,8.55438889 11.3523158,7.83455556 C11.3523158,6.24166667 10.4319972,5.97605556 9.4931385,5.97605556 C8.35492521,5.97605556 7.53285042,6.81061111 7.53285042,6.81061111 C8.19054848,8.01188889 7.07985873,12.2853889 6.59685873,14.0175 C6.01179224,16.1165278 5.20539058,19.2188889 4.69945429,21.1909444 C4.19351801,23.1635833 7.71806094,22.6329444 7.95411357,22.0507778 C8.21138227,21.4172778 8.88800277,19.0950278 9.5005928,16.6561111 C10.5281385,16.3356667 11.706108,15.8806667 11.706108,15.8806667 C12.2212188,19.3026944 14.9691773,28 22.8107119,28 C29.5392632,28 29.1092078,23.7198889 28.5526205,23.9979444" id="logo-1"></path>
+</svg>
+</a></div>
+</footer>
+</div>
+
+<section id='subscribe-bar'>
+<div id='subscribe-bar-form'><form class="subscribe-form subscribe-form--inline" id="UPzYfAws_new_member" action="/profile/newslab/add_subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="DhGIVnC6jjdUQWsB+mZh9pk+5lAePomuWuCFKRG1TPrK8ixGb2Vdwg6fNpbjUpE5VqHFSdUh7skzoXdefnmcMA==" /><input type="hidden" name="member[distinct_id]" id="member_distinct_id" />
+<input value="issue-page-popup" type="hidden" name="member[subscribe_element]" id="member_subscribe_element" />
+<div class='subscribe-form__fields'>
+<div class='subscribe-form__copy'>
+<label class="subscribe-form__label" for="member_email">Subscribe to our newsletter</label>
+<label class='subscribe-form__sublabel'>By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms?locale=en&amp;ref=Revue+Profile">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy?locale=en&amp;ref=Revue+Profile">Privacy Policy</a> and understand that 新闻实验室 will receive your email address.</label>
+</div>
+<div class='subscribe-form__input'>
+<div class='input-group'>
+<input class="form-control subscribe-form__email" placeholder="Your email address..." title="Subscribe to the newsletter of 新闻实验室" type="email" name="member[email]" id="member_email" />
+<div class='input-group-btn'><script src="https://www.recaptcha.net/recaptcha/api.js" async defer  nonce='RK7eo8USAwd4gcO6+WDbuA=='></script>
+<input type="submit" data-sitekey="6LcRA6wZAAAAAEYg1KFtJ_b70PaAcaJwppkQihHs" data-callback="zmeV2Ql8CaptchaCallback" class="g-recaptcha btn btn-primary subscribe-form__submit" title="Subscribe to the newsletter of 新闻实验室" value="Subscribe now"/>
+</div>
+</div>
+</div>
+</div>
+<div class='subscribe-form__error'>
+<span class='error-message'>
+
+
+</span>
+</div>
+<div style='width: 1px; height: 1px; overflow: hidden;'>
+<input type="text" name="confirm_7C-3kC" id="confirm_7C-3kC" autocomplete="off" />
+</div>
+
+</form><script nonce="RK7eo8USAwd4gcO6+WDbuA==">
+//<![CDATA[
+window["zmeV2Ql8CaptchaCallback"] = function() {
+  document.getElementById("UPzYfAws_new_member").submit();
+};
+
+
+//]]>
+</script></div>
+</section>
+<div class='component__spacer--is-small'></div>
+
+
+<div class='cookie-notice cookie-notice--show'>
+<p class='cookie-notice__message'>By using the Revue Service, you agree to our cookie use in our <a class="cookie-notice__link" href="https://www.getrevue.co/privacy">Website Privacy Policy</a> or <a class="cookie-notice__link" href="https://www.getrevue.co/privacy/platform">Platform Privacy Policy</a>. We use cookies for purposes, including analytics and personalization.</p>
+<a id="hideCookieNotice" class="btn btn-sm cookie-notice__button" href="#">OK</a>
+</div>
+
+</body>
+</html>
