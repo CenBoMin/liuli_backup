@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="IjhlNDFjYTQ3ZDgyZjAzYzlkNDBjNjE0NmFjMDBmNTY1MDg2MDdiN2Ui.YoFMZw.30L6Cd0jSHx1IQU9EFFDkx-qAqk">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.hellogithub.com/favicon/apple-touch-icon.png">
+    <link rel="android-chrome" sizes="192x192" href="https://img.hellogithub.com/favicon/android-chrome-192x192.png">
+    <link rel="android-chrome" sizes="512x512" href="https://img.hellogithub.com/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.hellogithub.com/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.hellogithub.com/favicon/favicon-16x16.png">
+    <link rel="icon" href="https://img.hellogithub.com/favicon/favicon.ico">
+    <title>HelloGitHub </title>
+    <link rel="stylesheet" href="/static/css/pure.min.css?q=1634283466">
+    
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="分享 GitHub 入门级、有趣的开源项目。推广自己的开源项目、编程实践项目、适合练手的开源项目、HelloGitHub月刊">
+<link rel="stylesheet" href="/static/css/side-menu.css?q=1634283466">
+<link rel="stylesheet" href="/static/css/notice.css?q=1634283466">
+<link rel="stylesheet" href="/static/css/article.css?q=1645505249">
+<link rel="stylesheet" href="/static/css/md.css?q=1642173721">
+
+
+
+    <script data-ad-client="ca-pub-1361072126478946" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?73e0d9a1bd6e22a206afe0551e5e603d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101093029-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+
+
+<div id="notice" dir="ltr" class="cc-banner active" role="alert">
+    <div class="cc-container">
+      <svg class="cc-icon cc-v-center" x="0px" y="0px" viewBox="0 0 44 44" height="30px" fill="none" stroke="currentColor">
+        <circle cx="22" cy="22" r="20" stroke-width="2"></circle>
+        <line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line>
+        <line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line>
+      </svg>
+      <span class="cc-v-center cc-text">
+          <strong>公告：</strong>又拍云为开发者提供免费的云存储服务。<a id="notice_url" href="https://www.upyun.com/league" onclick="track_notice()" target="_blank" class="cc-link cc-v-center">点击获取</a>
+      </span>
+    </div>
+</div>
+
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="/">HelloGitHub</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link">首页</a></li>
+                <li class="pure-menu-item"><a href="/periodical/volume/" class="pure-menu-link">月刊</a></li>
+                <li class="pure-menu-item"><a href="/report/tiobe/?url=/periodical/volume/" class="pure-menu-link">编程语言月报</a></li>
+                <li class="pure-menu-item"><a href="/report/netcraft/?url=/periodical/volume/" class="pure-menu-link">服务器月报</a></li>
+                <li class="pure-menu-item"><a href="/report/db-engines/?url=/periodical/volume/" class="pure-menu-link">数据库月报</a></li>
+                <li class="menu-item-divided pure-menu-selected">
+                    <a href="/article/?page=1&url=/periodical/volume/&sort=new" class="pure-menu-link">返回</a>
+                </li>
+                <li class="pure-menu-item"><a href="/onefile/?url=/periodical/volume/" class="pure-menu-link">编程挑战</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="markdown-body">
+            <h1>GitHub 桌面版 v3.0 新特性「GitHub 热点速览」</h1>
+            <p><img src="https://img.hellogithub.com/article/Q80g3OJLbqEB9jW_1651712409.png" alt="cover.png" /></p>
+
+<p>新版本一般意味着更强的功能特性，比如 GitHub Desktop v3.0。虽然未发布新版本，但本周收录的 7 个开源项目颇有“新版”味。比如，破解（恢复）密码能力 Max 的 Hashcat 支持 300+ 攻击模式，再如开源不到 2 周获得 7k star 的跨平台文件管理 spacedrive 替你造一朵分布式云。还有极大降低 Web 开发门槛的 PyScript，见名就知是个狠角色，还有编译速度为 cargo 5 倍的 fleet。</p>
+
+<p>以下内容摘录自微博<a href="https://www.weibo.com/hellogithub/">@HelloGitHub</a> 的 GitHub Trending 及 Hacker News 热帖（简称 HN 热帖），选项标准：<code>新发布</code> | <code>实用</code> | <code>有趣</code>，根据项目 release 时间分类，发布时间不超过 14 day 的项目会标注 <code>New</code>，无该标志则说明项目 release 超过半月。由于本文篇幅有限，还有部分项目未能在本文展示，望周知 🌝</p>
+
+<ul>
+<li>本文目录
+<ul>
+<li>News 快读
+<ul>
+<li><ol>
+<li>产品·GitHub Desktop 发布 v3.0 版本</li>
+</ol></li>
+<li><ol>
+<li>社区·Elixir 社区提供基于搜索的代码导航</li>
+</ol></li>
+</ul></li>
+<li><ol>
+<li>本周特推</li>
+<li>1.1 跨平台文件管理：spacedrive</li>
+<li>1.2 降低 Web 开发门槛：PyScript</li>
+</ol></li>
+<li><ol>
+<li>GitHub Trending 周榜</li>
+<li>2.1 密码恢复：hashcat</li>
+<li>2.2 自建微博：mastodon</li>
+<li>2.3 JSON 数据可视化：jsonvisio.com</li>
+<li>2.4 Rust 快速构建工具：fleet</li>
+<li>2.5 定制 Windows 风扇：FanControl.Releases</li>
+</ol></li>
+<li><ol>
+<li>往期回顾</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<h2>News 快读</h2>
+
+<h3>1. 产品·GitHub Desktop 发布 v3.0 版本</h3>
+
+<p>节前 GitHub Desktop 发布 v3.0 版本，让 GitHub 工作流更接近本地开发工作流。本次 GitHub 桌面 v3.0 带来四大特性：</p>
+
+<ol>
+<li>预检查 pr 的运行状态，在官方的 gif 动图中展示了一个 pr 通过 pre-run 可以查看到该 pr 涉及的代码是否正常运行，比如它是否在 Windows x64 运行失败，但在 macOS x64 中运行成功；（见图1）</li>
+<li>通知划分优先级，只有仓库遇到真正需要你关心的变更时才会向你显示通知；</li>
+<li>pr 检查失败通知，为了防止失败的 pr 进一步导致协作问题，pr check（检查）失败后会通知对应的人；</li>
+<li>pr review 增加新标识，以便 pr 更好地修改；</li>
+</ol>
+
+<p>此外，伴随着 v3.0 GitHub 桌面版的发布，官方展示了 GitHub Desktop 的开源成绩：1,000 次 pr 以及 8,500 个 issue。如果你想要进一步了解该版本的详情，不妨阅读下官方 blog：<a href="https://github.blog/2022-04-26-github-desktop-3-0-brings-better-integration-for-your-pull-requests/">https://github.blog/2022-04-26-github-desktop-3-0-brings-better-integration-for-your-pull-requests/</a></p>
+
+<p><img src="https://img.hellogithub.com/article/ueGOzUcsRMYn6d2_1651712425.gif" alt="1.gif" /></p>
+
+<h3>2. 社区·Elixir 社区提供基于搜索的代码导航</h3>
+
+<p>GitHub 官方宣布支持 Elixir 代码检索导航，而这个功能由 Elixir 社区贡献，这也是第一个编程语言社区编写并提交给 GitHub 官方的代码导航。通过 <a href="https://github.blog/2022-04-29-bringing-code-navigation-to-communities/">https://github.blog/2022-04-29-bringing-code-navigation-to-communities/</a> 你可以了解全部 Elixir 社区同 GitHub 发生的故事。</p>
+
+<h2>1. 本周特推</h2>
+
+<h3>1.1 跨平台文件管理：spacedrive</h3>
+
+<p><strong>本周 star 增长数：4,500+</strong></p>
+
+<p><code>New</code> Spacedrive 是个跨平台文件资源管理器，由用 Rust 写的虚拟分布式文件系统 VDFS 提供技术支持。无论是云端，还是本地硬盘，Spacedrive 可将多个设备的文件组合变成你私人的分布式云。值得一提的是，该项目开源不到一周获得了超过 7k 的 star，可见其受欢迎程度。</p>
+
+<blockquote>
+  <p>GitHub 地址→<a href="https://github.com/spacedriveapp/spacedrive">https://github.com/spacedriveapp/spacedrive</a></p>
+</blockquote>
+
+<p><img src="https://img.hellogithub.com/article/2AFWGdSysUvJjkQ_1651712436.png" alt="2.png" /></p>
+
+<h3>1.2 降低 Web 开发门槛：PyScript</h3>
+
+<p><strong>本周 star 增长数：4,500+</strong></p>
+
+<p><code>New</code> PyScript 是 Scratch、JSFiddle 或其他“易用”的编程框架的 Python 替代品，它让 Web 成为一个友好的、可攻击的、任何人都可以编写有趣的交互式应用程序的地方。参考下方示例即可使用 PyScript。</p>
+
+<pre><code>&lt;link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /&gt;
+&lt;script defer src="https://pyscript.net/alpha/pyscript.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<blockquote>
+  <p>GitHub 地址→<a href="https://github.com/pyscript/pyscript">https://github.com/pyscript/pyscript</a></p>
+</blockquote>
+
+<h2>2. GitHub Trending 周榜</h2>
+
+<h3>2.1 密码恢复：hashcat</h3>
+
+<p><strong>本周 star 增长数：650+</strong></p>
+
+<p>Hashcat 是世界上超快的密码恢复工具，支持超过 300 个高度优化的哈希算法的 5 种独特的攻击模式。目前支持 Linux、Windows 和 macOS 上的 CPU、GPU 和其他硬件加速器，并提供帮助启用分布式密码破解的工具。</p>
+
+<blockquote>
+  <p>GitHub 地址→<a href="https://github.com/hashcat/hashcat">https://github.com/hashcat/hashcat</a></p>
+</blockquote>
+
+<p><img src="https://img.hellogithub.com/article/9AzSxtdDkOc4Fu6_1651712450.png" alt="3.png" /></p>
+
+<h3>2.2 自建微博：mastodon</h3>
+
+<p><strong>本周 star 增长数：900+</strong></p>
+
+<p>mastodon 一个开源的社交网络服务，支持发布文本、视频、图片等内容形式。它基于 ActivityPub（用于构建去中心化社交网络应用的协议），用户可以关注并发现新朋友。注意，这里的微博为 microblogging 的直译，而非 Weibo 的意思。</p>
+
+<blockquote>
+  <p>GitHub 地址→<a href="https://github.com/mastodon/mastodon">https://github.com/mastodon/mastodon</a></p>
+</blockquote>
+
+<p><img src="https://img.hellogithub.com/article/OJgLdfRDq1kYhFc_1651712474.gif" alt="4.gif" /></p>
+
+<h3>2.3 JSON 数据可视化：jsonvisio.com</h3>
+
+<p><strong>本周 star 增长数 550+</strong></p>
+
+<p>JSON Visio 是 JSON 数据可视化工具，它可以无缝地在图形上展示数据，而无需重构任何东西，直接粘贴或导入文件即可。如它的 logo 所示，它的数据将变成类树形呈现。</p>
+
+<blockquote>
+  <p>GitHub 地址→<a href="https://github.com/AykutSarac/jsonvisio.com">https://github.com/AykutSarac/jsonvisio.com</a></p>
+</blockquote>
+
+<p><img src="https://img.hellogithub.com/article/JHUb4LGYcr7mzO2_1651712483.png" alt="5.png" /></p>
+
+<p><img src="https://img.hellogithub.com/article/B1jOApbISqmX0wF_1651712490.png" alt="6.png" /></p>
+
+<h3>2.4 Rust 快速构建工具：fleet</h3>
+
+<p><strong>本周 star 增长数：350+</strong></p>
+
+<p><code>New</code> Fleet 是 Rust 的快速构建工具。Fleet 编译比 <code>cargo</code> 编译快 5 倍。</p>
+
+<blockquote>
+  <p>GitHub 地址→<a href="https://github.com/dimensionhq/fleet">https://github.com/dimensionhq/fleet</a></p>
+</blockquote>
+
+<p><img src="https://img.hellogithub.com/article/AzFx4Hf6aN78ert_1651712499.png" alt="7.png" /></p>
+
+<h3>2.5 定制 Windows 风扇：FanControl.Releases</h3>
+
+<p><strong>本周 star 增长数：250+</strong></p>
+
+<p>有了 FanControl.Release，你就可以定制你自己的 Windows 风扇控制软件。</p>
+
+<blockquote>
+  <p>GitHub 地址→<a href="https://github.com/Rem0o/FanControl.Releases">https://github.com/Rem0o/FanControl.Releases</a></p>
+</blockquote>
+
+<p><img src="https://img.hellogithub.com/article/Nvecnwl3mBWhGQb_1651712512.png" alt="8.png" /></p>
+
+<h2>3. 往期回顾</h2>
+
+<p>往期回顾：</p>
+
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/5V5TgigDQ0Vdj-3cmfaqng">程序员延寿指南「GitHub 热点速览 v.22.17」</a></li>
+<li><a href="https://mp.weixin.qq.com/s/GoTnuQdFNxylXz44xKcORQ">马里奥制造，Ready~~GO！「GitHub 热点速览 v.22.16」</a></li>
+</ul>
+
+<p>以上为 2022 年第 18 个工作周的 GitHub Trending 🎉如果你 Pick 其他好玩、实用的 GitHub 项目，记得来 <a href="https://github.com/521xueweihan/HelloGitHub">HelloGitHub</a> issue 区和我们分享下哟 🌝 </p>
+
+<p>最后，记得你在本文留言区留下你想看的主题 Repo（限公众号），例如：AI 换头。👀 和之前的送书活动类似，留言点赞 Top3 的小伙伴(<strike>棒</strike>），小鱼干会努力去找 Repo 的^^</p>
+
+<blockquote>
+  <p>HelloGitHub 交流群现已全面开放，添加微信号：HelloGitHub001 为好友入群，可同前端、Java、Go 等各界大佬谈笑风生、切磋技术~</p>
+</blockquote>
+
+            <p><img src="https://img.hellogithub.com/ad/footer.png" alt=""></p>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/static/js/ui.js?q=1634283466"></script>
+<script src="/static/js/scroll_before_location.js?q=1634283466"></script>
+<script>
+    function track_notice() {
+        var raw_url = document.location.toString();
+        var arrUrl = raw_url.split("//");
+
+        var start = arrUrl[1].indexOf("/");
+        var path = arrUrl[1].substring(start);
+
+        if(path.indexOf("?") !== -1){
+            path = path.split("?")[0];
+        }
+        var url = document.getElementById("notice_url").href;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "https://hellogithub.com/periodical/statistics/notice/?target="+url+"&path="+path, true);
+        xmlhttp.send(null);
+    }
+</script>
+
+<link rel="stylesheet" href="/static/css/atom-one-light.min.css?q=1634283466">
+<script src="/static/js/highlight.pack.js?q=1634283466"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>
